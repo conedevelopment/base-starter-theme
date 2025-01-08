@@ -1,0 +1,68 @@
+{
+  "scripts": {
+    "js:lint": "semistandard assets/js/*.js",
+    "js:fix": "semistandard assets/js/*.js --fix",
+    "prod": "npm-run-all sass:compile",
+    "sass:watch": "sass --load-path=node_modules --watch --no-source-map --update --style=expanded assets/scss:assets/css --silence-deprecation=mixed-decls",
+    "sass:fix": "stylelint assets/scss/**/*.scss --fix",
+    "sass:lint": "stylelint assets/scss/**/*.scss",
+    "sass:compile": "sass --load-path=node_modules --no-source-map --style=compressed assets/scss:assets/css",
+    "start": "npm-run-all --parallel sass:watch",
+    "deploy": "copy-files-from-to"
+  },
+  "devDependencies": {
+    "@alpinejs/focus": "^3.14.7",
+    "@splidejs/splide": "^4.1.4",
+    "alpinejs": "^3.14.4",
+    "copy-files-from-to": "^3.12.0",
+    "del-cli": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "gsap": "^3.12.5",
+    "npm-run-all": "^4.1.5",
+    "photoswipe": "^5.4.4",
+    "sass": "^1.79.4",
+    "semistandard": "^17.0.0",
+    "sprucecss": "^2.3.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-order": "^6.0.4"
+  },
+  "engines": {
+    "node": "^18.12",
+    "npm": "^9.2",
+    "yarn": "please-use-npm"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/alpinejs/dist/cdn.min.js",
+      "to": "assets/js/plugin/alpine.min.js"
+    },
+    {
+      "from": "node_modules/@alpinejs/focus/dist/cdn.min.js",
+      "to": "assets/js/plugin/alpine-focus.min.js"
+    },
+    {
+      "from": "node_modules/gsap/dist/gsap.min.js",
+      "to": "assets/js/plugin/gsap.min.js"
+    },
+    {
+      "from": "node_modules/gsap/dist/TextPlugin.min.js",
+      "to": "assets/js/plugin/gsap-text.min.js"
+    },
+    {
+      "from": "node_modules/photoswipe/dist/photoswipe.esm.min.js",
+      "to": "assets/js/plugin/photoswipe.min.js"
+    },
+    {
+      "from": "node_modules/photoswipe/dist/photoswipe-lightbox.esm.min.js",
+      "to": "assets/js/plugin/photoswipe-lightbox.min.js"
+    },
+    {
+      "from": "node_modules/@splidejs/splide/dist/js/splide.min.js",
+      "to": "assets/js/plugin/splide.min.js"
+    }
+  ],
+  "copyFilesSettings": {
+    "whenFileExists": "overwrite"
+  }
+}
