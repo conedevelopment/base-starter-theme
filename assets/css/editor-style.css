@@ -1,44 +1,30 @@
 @font-face {
   font-display: swap;
-  font-family: "Manrope";
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/font/manrope-v14-latin_latin-ext-regular.woff2") format("woff2");
+  src: url("../font/work-sans-v19-latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Manrope";
+  font-family: "Work Sans";
   font-style: normal;
-  font-weight: 600;
-  src: url("/font/manrope-v14-latin_latin-ext-600.woff2") format("woff2");
+  font-weight: 300;
+  src: url("../font/work-sans-v19-latin-300.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Manrope";
+  font-family: "Work Sans";
   font-style: normal;
-  font-weight: 700;
-  src: url("/font/manrope-v14-latin_latin-ext-700.woff2") format("woff2");
+  font-weight: 500;
+  src: url("../font/work-sans-v19-latin-500.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/font/inter-v12-latin_latin-ext-regular.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Inter";
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/font/inter-v12-latin_latin-ext-700.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 800;
-  src: url("/font/inter-v12-latin_latin-ext-800.woff2") format("woff2");
+  src: url("../font/work-sans-v19-latin-700.woff2") format("woff2");
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -492,9 +478,9 @@ template {
 
 :root {
   --cone-border-radius: 0.425rem;
-  --cone-font-family-base: Manrope, sans-serif;
+  --cone-font-family-base: Work Sans, sans-serif;
   --cone-font-family-cursive: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
-  --cone-font-family-heading: Inter, sans-serif;
+  --cone-font-family-heading: Work Sans, sans-serif;
   --cone-font-size-base: 1rem;
   --cone-font-size-lead: clamp(1.15rem, 2vw, 1.35rem);
   --cone-font-size-lg: 1.125rem;

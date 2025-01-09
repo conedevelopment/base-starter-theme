@@ -16,6 +16,7 @@ html[style*='padding-right'] {
     display: flex;
     gap: spacer('m');
     justify-content: space-between;
+    position: relative;
   }
 
   &__logo {
@@ -29,7 +30,7 @@ html[style*='padding-right'] {
       inline-size: auto;
 
       @include breakpoint('md') {
-        block-size: 1.5rem;
+        block-size: 1.25rem;
       }
     }
   }

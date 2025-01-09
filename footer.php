@@ -41,7 +41,6 @@
                 <div class="site-footer__column">
                     <?php
                     get_template_part('template-parts/lang-switcher');
-                    get_template_part('template-parts/scroll-to-top');
                     get_template_part('template-parts/theme-switcher');
                     ?>
                 </div>

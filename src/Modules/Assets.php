@@ -41,7 +41,6 @@ class Assets extends Module
 
         wp_enqueue_script('base-navigation', static::asset('/js/navigation.js'), [], Config::VERSION, ['strategy' => 'defer']);
         wp_enqueue_script('base-header', static::asset('/js/header.js'), [], Config::VERSION, ['strategy' => 'defer']);
-        wp_enqueue_script('base-scroll-to-top', static::asset('/js/scroll-to-top.js'), [], Config::VERSION, ['strategy' => 'defer']);
 
         // Prism
         wp_enqueue_script('base-prism', static::asset('/js/plugin/prism-custom.min.js'), [], Config::VERSION, true);
@@ -51,9 +50,7 @@ class Assets extends Module
             wp_enqueue_script('base-toc', static::asset('/js/toc.js'), [], Config::VERSION, true);
         }
 
-        // Plans
         wp_enqueue_script('base-accordion', static::asset('/js/accordion.js'), [], Config::VERSION, true);
-
         wp_enqueue_script('base-theme-switcher', static::asset('/js/theme-switcher.js'), [], Config::VERSION, ['strategy' => 'defer']);
 
         if (wp_get_environment_type() === 'production') {

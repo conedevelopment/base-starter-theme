@@ -1,7 +1,6 @@
 @forward 'config';
 @forward 'layout';
 @forward 'component';
-@forward 'section';
 @forward 'plugin';
 @forward 'extend';
 @forward 'wordpress';
@@ -17,7 +16,7 @@
 
   @include breakpoint('md') {
     @include set-css-variable((
-      --header-block-size: 6rem,
+      --header-block-size: 5rem,
     ));
   }
 }

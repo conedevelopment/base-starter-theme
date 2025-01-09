@@ -3,7 +3,6 @@
 
 .site-navigation {
   $this: &;
-  text-transform: uppercase;
 
   &__btn {
     align-items: end;
@@ -119,6 +118,7 @@
       @include transition;
       color: color('text');
       font-size: 0.938rem;
+      font-weight: 500;
       text-decoration: none;
 
       &:hover {

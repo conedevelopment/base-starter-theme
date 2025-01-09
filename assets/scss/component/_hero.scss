@@ -1,0 +1,7 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.hero {
+  &__title {
+    font-size: responsive-font-size(7rem);
+  }
+}
