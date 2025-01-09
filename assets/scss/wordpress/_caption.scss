@@ -1,0 +1,21 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.wp-caption {
+  max-width: 100%;
+
+  img[class*='wp-image-'] {
+    display: block;
+    margin-inline: auto;
+  }
+
+  .wp-caption-text {
+    font-size: config('font-size-sm', $typography);
+    margin-block: spacer('xs') 0;
+  }
+}
+
+.wp-caption-text {
+  line-height: config('line-height-md', $typography);
+  text-align: start;
+  text-transform: uppercase;
+}

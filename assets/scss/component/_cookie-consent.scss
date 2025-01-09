@@ -1,0 +1,107 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.cookie-consent {
+  animation-duration: config('duration', $transition);
+  animation-fill-mode: forwards;
+  animation-name: cookie-in;
+  background: color('background');
+  box-shadow: 0 0 4rem hsl(0deg 0% 0% / 10%);
+  display: flex;
+  flex-direction: column;
+  gap: spacer-clamp('s', 'm');
+  inset: auto 0 0;
+  justify-content: center;
+  outline: 0;
+  padding: spacer-clamp('s', 'm');
+  position: fixed;
+  z-index: 99;
+
+  @include breakpoint('md') {
+    border-radius: config('border-radius-lg', $display) config('border-radius-lg', $display) 0;
+    inset: auto spacer-clamp('s', 'm') spacer-clamp('s', 'm') auto;
+    justify-content: center;
+    max-inline-size: 45rem;
+    padding: spacer-clamp(m, l);
+  }
+
+  &.animate--out {
+    animation-duration: config('duration', $transition);
+    animation-fill-mode: forwards;
+    animation-name: cookie-out;
+  }
+
+  &__icon {
+    --size: 2.5rem;
+    height: var(--size);
+    width: var(--size);
+  }
+
+  &__caption {
+    @include layout-stack('xs');
+    color: color('text');
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('s');
+  }
+
+  &__options {
+    @include layout-stack('m');
+    @include scrollbar;
+    border-block: 1px solid hsl(0deg 0% 0% / 7.5%);
+    display: none;
+    max-block-size: 20rem;
+    overflow-y: auto;
+    padding-block: spacer-clamp('s', 'm');
+    padding-inline-end: spacer('m');
+
+    &--visible {
+      display: block;
+    }
+
+    label {
+      font-weight: 700;
+    }
+  }
+
+  &__option {
+    @include layout-stack('xs');
+
+    p,
+    ul {
+      color: color('text');
+    }
+
+    .table-responsive {
+      @include scrollbar;
+    }
+
+    table {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes cookie-in {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookie-out {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}

@@ -1,0 +1,216 @@
+@use 'sass:color';
+@use 'sprucecss/scss/spruce' as *;
+
+.site-navigation {
+  $this: &;
+  text-transform: uppercase;
+
+  &__btn {
+    align-items: end;
+    background-color: transparent;
+    block-size: 1.25rem;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    inline-size: 1.813rem;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+    z-index: 15;
+
+    @include breakpoint('lg') {
+      display: none;
+    }
+
+    span {
+      @include transition;
+      background-color: color('hamburger', 'navigation');
+      block-size: 2px;
+      display: flex;
+      inline-size: 100%;
+
+      &:last-child {
+        inline-size: 75%;
+      }
+    }
+  }
+
+  &__panel {
+    @include transition($property: opacity);
+    background-color: color('background');
+    display: flex;
+    flex-direction: column;
+    gap: spacer('m');
+    inset: calc(#{get-css-variable(--header-block-size)} - 1px) 0 auto;
+    justify-content: space-between;
+    max-block-size: 25rem;
+    opacity: 0;
+    overflow-y: auto;
+    padding-block: spacer('xs') spacer('m');
+    padding-inline: get-css-variable(--container-gap);
+    position: absolute;
+    visibility: hidden;
+    z-index: 30;
+
+    @include breakpoint('lg') {
+      align-items: center;
+      background-color: transparent;
+      border-block-end: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: spacer('s') spacer-clamp('m', 2rem);
+      inset: auto !important;
+      margin-block-end: 2px;
+      opacity: 100%;
+      overflow: initial;
+      padding: 0;
+      position: relative;
+      visibility: visible;
+    }
+
+    > .navigation-menu {
+      display: flex;
+      flex-direction: column;
+      gap: spacer('s') spacer('m');
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @include breakpoint('lg') {
+        align-items: center;
+        flex-direction: row;
+      }
+
+      @include breakpoint('xl') {
+        gap: spacer('s') 1.75rem;
+      }
+    }
+  }
+
+  li {
+    margin-block: 0;
+  }
+
+  .current-menu-parent > a {
+    font-weight: 700;
+    inset-block-end: -1px;
+    position: relative;
+  }
+
+  .navigation-menu {
+    > li > a {
+      align-items: center;
+      display: flex;
+      gap: spacer('xxs');
+      justify-content: space-between;
+
+      @include breakpoint('lg') {
+        padding-block: spacer('s');
+      }
+    }
+
+    .current-menu-item > a {
+      font-weight: 700;
+      inset-block-end: 0.5px;
+      position: relative;
+    }
+
+    a {
+      @include transition;
+      color: color('text');
+      font-size: 0.938rem;
+      text-decoration: none;
+
+      &:hover {
+        color: color('link-hover');
+      }
+
+      &:focus {
+        outline-offset: 2px;
+      }
+
+      &[aria-current='page'] {
+        font-weight: 700;
+        inset-block-end: 0.5px;
+        position: relative;
+      }
+    }
+  }
+
+  .menu-item-has-children {
+    position: relative;
+
+    > a {
+      &[aria-expanded='true'] + .sub-menu {
+        display: flex;
+
+        @include breakpoint('lg') {
+          opacity: 100%;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .dropdown-btn {
+    --size: 1em;
+    @include clear-btn;
+    block-size: var(--size);
+    color: color('primary');
+    inline-size: var(--size);
+    inset-block-start: -3px;
+    outline: none;
+    position: relative;
+
+    svg {
+      block-size: var(--size);
+      inline-size: var(--size);
+      pointer-events: none;
+    }
+  }
+
+  .sub-menu {
+    @include clear-list;
+    align-items: start;
+    display: none;
+    flex-direction: column;
+    gap: spacer('xs');
+    margin-block-start: spacer('s');
+    margin-inline-start: spacer('s');
+    padding-inline: 0;
+
+    @include breakpoint('lg') {
+      @include transition;
+      background-color: color('primary');
+      border-block-start: 0.45rem solid color('primary');
+      box-shadow: 0 0 1.5rem hsl(0deg 0% 0% / 5%);
+      display: flex;
+      inset: 98% auto auto 0;
+      line-height: config('line-height-md', $typography);
+      margin-block-start: 0;
+      margin-inline-start: 0;
+      min-inline-size: 17rem;
+      opacity: 0;
+      padding: spacer-clamp(1.25rem, 1.55rem) spacer-clamp('s', 'm') spacer-clamp('s', 'm');
+      position: absolute;
+      visibility: hidden;
+    }
+
+    li {
+      inline-size: 100%;
+    }
+
+    a {
+      display: flex;
+      inline-size: 100%;
+    }
+  }
+
+  .navigation-title {
+    text-shadow: 0.5px 0 0 currentColor;
+  }
+
+  li + .navigation-title {
+    margin-block-start: spacer('xs');
+  }
+}

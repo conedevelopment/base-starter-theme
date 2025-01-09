@@ -1,0 +1,23 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.wp-video {
+  inline-size: 100% !important;
+  overflow: hidden;
+
+  video {
+    aspect-ratio: 16 / 9;
+    block-size: auto !important;
+    inline-size: 100% !important;
+    object-fit: cover;
+  }
+}
+
+.wp-video-shortcode {
+  block-size: initial !important;
+  inline-size: initial !important;
+}
+
+.mejs-background,
+.mejs-mediaelement {
+  position: relative !important;
+}

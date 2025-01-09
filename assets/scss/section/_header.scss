@@ -1,0 +1,65 @@
+@use 'sprucecss/scss/spruce' as *;
+
+html[style*='padding-right'] {
+  .site-header {
+    inset-inline-end: 17px;
+  }
+}
+
+.site-header {
+  $this: &;
+  position: relative;
+
+  &__inner {
+    align-items: center;
+    block-size: get-css-variable(--header-block-size);
+    display: flex;
+    gap: spacer('m');
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+
+    svg,
+    img {
+      block-size: 1rem;
+      inline-size: auto;
+
+      @include breakpoint('md') {
+        block-size: 1.25rem;
+      }
+    }
+  }
+
+  &--open {
+    .site-navigation__btn {
+      z-index: 15;
+
+      span {
+        &:first-child {
+          transform: rotate(45deg) translateX(11px) translateY(15px);
+          transform-origin: right top;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+
+        &:last-child {
+          inline-size: 100%;
+          transform: rotate(-45deg) translateX(12px) translateY(-17px);
+          transform-origin: right bottom;
+        }
+      }
+    }
+
+    .site-navigation__panel {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+}

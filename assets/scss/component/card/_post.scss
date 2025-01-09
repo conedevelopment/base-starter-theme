@@ -1,0 +1,33 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.post-card {
+  $this: &;
+  @include a11y-card-link('.post-card__link', true);
+  @include layout-stack('m');
+
+  &--artist {
+    #{$this}__thumbnail {
+      aspect-ratio: 4 / 5;
+    }
+  }
+
+  &__thumbnail {
+    aspect-ratio: 16 / 11;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+
+  &__caption {
+    @include layout-stack(0);
+  }
+
+  &__title {
+    font-size: font-size('h4');
+    font-weight: 700;
+
+    a {
+      color: color('heading');
+      text-decoration: none;
+    }
+  }
+}

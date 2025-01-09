@@ -1,0 +1,75 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.l-not-found {
+  align-items: center;
+  background-color: color('background');
+  display: flex;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: spacer('s');
+    justify-content: center;
+    min-block-size: 65dvh;
+    padding-block: get-css-variable(--section-gap);
+    text-align: center;
+  }
+
+  &__image {
+    margin-inline: auto;
+    max-inline-size: 10rem;
+  }
+
+  &__title {
+    margin-block: 0;
+    margin-inline: auto;
+    max-inline-size: 20ch;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    margin-block-start: spacer('xs');
+  }
+
+  &__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    justify-content: center;
+    list-style: none;
+    margin-block: 0;
+
+    > * {
+      display: flex;
+      margin-block-start: 0;
+    }
+
+    > *:not(:last-child) {
+      align-items: center;
+      display: flex;
+      gap: 0.25rem 1rem;
+      position: relative;
+
+      &::after {
+        --size: 0.3em;
+        background-color: color('secondary');
+        block-size: var(--size);
+        border-radius: 50%;
+        content: '';
+        display: flex;
+        inline-size: var(--size);
+        position: relative;
+      }
+    }
+
+    a {
+      color: color('text');
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: color('link');
+      }
+    }
+  }
+}

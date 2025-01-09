@@ -1,0 +1,53 @@
+@use 'sass:math';
+@use 'sprucecss/scss/spruce' as *;
+
+.gallery {
+  --column: 1;
+
+  display: grid;
+  gap: spacer('s');
+  grid-template-columns: repeat(var(--column), minmax(0, 1fr));
+
+  &.gallery-size-medium,
+  &.gallery-size-large {
+    img {
+      aspect-ratio: 16 / 11;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 560px) {
+    --column: 3 !important;
+  }
+
+  @media (max-width: 400px) {
+    --column: 2 !important;
+  }
+}
+
+@for $i from 2 through 9 {
+  .gallery-columns-#{$i} {
+    --column: #{$i};
+  }
+}
+
+.gallery-item {
+  @include transition;
+  display: inline-flex;
+  margin-block: 0;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  img {
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.gallery-caption {
+  display: none !important;
+}

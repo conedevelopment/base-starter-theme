@@ -1,0 +1,86 @@
+@forward 'config';
+@use 'sprucecss/scss/spruce' as *;
+
+.mce-content-body {
+  @include layout-stack('s');
+  font-size: 0.938rem;
+  margin-block: spacer('l') !important;
+  margin-inline: auto;
+  max-width: 40rem;
+  padding: spacer('m') !important;
+
+  p:has(img),
+  p:has(iframe) {
+    max-width: 100% !important;
+  }
+
+  p:empty {
+    display: none;
+  }
+
+  p:empty + * {
+    margin-block-start: 0;
+  }
+
+  * + h2,
+  * + h3 {
+    margin-block-start: 2.25rem;
+  }
+
+  h2 + h2,
+  h2 + h3,
+  h3 + h2 {
+    margin-block-start: 1rem;
+  }
+
+  img,
+  iframe {
+    border-radius: config('border-radius-sm', $display);
+  }
+
+  iframe {
+    aspect-ratio: 16 / 11;
+    block-size: auto;
+  }
+
+  a:not(.btn) {
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-decoration: underline;
+    word-break: break-word;
+    word-wrap: break-word;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .mce-object-iframe {
+    width: 100%;
+  }
+
+  .gallery img {
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+  }
+
+  .clean-list {
+    list-style: none;
+    margin-inline: 0;
+    padding-inline: 0;
+
+    li::marker {
+      content: '';
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}

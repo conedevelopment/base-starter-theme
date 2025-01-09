@@ -1,0 +1,49 @@
+@forward 'config';
+@forward 'layout';
+@forward 'component';
+@forward 'section';
+@forward 'plugin';
+@forward 'extend';
+@forward 'wordpress';
+
+@use 'sprucecss/scss/spruce' as *;
+
+:root {
+  @include set-css-variable((
+    --container-gap: spacer-clamp('m', 'xl'),
+    --section-gap: spacer-clamp(4rem, 10vw, 6rem),
+    --header-block-size: 4rem,
+  ));
+
+  @include breakpoint('md') {
+    @include set-css-variable((
+      --header-block-size: 6rem,
+    ));
+  }
+}
+
+body {
+  font-size: 0.9378rem;
+
+  @include breakpoint('md') {
+    font-size: 1rem;
+  }
+}
+
+.screen-reader-text {
+  @include visually-hidden;
+}
+
+/* stylelint-disable */
+#wpadminbar {
+  position: fixed !important;
+}
+/* stylelint-enable */
+
+[x-cloak] {
+  display: none !important;
+}
+
+[hidden] {
+  display: none !important;
+}

@@ -1,0 +1,24 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.form-group {
+  &--wpcf7-submit {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: spacer('m');
+    justify-content: start;
+  }
+}
+
+.form-row--mixed {
+  gap: spacer('s') spacer('l');
+}
+
+.form-switch {
+  &__control {
+    @include field-icon(
+      config('switch', $form-icon, false),
+      color('primary', $only-color: true)
+    );
+  }
+}

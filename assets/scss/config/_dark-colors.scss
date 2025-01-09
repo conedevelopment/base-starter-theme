@@ -1,0 +1,118 @@
+@use 'sass:color';
+
+$color-black: hsl(192deg 100% 7%);
+$color-danger: hsl(0deg 71% 51%);
+$color-gray-dark: hsl(0deg 0% 100% / 8%);
+$color-gray: hsl(0deg 0% 90%);
+$color-primary: hsl(194deg 85% 56%);
+$color-secondary: hsl(326deg 100% 65%);
+$color-success: hsl(150deg 100% 33%);
+$color-white: hsl(0deg 0% 95%);
+
+$colors: (
+  'base': (
+    'background': $color-black,
+    'blockquote-border': $color-primary,
+    'border': $color-gray-dark,
+    'code-background': hsl(207deg 64% 18%),
+    'code-foreground': $color-white,
+    'heading': $color-white,
+    'link': $color-primary,
+    'link-hover': color.scale($color-primary, $lightness: 20%),
+    'mark-background': hsl(50deg 100% 80%),
+    'mark-foreground': $color-black,
+    'marker': $color-primary,
+    'primary': $color-primary,
+    'secondary': $color-secondary,
+    'strong': $color-white,
+    'text': $color-gray,
+  ),
+  'btn': (
+    'pagination-background': hsl(192deg 100% 9%),
+    'pagination-background-hover': $color-primary,
+    'pagination-focus-ring': $color-primary,
+    'pagination-foreground': $color-white,
+    'pagination-foreground-hover': $color-white,
+    'primary-background': hsl(194deg 85% 56%),
+    'primary-background-hover': hsl(194deg 85% 66%),
+    'primary-foreground': hsl(192deg 100% 0%),
+    'primary-outline-foreground-hover': hsl(192deg 100% 0%),
+    'primary-shadow': hsl(194, 100%, 27%),
+    'secondary-background': $color-secondary,
+    'secondary-background-hover': color.adjust($color-secondary, $lightness: 5%),
+    'secondary-foreground': $color-white,
+    'secondary-shadow': hsl(326deg 100% 18%),
+  ),
+  'cta': (
+    'background': hsl(192deg 100% 6%),
+  ),
+  'form': (
+    'background': color.scale($color-black, $lightness: 5%),
+    'background-disabled': $color-black,
+    'border': $color-gray-dark,
+    'border-disabled': $color-gray-dark,
+    'border-focus': $color-primary,
+    'check-background': $color-primary,
+    'check-focus-ring': $color-primary,
+    'check-foreground': $color-black,
+    'invalid': $color-danger,
+    'invalid-focus-ring': color.adjust($color-danger, $alpha: -0.75),
+    'label': $color-white,
+    'legend': $color-white,
+    'placeholder': hsl(0deg 0% 60%),
+    'range-thumb-background': $color-primary,
+    'range-thumb-focus-ring': $color-primary,
+    'range-track-background': $color-gray-dark,
+    'ring-focus': color.adjust($color-primary, $alpha: -0.75),
+    'select-foreground': hsl(0deg 0% 100%),
+    'text': $color-gray,
+    'valid': $color-success,
+    'valid-focus-ring': color.adjust($color-success, $alpha: -0.75),
+  ),
+  'header': (
+    'background': hsl(192deg 100% 7% / 95%),
+  ),
+  'hero': (
+    'gradient-start': hsl(205deg 100% 47%),
+    'gradient-end': hsl(194deg 85% 56%),
+  ),
+  'highlighted': (
+    'background': hsl(192deg 100% 6%),
+  ),
+  'navigation': (
+    'arrow': hsl(0deg 0% 100% / 25%),
+  ),
+  'selection': (
+    'background': $color-primary,
+    'foreground': $color-black,
+  ),
+  'scrollbar': (
+    'thumb-background': hsl(0deg 0% 100% / 15%),
+    'thumb-background-hover': hsl(0deg 0% 100% / 25%),
+    'track-background': hsl(0deg 0% 100% / 5%),
+  ),
+  'prism': (
+    'color': hsl(217deg 34% 88%),
+    'background': hsl(207deg 83% 10%),
+    'comment': hsl(180deg 9% 55%),
+    'punctuation': hsl(276deg 68% 75%),
+    'namespace': hsl(197deg 31% 77%),
+    'deleted': hsl(1deg 83% 63% / 56%),
+    'boolean': hsl(350deg 100% 67%),
+    'number': hsl(14deg 90% 70%),
+    'constant': hsl(221deg 100% 75%),
+    'class-name': hsl(33deg 100% 77%),
+    'regex': hsl(217deg 34% 88%),
+  ),
+  'table': (
+    'border': $color-gray-dark,
+    'caption': $color-gray,
+    'heading': $color-white,
+    'hover': hsl(0deg 0% 100% / 5%),
+    'text': $color-gray,
+    'stripe': hsl(0deg 0% 100% / 2.5%),
+  ),
+  'testimonial': (
+    'background-hover': hsl(192deg 100% 6%),
+  ),
+);

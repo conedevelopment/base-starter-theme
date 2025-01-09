@@ -1,0 +1,53 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.splide {
+  &__pagination-container {
+    margin-inline: 2px;
+    position: relative;
+  }
+
+  &__pagination {
+    @include clear-list;
+    align-items: center;
+    display: flex;
+    gap: spacer-clamp('s', 'm', '2vw');
+    justify-content: end;
+    margin-block-start: spacer('l');
+
+    &__page {
+      --size: 1rem;
+      @include transition;
+      @include clear-btn;
+      background-color: transparent;
+      block-size: var(--size);
+      border: 3px solid hsl(0deg 0% 100%);
+      border-radius: 50%;
+      display: flex;
+      font-size: config('font-size-lead', $typography);
+      inline-size: var(--size);
+
+      @include breakpoint('md') {
+        --size: 1.25rem;
+      }
+
+      &.is-active,
+      &:hover {
+        background-color: hsl(0deg 0% 100%);
+
+        .status {
+          inline-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes inline-size {
+  from {
+    inline-size: 0%;
+  }
+
+  to {
+    inline-size: 100%;
+  }
+}

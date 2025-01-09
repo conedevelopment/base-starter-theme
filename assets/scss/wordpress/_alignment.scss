@@ -1,0 +1,19 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-inline-end: spacer('m');
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-inline-start: spacer('m');
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-inline: auto;
+}

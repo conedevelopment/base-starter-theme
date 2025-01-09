@@ -1,0 +1,75 @@
+@use 'sass:color';
+@use 'sprucecss/scss/spruce' as *;
+
+.site-footer {
+  $this: &;
+  color: hsl(0deg 0% 45%);
+  font-size: 0.9rem;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 10;
+
+  &--home {
+    #{$this}__inner {
+      padding-block: spacer('l');
+    }
+  }
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('m') get-css-variable(--container-gap);
+    justify-content: space-between;
+    padding-block: calc(#{spacer('l')} / 2) spacer('l');
+  }
+
+  &__navigation {
+    @include clear-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('xxs') spacer('m');
+
+    > * {
+      margin-block: 0;
+    }
+
+    a {
+      color: hsl(0deg 0% 45%);
+      text-decoration: none;
+
+      &:hover {
+        color: color('link');
+      }
+
+      &[aria-current='page'] {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+
+    @include breakpoint('sm') {
+      order: 2;
+    }
+
+    svg,
+    img {
+      --size: 2.5rem;
+      block-size: var(--size);
+      inline-size: auto;
+
+      @include breakpoint('md') {
+        --size: 3.5rem;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-block: 0;
+  }
+}

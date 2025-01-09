@@ -1,0 +1,40 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.consent-ready {
+  .restriction {
+    display: block;
+  }
+}
+
+.restriction {
+  block-size: 100%;
+  display: none;
+  overflow: hidden;
+  position: relative;
+
+  &[data-type='youtube'] {
+    block-size: 100%;
+  }
+
+  &__caption {
+    align-items: center;
+    border: 1px solid color('border');
+    display: flex;
+    flex-direction: column;
+    gap: spacer('xs') spacer('m');
+    inset: 0;
+    justify-content: center;
+    padding: spacer-clamp('m', 'l');
+    position: absolute;
+    text-align: center;
+  }
+
+  &__body {
+    @include layout-stack('s');
+    @include set-css-variable((
+      --base-color-heading: hsl(0deg 0% 100%),
+      --base-color-text: hsl(0deg 0% 100% / 90%),
+    ));
+    color: color('text');
+  }
+}

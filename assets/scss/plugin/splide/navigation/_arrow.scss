@@ -1,0 +1,8 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.splide {
+  &__arrows {
+    display: flex;
+    gap: spacer('xs');
+  }
+}
