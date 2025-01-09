@@ -29,7 +29,7 @@ html[style*='padding-right'] {
       inline-size: auto;
 
       @include breakpoint('md') {
-        block-size: 1.25rem;
+        block-size: 1.5rem;
       }
     }
   }

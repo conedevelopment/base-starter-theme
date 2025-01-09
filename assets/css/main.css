@@ -2165,7 +2165,7 @@ html[style*=padding-right] .site-header {
 @media (min-width: 64em) {
   .site-header__logo svg,
   .site-header__logo img {
-    block-size: 1.25rem;
+    block-size: 1.5rem;
   }
 }
 .site-header--open .site-navigation__btn {

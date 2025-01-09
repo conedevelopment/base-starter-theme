@@ -131,8 +131,8 @@ final class Theme
     public static function boot(): void
     {
         (new Config)->boot();
-        (new Assets)->boot();
         (new Acf)->boot();
+        (new Assets)->boot();
         (new Auth)->boot();
         (new Comments)->boot();
         (new Mailchimp)->boot();
