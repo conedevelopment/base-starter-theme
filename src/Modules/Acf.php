@@ -5,6 +5,18 @@ namespace Base\Modules;
 class Acf extends Module
 {
     /**
+     * Remove wpautop from ACF the_content.
+     */
+    public static function removeAutoP(): void
+    {
+        remove_filter('the_content', 'wpautop');
+        remove_filter('acf_the_content', 'wpautop');
+
+        add_filter('acf_the_content', 'wpautop', 8);
+        add_filter('the_content', 'wpautop', 8);
+    }
+
+    /**
      * Boot the module.
      */
     public function boot(): void
@@ -54,42 +66,6 @@ class Acf extends Module
             return get_template_directory() . '/acf-json-cpt';
         });
 
-        /**
-         * Add ACF related custom CSS
-         */
-        add_action('admin_head', function () {
-            echo '<style id="custom-acf">
-                .mce-menu .mce-menu-item.mce-active.mce-menu-item-normal span,
-                .mce-menu .mce-menu-item.mce-active.mce-menu-item-preview span,
-                .mce-menu .mce-menu-item.mce-selected span,
-                .mce-menu .mce-menu-item:focus span,
-                .mce-menu .mce-menu-item:hover span {
-                    color: #fff !important;
-                }
-                .acf-tab-wrap {
-                    overflow: visible !important;
-                }
-                .acf-field-image .image-wrap {
-                    max-width: 250px !important;
-                }
-                .field-disabled nput {
-                    opacity: 50%;
-                    pointer-events: none;
-                }
-                .acf-clean-group > .acf-label {
-                    display: none;
-                }
-                .acf-clean-group > .acf-input > .acf-fields {
-                    border: 0;
-                }
-                .acf-clean-group > .acf-input > .acf-fields > .acf-field {
-                    border: 0;
-                    padding: 0;
-                }
-                .acf-clean-group > .acf-input > .acf-fields > .acf-field + .acf-field {
-                    margin-block-start: 0.5rem;
-                }
-            </style>';
-        });
+        add_action('acf/init', [static::class, 'removeAutoP'], 12);
     }
 }

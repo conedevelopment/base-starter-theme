@@ -2,6 +2,8 @@
 
 namespace Base\Modules;
 
+use Base\Support\Str;
+
 class Config extends Module
 {
     /**
@@ -50,6 +52,18 @@ class Config extends Module
     }
 
     /**
+     * Removes empty paragraph tags from shortcodes in WordPress.
+     */
+    public static function shortcodeParagraphFix(string $content): string
+    {
+        return strtr($content, [
+            '<p>[' => '[',
+            ']</p>' => ']',
+            ']<br />' => ']',
+        ]);
+    }
+
+    /**
      * Boot the module.
      */
     public function boot(): void
@@ -57,5 +71,10 @@ class Config extends Module
         add_action('wp_before_admin_bar_render', [static::class, 'adminBarCustomization'], 100);
         add_filter('wp_kses_allowed_html', [static::class, 'wpksesTags'], 10, 1);
         add_action('init', [static::class, 'removeTags']);
+        add_filter('the_content', [Str::class, 'removeEmptyP'], 20, 1);
+        add_filter('acf_the_content', [Str::class, 'removeEmptyP'], 20, 1);
+        add_filter('the_content', [static::class, 'shortcodeParagraphFix']);
+        add_filter('acf_the_content', [static::class, 'shortcodeParagraphFix'], 11);
+        remove_filter('term_description', 'wpautop');
     }
 }

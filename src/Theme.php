@@ -6,8 +6,11 @@ use Base\Modules\Acf;
 use Base\Modules\Assets;
 use Base\Modules\Auth;
 use Base\Modules\Comments;
+use Base\Modules\Config;
 use Base\Modules\Mailchimp;
 use Base\Modules\Performance;
+use Base\Modules\Photoswipe;
+use Base\Modules\Search;
 use Base\Modules\Shortcodes;
 use Base\Modules\Tinymce;
 use Base\Modules\Wpcf7;
@@ -44,6 +47,8 @@ final class Theme
         register_nav_menus([
             'header' => esc_html__('Header', 'base'),
             'footer-1' => esc_html__('Footer (1)', 'base'),
+            'footer-2' => esc_html__('Footer (2)', 'base'),
+            'footer-3' => esc_html__('Footer (3)', 'base'),
             'error-404' => esc_html__('404', 'base'),
         ]);
 
@@ -61,19 +66,6 @@ final class Theme
     }
 
     /**
-     * Removes empty paragraph tags from shortcodes in WordPress.
-     */
-    public static function shortcodeParagraphFix(string $content): string
-    {
-        return strtr($content, [
-            '<p>[' => '[',
-            ']</p>' => ']',
-            ']<br />' => ']',
-        ]);
-    }
-
-
-    /**
      * Add type="module" to script tags with handle containing "module".
      */
     public static function moduleTypeAttribute(string $tag, string $handle, string $src): string
@@ -83,68 +75,6 @@ final class Theme
         }
 
         return '<script type="module" src="' . esc_url($src) . '"></script>';
-    }
-
-    /*
-     * Add data-pswp-width and data-pswp-height attributes to images in posts.
-     */
-    public static function addPswpAttributes($content): string
-    {
-        $output = do_shortcode($content);
-        $output = preg_replace('/<a href=\'(.*?)\'/i', '<a href="$1"', $output);
-
-        if (preg_match_all('/<a href="([^"]+\.(?:jpg|jpeg|png|gif|webp))"[^>]*>(.*?)<\/a>/i', $output, $matches)) {
-            foreach ($matches[1] as $index => $image_url) {
-                $attachment_id = attachment_url_to_postid($image_url);
-                $image_dimensions = wp_get_attachment_image_src($attachment_id, 'full');
-
-                if ($image_dimensions) {
-                    $height = $image_dimensions[2];
-                    $width = $image_dimensions[1];
-                } else {
-                    $width = $height = null;
-                }
-
-                $data_attributes = 'data-pswp-width="' . $width . '" data-pswp-height="' . $height . '" data-cropped="true"';
-                $output = str_replace($matches[0][$index], '<a href="' . esc_url($image_url) . '" ' . $data_attributes . '>' . $matches[2][$index] . '</a>', $output);
-            }
-        }
-
-        return $output;
-    }
-
-    /**
-     * Remove wpautop from ACF the_content.
-     */
-    public static function acfWysiwygRemoveWpautop(): void
-    {
-        remove_filter('the_content', 'wpautop');
-        remove_filter('acf_the_content', 'wpautop');
-
-        add_filter('acf_the_content', 'wpautop', 8);
-        add_filter('the_content', 'wpautop', 8);
-    }
-
-    /**
-     * Remove empty paragraphs from the content.
-     */
-    public static function removeEmptyP($content): string
-    {
-        $content = preg_replace([
-            '#<p>\s*<(div|aside|section|article|header|footer)#',
-            '#</(div|aside|section|article|header|footer)>\s*</p>#',
-            '#</(div|aside|section|article|header|footer)>\s*<br ?/?>#',
-            '#<(div|aside|section|article|header|footer)(.*?)>\s*</p>#',
-            '#<p>\s*</(div|aside|section|article|header|footer)#',
-        ], [
-            '<$1',
-            '</$1>',
-            '</$1>',
-            '<$1$2>',
-            '</$1',
-        ], $content);
-
-        return preg_replace('#<p>(\s|&nbsp;)*+(<br\s*/*>)*(\s|&nbsp;)*</p>#i', '', $content);
     }
 
     /**
@@ -196,70 +126,27 @@ final class Theme
     }
 
     /**
-     * Simple WP_Query based AJAX search callback.
-     */
-    public static function ajaxSearch()
-    {
-        if ( isset( $_GET['s'] ) ) {
-            $search_query = sanitize_text_field( $_GET['s'] );
-
-            $args = [
-                'post_type' => 'knowledge-base',
-                'posts_per_page' => -1,
-                's' => $search_query
-            ];
-
-            $query = new WP_Query($args);
-
-            $results = [];
-
-            if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $results[] = [
-                        'id' => get_the_ID(),
-                        'title' => get_the_title(),
-                        'url' => get_permalink(),
-                    ];
-                }
-            }
-            wp_reset_postdata();
-
-            wp_send_json($results);
-        }
-
-        wp_send_json([]);
-    }
-
-    /**
      * Boot the theme.
      */
     public static function boot(): void
     {
+        (new Config)->boot();
         (new Assets)->boot();
         (new Acf)->boot();
         (new Auth)->boot();
         (new Comments)->boot();
+        (new Mailchimp)->boot();
+        (new Performance)->boot();
+        (new Photoswipe)->boot();
+        (new Search)->boot();
         (new Shortcodes)->boot();
         (new Tinymce)->boot();
         (new Wpcf7)->boot();
-        (new Mailchimp)->boot();
-        (new Performance)->boot();
 
         add_action('after_setup_theme', [static::class, 'setup']);
         add_action('after_setup_theme', [static::class, 'setContentWidth'], 0);
-        add_filter('the_content', [static::class, 'shortcodeParagraphFix']);
-        add_filter('acf_the_content', [static::class, 'shortcodeParagraphFix'], 11);
         add_filter('script_loader_tag', [static::class, 'moduleTypeAttribute'], 10, 3);
-        add_filter('the_content', [static::class, 'addPswpAttributes'], 10, 1);
-        add_filter('acf_the_content', [static::class, 'addPswpAttributes'], 10, 1);
-        add_action('acf/init', [static::class, 'acfWysiwygRemoveWpautop'], 12);
-        add_filter('the_content', [static::class, 'removeEmptyP'], 20, 1);
-        add_filter('acf_the_content', [static::class, 'removeEmptyP'], 20, 1);
-        remove_filter('term_description', 'wpautop');
         add_action('pre_get_posts', [static::class, 'limitPosts']);
         add_filter('the_content', [static::class, 'wrapHeadings']);
-        add_action('wp_ajax_nopriv_ajax_search', [static::class, 'ajaxSearch']);
-        add_action('wp_ajax_ajax_search', [static::class, 'ajaxSearch']);
     }
 }

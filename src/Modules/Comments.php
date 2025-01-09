@@ -5,7 +5,7 @@ namespace Base\Modules;
 class Comments extends Module
 {
     /**
-     * Disable support for comments and trackbacks in post types
+     * Disable support for comments and trackbacks in post types.
      */
     public function disableCommentsPostTypesSupport(): void
     {
@@ -20,7 +20,7 @@ class Comments extends Module
     }
 
     /**
-     * Remove comments page in menu
+     * Remove comments page in menu.
      */
     public function disableCommentsAdminMenu(): void
     {
@@ -28,7 +28,7 @@ class Comments extends Module
     }
 
     /**
-     * Redirect any user trying to access comments page
+     * Redirect any user trying to access comments page.
      */
     public function disableCommentsAdminMenuRedirect(): void
     {
@@ -41,7 +41,7 @@ class Comments extends Module
     }
 
     /**
-     * Remove comments metabox from dashboard
+     * Remove comments metabox from dashboard.
      */
     public function disableCommentsDashboard(): void
     {
