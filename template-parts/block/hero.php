@@ -3,6 +3,7 @@ $base_title = $args['title'] ?? get_sub_field('hero_title');
 $base_subtitle = $args['subtitle'] ?? get_sub_field('hero_subtitle');
 $base_description = $args['description'] ?? get_sub_field('hero_description');
 $base_buttons = $args['buttons'] ?? get_sub_field('hero_buttons');
+$base_breadcrumb = $args['breadcrumb'] ?? get_sub_field('hero_breadcrumb');
 
 if (! $base_title) {
     $base_title = get_the_title();
@@ -24,7 +25,7 @@ if ($base_title) :
                 <?php if ($base_description) : ?>
                     <p class="hero__description"><?php echo $base_description; ?></p>
                 <?php endif; ?>
-                <?php if ($base_breadcrumb === 'show') : ?>
+                <?php if ($base_breadcrumb === false && function_exists('bcn_display')) : ?>
                     <div class="breadcrumb-list" typeof="BreadcrumbList" vocab="https://schema.org/">
                         <?php bcn_display(); ?>
                     </div>

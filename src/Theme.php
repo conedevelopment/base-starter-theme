@@ -10,6 +10,7 @@ use Base\Modules\Config;
 use Base\Modules\Mailchimp;
 use Base\Modules\Performance;
 use Base\Modules\Photoswipe;
+use Base\Modules\Preload;
 use Base\Modules\Search;
 use Base\Modules\Shortcodes;
 use Base\Modules\Tinymce;
@@ -51,10 +52,6 @@ final class Theme
             'footer-3' => esc_html__('Footer (3)', 'base'),
             'error-404' => esc_html__('404', 'base'),
         ]);
-
-        if (!current_user_can('edit_posts')) {
-            add_filter('show_admin_bar', '__return_false');
-        }
     }
 
     /**
@@ -138,6 +135,7 @@ final class Theme
         (new Mailchimp)->boot();
         (new Performance)->boot();
         (new Photoswipe)->boot();
+        (new Preload)->boot();
         (new Search)->boot();
         (new Shortcodes)->boot();
         (new Tinymce)->boot();

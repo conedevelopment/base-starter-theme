@@ -16,7 +16,7 @@
 
   @include breakpoint('md') {
     @include set-css-variable((
-      --header-block-size: 5rem,
+      --header-block-size: 6rem,
     ));
   }
 }

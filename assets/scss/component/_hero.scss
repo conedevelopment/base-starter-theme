@@ -1,7 +1,10 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .hero {
+  text-align: center;
+
   &__title {
-    font-size: responsive-font-size(7rem);
+    font-size: responsive-font-size(5rem);
+    max-inline-size: 30ch;
   }
 }

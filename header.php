@@ -4,7 +4,6 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <?php get_template_part('template-parts/preload'); ?>
     <?php get_template_part('template-parts/theme-detection'); ?>
     <?php wp_head(); ?>
 </head>
@@ -33,7 +32,7 @@
                                 'items_wrap' => '<ul class="navigation-menu">%3$s</ul>',
                             ]);
                         }
-                        
+
                         if (have_rows('base_header_btns', 'option')) : ?>
                             <div class="site-header__btns">
                                 <?php while (have_rows('base_header_btns', 'option')) : the_row(); ?>

@@ -46,10 +46,7 @@ class Performance extends Module
         remove_action('wp_head', 'wp_maybe_inline_styles', 1);
         remove_action('wp_footer', 'wp_maybe_inline_styles', 1);
 
-        // Do not show admin bar
-        add_filter('show_admin_bar', '__return_false', 100, 1);
-
         // Do not add robots meta
-        add_filter('wp_robots', '__return_empty_array', 100, 1);    
+        add_filter('wp_robots', '__return_empty_array', 100, 1);
     }
 }

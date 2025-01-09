@@ -113,13 +113,17 @@ $color-tertiary: hsl(169deg 100% 50%);
       'form-switch': false,
     ),
   ),
+  $layout: (
+    'container-inline-size': 92rem,
+  ),
   $settings: (
     'css-custom-properties': true,
     'hyphens': false,
-    'prefix': 'cone',
+    'prefix': 'base',
   ),
   $typography: (
     'font-family-base': #{'Work Sans', sans-serif},
     'font-family-heading': #{'Work Sans', sans-serif},
+    'font-weight-heading': 300,
   ),
 );

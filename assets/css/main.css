@@ -336,179 +336,179 @@ template {
 }
 
 :root {
-  --cone-alert-color-danger: hsl(0, 71%, 51%);
-  --cone-alert-color-info: hsl(195, 100%, 42%);
-  --cone-alert-color-success: hsl(150, 100%, 33%);
-  --cone-alert-color-warning: hsl(48, 89%, 55%);
+  --base-alert-color-danger: hsl(0, 71%, 51%);
+  --base-alert-color-info: hsl(195, 100%, 42%);
+  --base-alert-color-success: hsl(150, 100%, 33%);
+  --base-alert-color-warning: hsl(48, 89%, 55%);
 }
 
 :root {
-  --cone-base-color-background: hsl(0, 0%, 100%);
-  --cone-base-color-blockquote-border: hsl(216, 100%, 50%);
-  --cone-base-color-border: hsl(215, 63%, 93%);
-  --cone-base-color-code-background: hsl(216, 100%, 97%);
-  --cone-base-color-code-foreground: hsl(0, 0%, 0%);
-  --cone-base-color-heading: hsl(0, 0%, 0%);
-  --cone-base-color-link: hsl(216, 100%, 50%);
-  --cone-base-color-link-hover: hsl(216, 100%, 40%);
-  --cone-base-color-mark-background: hsl(50, 100%, 80%);
-  --cone-base-color-mark-foreground: hsl(0, 0%, 0%);
-  --cone-base-color-marker: hsl(216, 100%, 50%);
-  --cone-base-color-primary: hsl(216, 100%, 50%);
-  --cone-base-color-secondary: hsl(326, 100%, 49%);
-  --cone-base-color-strong: hsl(0, 0%, 0%);
-  --cone-base-color-text: hsl(208, 9%, 42%);
-  --cone-base-color-primary-dark: hsl(230, 100%, 11%);
-  --cone-base-color-tertiary: hsl(169, 100%, 50%);
+  --base-base-color-background: hsl(0, 0%, 100%);
+  --base-base-color-blockquote-border: hsl(216, 100%, 50%);
+  --base-base-color-border: hsl(215, 63%, 93%);
+  --base-base-color-code-background: hsl(216, 100%, 97%);
+  --base-base-color-code-foreground: hsl(0, 0%, 0%);
+  --base-base-color-heading: hsl(0, 0%, 0%);
+  --base-base-color-link: hsl(216, 100%, 50%);
+  --base-base-color-link-hover: hsl(216, 100%, 40%);
+  --base-base-color-mark-background: hsl(50, 100%, 80%);
+  --base-base-color-mark-foreground: hsl(0, 0%, 0%);
+  --base-base-color-marker: hsl(216, 100%, 50%);
+  --base-base-color-primary: hsl(216, 100%, 50%);
+  --base-base-color-secondary: hsl(326, 100%, 49%);
+  --base-base-color-strong: hsl(0, 0%, 0%);
+  --base-base-color-text: hsl(208, 9%, 42%);
+  --base-base-color-primary-dark: hsl(230, 100%, 11%);
+  --base-base-color-tertiary: hsl(169, 100%, 50%);
 }
 
 :root {
-  --cone-btn-color-primary-background: hsl(216, 100%, 50%);
-  --cone-btn-color-primary-background-hover: hsl(216, 100%, 40%);
-  --cone-btn-color-primary-foreground: hsl(0, 0%, 100%);
-  --cone-btn-color-primary-shadow: hsl(216, 100%, 85%);
-  --cone-btn-color-secondary-background: hsl(326, 100%, 49%);
-  --cone-btn-color-secondary-background-hover: hsl(326, 100%, 47%);
-  --cone-btn-color-secondary-foreground: hsl(0, 0%, 100%);
-  --cone-btn-color-secondary-shadow: hsl(326, 100%, 84%);
-  --cone-btn-color-primary-outline-foreground-hover: hsl(0, 0%, 100%);
-  --cone-btn-color-pagination-background: hsl(264, 100%, 99%);
-  --cone-btn-color-pagination-background-hover: hsl(216, 100%, 50%);
-  --cone-btn-color-pagination-focus-ring: hsl(216, 100%, 50%);
-  --cone-btn-color-pagination-foreground: hsl(216, 100%, 50%);
-  --cone-btn-color-pagination-foreground-hover: hsl(0, 0%, 100%);
+  --base-btn-color-primary-background: hsl(216, 100%, 50%);
+  --base-btn-color-primary-background-hover: hsl(216, 100%, 40%);
+  --base-btn-color-primary-foreground: hsl(0, 0%, 100%);
+  --base-btn-color-primary-shadow: hsl(216, 100%, 85%);
+  --base-btn-color-secondary-background: hsl(326, 100%, 49%);
+  --base-btn-color-secondary-background-hover: hsl(326, 100%, 47%);
+  --base-btn-color-secondary-foreground: hsl(0, 0%, 100%);
+  --base-btn-color-secondary-shadow: hsl(326, 100%, 84%);
+  --base-btn-color-primary-outline-foreground-hover: hsl(0, 0%, 100%);
+  --base-btn-color-pagination-background: hsl(264, 100%, 99%);
+  --base-btn-color-pagination-background-hover: hsl(216, 100%, 50%);
+  --base-btn-color-pagination-focus-ring: hsl(216, 100%, 50%);
+  --base-btn-color-pagination-foreground: hsl(216, 100%, 50%);
+  --base-btn-color-pagination-foreground-hover: hsl(0, 0%, 100%);
 }
 
 :root {
-  --cone-form-color-background: hsl(0, 0%, 100%);
-  --cone-form-color-background-disabled: hsl(0, 0%, 95%);
-  --cone-form-color-border: hsl(0, 0%, 0%);
-  --cone-form-color-border-disabled: hsl(215, 63%, 93%);
-  --cone-form-color-border-focus: hsl(216, 100%, 50%);
-  --cone-form-color-check-background: hsl(216, 100%, 50%);
-  --cone-form-color-check-focus-ring: hsl(216, 100%, 50%);
-  --cone-form-color-check-foreground: hsl(0, 0%, 100%);
-  --cone-form-color-group-label-background: hsl(210, 60%, 98%);
-  --cone-form-color-group-label-foreground: hsl(208, 9%, 42%);
-  --cone-form-color-invalid: hsl(0, 71%, 51%);
-  --cone-form-color-invalid-focus-ring: hsla(0, 71%, 51%, 0.25);
-  --cone-form-color-label: hsl(0, 0%, 0%);
-  --cone-form-color-legend: hsl(0, 0%, 0%);
-  --cone-form-color-placeholder: hsl(208, 7%, 40%);
-  --cone-form-color-range-thumb-background: hsl(216, 100%, 50%);
-  --cone-form-color-range-thumb-focus-ring: hsl(216, 100%, 50%);
-  --cone-form-color-range-track-background: hsl(215, 63%, 93%);
-  --cone-form-color-ring-focus: hsla(216, 100%, 50%, 0.25);
-  --cone-form-color-select-foreground: hsl(0, 0%, 0%);
-  --cone-form-color-switch-background: hsl(216, 100%, 50%);
-  --cone-form-color-switch-focus-ring: hsl(216, 100%, 50%);
-  --cone-form-color-switch-foreground: hsl(0, 0%, 100%);
-  --cone-form-color-text: hsl(208, 9%, 42%);
-  --cone-form-color-valid: hsl(150, 100%, 33%);
-  --cone-form-color-valid-focus-ring: hsla(150, 100%, 33%, 0.25);
+  --base-form-color-background: hsl(0, 0%, 100%);
+  --base-form-color-background-disabled: hsl(0, 0%, 95%);
+  --base-form-color-border: hsl(0, 0%, 0%);
+  --base-form-color-border-disabled: hsl(215, 63%, 93%);
+  --base-form-color-border-focus: hsl(216, 100%, 50%);
+  --base-form-color-check-background: hsl(216, 100%, 50%);
+  --base-form-color-check-focus-ring: hsl(216, 100%, 50%);
+  --base-form-color-check-foreground: hsl(0, 0%, 100%);
+  --base-form-color-group-label-background: hsl(210, 60%, 98%);
+  --base-form-color-group-label-foreground: hsl(208, 9%, 42%);
+  --base-form-color-invalid: hsl(0, 71%, 51%);
+  --base-form-color-invalid-focus-ring: hsla(0, 71%, 51%, 0.25);
+  --base-form-color-label: hsl(0, 0%, 0%);
+  --base-form-color-legend: hsl(0, 0%, 0%);
+  --base-form-color-placeholder: hsl(208, 7%, 40%);
+  --base-form-color-range-thumb-background: hsl(216, 100%, 50%);
+  --base-form-color-range-thumb-focus-ring: hsl(216, 100%, 50%);
+  --base-form-color-range-track-background: hsl(215, 63%, 93%);
+  --base-form-color-ring-focus: hsla(216, 100%, 50%, 0.25);
+  --base-form-color-select-foreground: hsl(0, 0%, 0%);
+  --base-form-color-switch-background: hsl(216, 100%, 50%);
+  --base-form-color-switch-focus-ring: hsl(216, 100%, 50%);
+  --base-form-color-switch-foreground: hsl(0, 0%, 100%);
+  --base-form-color-text: hsl(208, 9%, 42%);
+  --base-form-color-valid: hsl(150, 100%, 33%);
+  --base-form-color-valid-focus-ring: hsla(150, 100%, 33%, 0.25);
 }
 
 :root {
-  --cone-selection-color-foreground: hsl(0, 0%, 100%);
-  --cone-selection-color-background: hsl(216, 100%, 50%);
+  --base-selection-color-foreground: hsl(0, 0%, 100%);
+  --base-selection-color-background: hsl(216, 100%, 50%);
 }
 
 :root {
-  --cone-scrollbar-color-thumb-background: hsla(0, 0%, 0%, 0.15);
-  --cone-scrollbar-color-thumb-background-hover: hsla(0, 0%, 0%, 0.25);
-  --cone-scrollbar-color-track-background: hsla(0, 0%, 0%, 0.05);
+  --base-scrollbar-color-thumb-background: hsla(0, 0%, 0%, 0.15);
+  --base-scrollbar-color-thumb-background-hover: hsla(0, 0%, 0%, 0.25);
+  --base-scrollbar-color-track-background: hsla(0, 0%, 0%, 0.05);
 }
 
 :root {
-  --cone-table-color-border: hsl(215, 63%, 93%);
-  --cone-table-color-caption: hsl(208, 9%, 42%);
-  --cone-table-color-heading: hsl(0, 0%, 0%);
-  --cone-table-color-hover: hsla(0, 0%, 0%, 0.05);
-  --cone-table-color-stripe: hsla(0, 0%, 0%, 0.025);
-  --cone-table-color-text: hsl(208, 9%, 42%);
+  --base-table-color-border: hsl(215, 63%, 93%);
+  --base-table-color-caption: hsl(208, 9%, 42%);
+  --base-table-color-heading: hsl(0, 0%, 0%);
+  --base-table-color-hover: hsla(0, 0%, 0%, 0.05);
+  --base-table-color-stripe: hsla(0, 0%, 0%, 0.025);
+  --base-table-color-text: hsl(208, 9%, 42%);
 }
 
 :root {
-  --cone-cta-color-background: hsl(230, 100%, 11%);
+  --base-cta-color-background: hsl(230, 100%, 11%);
 }
 
 :root {
-  --cone-header-color-background: hsla(0, 0%, 100%, 0.95);
+  --base-header-color-background: hsla(0, 0%, 100%, 0.95);
 }
 
 :root {
-  --cone-hero-color-gradient-start: hsl(238, 100%, 47%);
-  --cone-hero-color-gradient-end: hsl(194, 85%, 56%);
+  --base-hero-color-gradient-start: hsl(238, 100%, 47%);
+  --base-hero-color-gradient-end: hsl(194, 85%, 56%);
 }
 
 :root {
-  --cone-highlighted-color-background: hsl(230, 100%, 11%);
+  --base-highlighted-color-background: hsl(230, 100%, 11%);
 }
 
 :root {
-  --cone-navigation-color-hamburger: hsl(216, 100%, 50%);
-  --cone-navigation-color-arrow: hsla(0, 0%, 0%, 0.15);
+  --base-navigation-color-hamburger: hsl(216, 100%, 50%);
+  --base-navigation-color-arrow: hsla(0, 0%, 0%, 0.15);
 }
 
 :root {
-  --cone-prism-color-color: hsl(243, 14%, 29%);
-  --cone-prism-color-background: hsl(0, 0%, 98%);
-  --cone-prism-color-comment: hsl(225, 14%, 46%);
-  --cone-prism-color-punctuation: hsl(279, 50%, 53%);
-  --cone-prism-color-namespace: hsl(173, 100%, 24%);
-  --cone-prism-color-deleted: hsla(1, 83%, 63%, 0.56);
-  --cone-prism-color-boolean: hsl(0, 44%, 53%);
-  --cone-prism-color-number: hsl(315, 90%, 35%);
-  --cone-prism-color-constant: hsl(221, 57%, 52%);
-  --cone-prism-color-class-name: hsl(0, 0%, 7%);
-  --cone-prism-color-regex: hsl(1, 48%, 59%);
+  --base-prism-color-color: hsl(243, 14%, 29%);
+  --base-prism-color-background: hsl(0, 0%, 98%);
+  --base-prism-color-comment: hsl(225, 14%, 46%);
+  --base-prism-color-punctuation: hsl(279, 50%, 53%);
+  --base-prism-color-namespace: hsl(173, 100%, 24%);
+  --base-prism-color-deleted: hsla(1, 83%, 63%, 0.56);
+  --base-prism-color-boolean: hsl(0, 44%, 53%);
+  --base-prism-color-number: hsl(315, 90%, 35%);
+  --base-prism-color-constant: hsl(221, 57%, 52%);
+  --base-prism-color-class-name: hsl(0, 0%, 7%);
+  --base-prism-color-regex: hsl(1, 48%, 59%);
 }
 
 :root {
-  --cone-reference-color-background: hsl(0, 0%, 0%);
-  --cone-reference-color-box-shadow: hsla(0, 0%, 0%, 0.15);
-  --cone-reference-color-icon: hsla(0, 0%, 100%, 0.25);
-  --cone-reference-color-link: hsla(0, 0%, 100%, 0.8);
-  --cone-reference-color-title: hsl(0, 0%, 100%);
+  --base-reference-color-background: hsl(0, 0%, 0%);
+  --base-reference-color-box-shadow: hsla(0, 0%, 0%, 0.15);
+  --base-reference-color-icon: hsla(0, 0%, 100%, 0.25);
+  --base-reference-color-link: hsla(0, 0%, 100%, 0.8);
+  --base-reference-color-title: hsl(0, 0%, 100%);
 }
 
 :root {
-  --cone-testimonial-color-background-hover: hsl(195, 100%, 97%);
+  --base-testimonial-color-background-hover: hsl(195, 100%, 97%);
 }
 
 :root {
-  --cone-border-radius: 0.425rem;
-  --cone-font-family-base: Work Sans, sans-serif;
-  --cone-font-family-cursive: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
-  --cone-font-family-heading: Work Sans, sans-serif;
-  --cone-font-size-base: 1rem;
-  --cone-font-size-lead: clamp(1.15rem, 2vw, 1.35rem);
-  --cone-font-size-lg: 1.125rem;
-  --cone-font-size-ratio: 1.25;
-  --cone-font-size-sm: 0.875rem;
-  --cone-font-weight-heading: 700;
-  --cone-inline-padding: 0.1em 0.3em;
-  --cone-line-height-base: 1.8;
-  --cone-line-height-heading: calc(2px + 2ex + 2px);
-  --cone-line-height-lg: 1.8;
-  --cone-line-height-md: 1.5;
-  --cone-line-height-sm: 1.2;
-  --cone-border-radius-lg: 1.5rem;
-  --cone-border-radius-sm: 0.425rem;
-  --cone-border-radius-xl: 2.5rem;
-  --cone-container-inline-size: 84rem;
-  --cone-page-margin: 2cm;
-  --cone-hidden-elements: header, footer, aside, nav, form, iframe, [class^="aspect-ratio"];
+  --base-border-radius: 0.425rem;
+  --base-font-family-base: Work Sans, sans-serif;
+  --base-font-family-cursive: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
+  --base-font-family-heading: Work Sans, sans-serif;
+  --base-font-size-base: 1rem;
+  --base-font-size-lead: clamp(1.15rem, 2vw, 1.35rem);
+  --base-font-size-lg: 1.125rem;
+  --base-font-size-ratio: 1.25;
+  --base-font-size-sm: 0.875rem;
+  --base-font-weight-heading: 300;
+  --base-inline-padding: 0.1em 0.3em;
+  --base-line-height-base: 1.8;
+  --base-line-height-heading: calc(2px + 2ex + 2px);
+  --base-line-height-lg: 1.8;
+  --base-line-height-md: 1.5;
+  --base-line-height-sm: 1.2;
+  --base-border-radius-lg: 1.5rem;
+  --base-border-radius-sm: 0.425rem;
+  --base-border-radius-xl: 2.5rem;
+  --base-container-inline-size: 92rem;
+  --base-page-margin: 2cm;
+  --base-hidden-elements: header, footer, aside, nav, form, iframe, [class^="aspect-ratio"];
 }
 @media (prefers-reduced-motion: reduce) {
   :root {
-    --cone-duration: 0;
+    --base-duration: 0;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
-    --cone-duration: 0.15s;
-    --cone-timing-function: ease-in-out;
+    --base-duration: 0.15s;
+    --base-timing-function: ease-in-out;
   }
 }
 
@@ -529,8 +529,8 @@ template {
 }
 
 ::selection {
-  background-color: var(--cone-selection-color-background);
-  color: var(--cone-selection-color-foreground);
+  background-color: var(--base-selection-color-background);
+  color: var(--base-selection-color-foreground);
   text-shadow: none;
 }
 
@@ -550,19 +550,19 @@ html {
 }
 
 body {
-  background: var(--cone-base-color-background);
-  color: var(--cone-base-color-text);
+  background: var(--base-base-color-background);
+  color: var(--base-base-color-text);
 }
 
 a {
-  color: var(--cone-base-color-link);
+  color: var(--base-base-color-link);
   text-decoration: underline;
-  transition-duration: var(--cone-duration);
+  transition-duration: var(--base-duration);
   transition-property: color;
-  transition-timing-function: var(--cone-timing-function);
+  transition-timing-function: var(--base-timing-function);
 }
 a:hover {
-  color: var(--cone-base-color-link-hover);
+  color: var(--base-base-color-link-hover);
 }
 
 button {
@@ -576,7 +576,7 @@ button {
 
 hr {
   border: 0;
-  border-block-start: 1px solid var(--cone-base-color-border);
+  border-block-start: 1px solid var(--base-base-color-border);
 }
 
 img {
@@ -610,33 +610,33 @@ figure figcaption {
 }
 
 .table {
-  --cone-line-height: 1.5;
-  --cone-padding: 1rem;
-  --cone-responsive-inline-size: 40rem;
+  --base-line-height: 1.5;
+  --base-padding: 1rem;
+  --base-responsive-inline-size: 40rem;
   border-collapse: collapse;
-  color: var(--cone-table-color-text);
+  color: var(--base-table-color-text);
   inline-size: 100%;
 }
 .table caption {
-  color: var(--cone-table-color-caption);
+  color: var(--base-table-color-caption);
   margin-block-end: 1rem;
 }
 .table th,
 .table td {
-  border-block-end: 1px solid var(--cone-table-color-border);
-  line-height: var(--cone-line-height);
-  padding: var(--cone-padding);
+  border-block-end: 1px solid var(--base-table-color-border);
+  line-height: var(--base-line-height);
+  padding: var(--base-padding);
 }
 .table th {
-  color: var(--cone-table-color-heading);
+  color: var(--base-table-color-heading);
   text-align: inherit;
   text-align: -webkit-match-parent;
 }
 .table--striped > tbody > tr:nth-child(odd) {
-  background-color: var(--cone-table-color-stripe);
+  background-color: var(--base-table-color-stripe);
 }
 .table--hover > tbody > tr:hover {
-  background: var(--cone-table-color-hover);
+  background: var(--base-table-color-hover);
 }
 .table--clear-border th,
 .table--clear-border td {
@@ -651,21 +651,21 @@ figure figcaption {
   padding-inline-end: 0;
 }
 .table--sm {
-  --cone-padding: 0.5rem;
+  --base-padding: 0.5rem;
 }
 .table--sm th,
 .table--sm td {
-  padding: var(--cone-padding);
+  padding: var(--base-padding);
 }
 .table--rounded th:first-child,
 .table--rounded td:first-child {
-  border-end-start-radius: var(--cone-border-radius-sm);
-  border-start-start-radius: var(--cone-border-radius-sm);
+  border-end-start-radius: var(--base-border-radius-sm);
+  border-start-start-radius: var(--base-border-radius-sm);
 }
 .table--rounded th:last-child,
 .table--rounded td:last-child {
-  border-end-end-radius: var(--cone-border-radius-sm);
-  border-start-end-radius: var(--cone-border-radius-sm);
+  border-end-end-radius: var(--base-border-radius-sm);
+  border-start-end-radius: var(--base-border-radius-sm);
 }
 
 html {
@@ -673,9 +673,9 @@ html {
 }
 
 body {
-  font-family: var(--cone-font-family-base);
-  font-size: var(--cone-font-size-base);
-  line-height: var(--cone-line-height-base);
+  font-family: var(--base-font-family-base);
+  font-size: var(--base-font-size-base);
+  line-height: var(--base-line-height-base);
 }
 
 h1,
@@ -684,10 +684,10 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--cone-base-color-heading);
-  font-family: var(--cone-font-family-heading);
-  font-weight: var(--cone-font-weight-heading);
-  line-height: var(--cone-line-height-heading);
+  color: var(--base-base-color-heading);
+  font-family: var(--base-font-family-heading);
+  font-weight: var(--base-font-weight-heading);
+  line-height: var(--base-line-height-heading);
 }
 
 h1 {
@@ -733,7 +733,7 @@ ol li {
 }
 ul li::marker,
 ol li::marker {
-  color: var(--cone-base-color-marker);
+  color: var(--base-base-color-marker);
 }
 
 li > ul,
@@ -742,7 +742,7 @@ li > ol {
 }
 
 dl dt {
-  color: var(--cone-base-color-heading);
+  color: var(--base-base-color-heading);
   font-weight: bold;
 }
 dl dd {
@@ -753,7 +753,7 @@ dl dd + dt {
 }
 
 .quote {
-  border-inline-start: 0.5rem solid var(--cone-base-color-blockquote-border);
+  border-inline-start: 0.5rem solid var(--base-base-color-blockquote-border);
   padding-inline-start: 1.5rem;
 }
 .quote > * {
@@ -772,7 +772,7 @@ dl dd + dt {
 }
 
 blockquote {
-  border-inline-start: 0.5rem solid var(--cone-base-color-blockquote-border);
+  border-inline-start: 0.5rem solid var(--base-base-color-blockquote-border);
   margin-inline-start: 0;
   padding-inline-start: 1.5rem;
 }
@@ -791,27 +791,27 @@ abbr[title] {
 }
 
 mark {
-  background-color: var(--cone-base-color-mark-background);
-  border-radius: var(--cone-border-radius);
-  color: var(--cone-base-color-mark-foreground);
-  padding: var(--cone-inline-padding);
+  background-color: var(--base-base-color-mark-background);
+  border-radius: var(--base-border-radius);
+  color: var(--base-base-color-mark-foreground);
+  padding: var(--base-inline-padding);
 }
 
 code,
 kbd,
 samp {
-  background-color: var(--cone-base-color-code-background);
-  border-radius: var(--cone-border-radius);
-  color: var(--cone-base-color-code-foreground);
-  padding: var(--cone-inline-padding);
+  background-color: var(--base-base-color-code-background);
+  border-radius: var(--base-border-radius);
+  color: var(--base-base-color-code-foreground);
+  padding: var(--base-inline-padding);
 }
 
 strong {
-  color: var(--cone-base-color-strong);
+  color: var(--base-base-color-strong);
 }
 
 .lead {
-  font-size: var(--cone-font-size-lead);
+  font-size: var(--base-font-size-lead);
 }
 
 .hidden,
@@ -844,34 +844,34 @@ strong {
 }
 
 .btn {
-  --cone-border-radius: 2rem;
-  --cone-border-width: 1px;
-  --cone-font-family: Manrope, sans-serif;
-  --cone-font-size: 1rem;
-  --cone-font-weight: 600;
-  --cone-gap: 0.5rem;
-  --cone-icon-padding: 0.85em;
-  --cone-icon-size: 1em;
-  --cone-padding: 0.85em 1.75em;
-  --cone-shadow-size: 0.25rem;
+  --base-border-radius: 2rem;
+  --base-border-width: 1px;
+  --base-font-family: Manrope, sans-serif;
+  --base-font-size: 1rem;
+  --base-font-weight: 600;
+  --base-gap: 0.5rem;
+  --base-icon-padding: 0.85em;
+  --base-icon-size: 1em;
+  --base-padding: 0.85em 1.75em;
+  --base-shadow-size: 0.25rem;
   align-items: center;
-  border-radius: var(--cone-border-radius);
+  border-radius: var(--base-border-radius);
   border-style: solid;
-  border-width: var(--cone-border-width);
+  border-width: var(--base-border-width);
   cursor: pointer;
   display: inline-flex;
-  font-family: var(--cone-font-family);
-  font-size: var(--cone-font-size);
-  font-weight: var(--cone-font-weight);
-  gap: var(--cone-gap);
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+  gap: var(--base-gap);
   justify-content: center;
   line-height: 1;
-  padding: var(--cone-padding);
+  padding: var(--base-padding);
   text-align: start;
   text-decoration: none;
-  transition-duration: var(--cone-duration);
+  transition-duration: var(--base-duration);
   transition-property: background-color, border-color, box-shadow, color;
-  transition-timing-function: var(--cone-timing-function);
+  transition-timing-function: var(--base-timing-function);
 }
 
 .btn:focus {
@@ -885,42 +885,42 @@ strong {
 }
 
 .btn--icon {
-  padding: var(--cone-icon-padding);
+  padding: var(--base-icon-padding);
 }
 .btn--icon.btn--sm {
-  padding: var(--cone-icon-padding);
+  padding: var(--base-icon-padding);
 }
 .btn--icon.btn--lg {
-  padding: var(--cone-icon-padding);
+  padding: var(--base-icon-padding);
 }
 
 .btn__icon {
-  block-size: var(--cone-icon-size);
+  block-size: var(--base-icon-size);
   flex-shrink: 0;
-  inline-size: var(--cone-icon-size);
+  inline-size: var(--base-icon-size);
   pointer-events: none;
 }
 .btn__icon--sm {
-  block-size: var(--cone-icon-size);
-  inline-size: var(--cone-icon-size);
+  block-size: var(--base-icon-size);
+  inline-size: var(--base-icon-size);
 }
 
 .btn--sm {
-  --cone-font-size: 0.8rem;
-  --cone-gap: 0.25rem;
-  --cone-icon-padding: 0.5em;
-  --cone-icon-size: 0.8rem;
-  --cone-padding: 0.5em 0.75em;
-  font-size: var(--cone-font-size);
-  gap: var(--cone-gap);
-  padding: var(--cone-padding);
+  --base-font-size: 0.8rem;
+  --base-gap: 0.25rem;
+  --base-icon-padding: 0.5em;
+  --base-icon-size: 0.8rem;
+  --base-padding: 0.5em 0.75em;
+  font-size: var(--base-font-size);
+  gap: var(--base-gap);
+  padding: var(--base-padding);
 }
 
 .btn--lg {
-  --cone-font-size: 1.15rem;
-  --cone-gap: 0.5rem;
-  --cone-icon-padding: 0.9em;
-  --cone-padding: clamp(0.9em, 3vw, 1em) clamp(1.5em, 3vw, 1.75em);
+  --base-font-size: 1.15rem;
+  --base-gap: 0.5rem;
+  --base-icon-padding: 0.9em;
+  --base-padding: clamp(0.9em, 3vw, 1em) clamp(1.5em, 3vw, 1.75em);
 }
 
 .btn--block {
@@ -928,140 +928,140 @@ strong {
 }
 
 .btn--primary {
-  background-color: var(--cone-btn-color-primary-background);
-  border-color: var(--cone-btn-color-primary-background);
-  color: var(--cone-btn-color-primary-foreground);
+  background-color: var(--base-btn-color-primary-background);
+  border-color: var(--base-btn-color-primary-background);
+  color: var(--base-btn-color-primary-foreground);
 }
 .btn--primary:focus-visible {
-  outline: 2px solid var(--cone-btn-color-primary-background);
+  outline: 2px solid var(--base-btn-color-primary-background);
   outline-offset: 2px;
 }
 .btn--primary:hover {
-  background-color: var(--cone-btn-color-primary-background-hover);
-  border-color: var(--cone-btn-color-primary-background-hover);
-  color: var(--cone-btn-color-primary-foreground);
+  background-color: var(--base-btn-color-primary-background-hover);
+  border-color: var(--base-btn-color-primary-background-hover);
+  color: var(--base-btn-color-primary-foreground);
 }
 .btn--primary-shadow {
-  box-shadow: 0 0.55em 1em -0.2em var(--cone-btn-color-primary-shadow), 0 0.15em 0.35em -0.185em var(--cone-btn-color-primary-shadow);
+  box-shadow: 0 0.55em 1em -0.2em var(--base-btn-color-primary-shadow), 0 0.15em 0.35em -0.185em var(--base-btn-color-primary-shadow);
 }
 
 .btn--secondary {
-  background-color: var(--cone-btn-color-secondary-background);
-  border-color: var(--cone-btn-color-secondary-background);
-  color: var(--cone-btn-color-secondary-foreground);
+  background-color: var(--base-btn-color-secondary-background);
+  border-color: var(--base-btn-color-secondary-background);
+  color: var(--base-btn-color-secondary-foreground);
 }
 .btn--secondary:focus-visible {
-  outline: 2px solid var(--cone-btn-color-secondary-background);
+  outline: 2px solid var(--base-btn-color-secondary-background);
   outline-offset: 2px;
 }
 .btn--secondary:hover {
-  background-color: var(--cone-btn-color-secondary-background-hover);
-  border-color: var(--cone-btn-color-secondary-background-hover);
-  color: var(--cone-btn-color-secondary-foreground);
+  background-color: var(--base-btn-color-secondary-background-hover);
+  border-color: var(--base-btn-color-secondary-background-hover);
+  color: var(--base-btn-color-secondary-foreground);
 }
 .btn--secondary-shadow {
-  box-shadow: 0 0.55em 1em -0.2em var(--cone-btn-color-secondary-shadow), 0 0.15em 0.35em -0.185em var(--cone-btn-color-secondary-shadow);
+  box-shadow: 0 0.55em 1em -0.2em var(--base-btn-color-secondary-shadow), 0 0.15em 0.35em -0.185em var(--base-btn-color-secondary-shadow);
 }
 
 .btn--outline-primary {
   background-color: transparent;
-  border-color: var(--cone-btn-color-primary-background);
-  color: var(--cone-btn-color-primary-background);
+  border-color: var(--base-btn-color-primary-background);
+  color: var(--base-btn-color-primary-background);
 }
 .btn--outline-primary:focus-visible {
-  outline: 2px solid var(--cone-btn-color-primary-background);
+  outline: 2px solid var(--base-btn-color-primary-background);
   outline-offset: 2px;
 }
 .btn--outline-primary:hover {
-  background-color: var(--cone-btn-color-primary-background);
-  border-color: var(--cone-btn-color-primary-background);
-  color: var(--cone-btn-color-primary-outline-foreground-hover);
+  background-color: var(--base-btn-color-primary-background);
+  border-color: var(--base-btn-color-primary-background);
+  color: var(--base-btn-color-primary-outline-foreground-hover);
 }
 
 .btn--outline-secondary {
   background-color: transparent;
-  border-color: var(--cone-btn-color-secondary-background);
-  color: var(--cone-btn-color-secondary-background);
+  border-color: var(--base-btn-color-secondary-background);
+  color: var(--base-btn-color-secondary-background);
 }
 .btn--outline-secondary:focus-visible {
-  outline: 2px solid var(--cone-btn-color-secondary-background);
+  outline: 2px solid var(--base-btn-color-secondary-background);
   outline-offset: 2px;
 }
 .btn--outline-secondary:hover {
-  background-color: var(--cone-btn-color-secondary-background);
-  border-color: var(--cone-btn-color-secondary-background);
-  color: var(--cone-btn-color-secondary-foreground);
+  background-color: var(--base-btn-color-secondary-background);
+  border-color: var(--base-btn-color-secondary-background);
+  color: var(--base-btn-color-secondary-foreground);
 }
 
 .form-label {
-  color: var(--cone-form-color-label);
+  color: var(--base-form-color-label);
   line-height: 1.5;
   text-align: start;
 }
 
 .form-control {
   --webkit-date-line-height: 1.375;
-  --cone-border-radius: 0.425rem;
-  --cone-border-width: 1px;
-  --cone-font-size: 1rem;
-  --cone-line-height: 1.5;
-  --cone-padding: 0.5em 0.75em;
-  --cone-textarea-block-size: 6rem;
+  --base-border-radius: 0.425rem;
+  --base-border-width: 1px;
+  --base-font-size: 1rem;
+  --base-line-height: 1.5;
+  --base-padding: 0.5em 0.75em;
+  --base-textarea-block-size: 6rem;
   appearance: none;
-  background-color: var(--cone-form-color-background);
-  border: var(--cone-border-width) solid var(--cone-form-color-border);
-  border-radius: var(--cone-border-radius);
+  background-color: var(--base-form-color-background);
+  border: var(--base-border-width) solid var(--base-form-color-border);
+  border-radius: var(--base-border-radius);
   box-sizing: border-box;
-  color: var(--cone-form-color-text);
+  color: var(--base-form-color-text);
   display: block;
-  font-size: var(--cone-font-size);
+  font-size: var(--base-font-size);
   inline-size: 100%;
-  line-height: var(--cone-line-height);
-  padding: var(--cone-padding);
-  transition-duration: var(--cone-duration);
+  line-height: var(--base-line-height);
+  padding: var(--base-padding);
+  transition-duration: var(--base-duration);
   transition-property: border, box-shadow;
-  transition-timing-function: var(--cone-timing-function);
+  transition-timing-function: var(--base-timing-function);
 }
 .form-control::placeholder {
-  color: var(--cone-form-color-placeholder);
+  color: var(--base-form-color-placeholder);
 }
 .form-control::-webkit-datetime-edit {
   line-height: var(--webkit-date-line-height);
 }
 .form-control:focus {
-  border-color: var(--cone-form-color-border-focus);
-  box-shadow: 0 0 0 0.25rem var(--cone-form-color-ring-focus);
+  border-color: var(--base-form-color-border-focus);
+  box-shadow: 0 0 0 0.25rem var(--base-form-color-ring-focus);
   outline: 2px solid transparent;
 }
 .form-control[type=color] {
-  --cone-aspect-ratio: 1;
-  --cone-block-size: 100%;
-  --cone-inline-size: 2.625rem;
-  --cone-padding: 0.5em;
-  aspect-ratio: var(--cone-aspect-ratio);
-  block-size: var(--cone-block-size);
-  inline-size: var(--cone-inline-size);
-  padding: var(--cone-padding);
+  --base-aspect-ratio: 1;
+  --base-block-size: 100%;
+  --base-inline-size: 2.625rem;
+  --base-padding: 0.5em;
+  aspect-ratio: var(--base-aspect-ratio);
+  block-size: var(--base-block-size);
+  inline-size: var(--base-inline-size);
+  padding: var(--base-padding);
 }
 .form-control[type=color]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 .form-control[type=color]::-moz-color-swatch {
   border: 0;
-  border-radius: var(--cone-border-radius);
+  border-radius: var(--base-border-radius);
 }
 .form-control[type=color]::-webkit-color-swatch {
   border: 0;
-  border-radius: var(--cone-border-radius);
+  border-radius: var(--base-border-radius);
 }
 .form-control[disabled], .form-control[disabled=true] {
-  background-color: var(--cone-form-color-background-disabled);
-  border-color: var(--cone-form-color-border-disabled);
+  background-color: var(--base-form-color-background-disabled);
+  border-color: var(--base-form-color-border-disabled);
   cursor: not-allowed;
 }
 textarea.form-control {
-  block-size: var(--cone-textarea-block-size);
-  min-block-size: var(--cone-textarea-block-size);
+  block-size: var(--base-textarea-block-size);
+  min-block-size: var(--base-textarea-block-size);
   resize: vertical;
 }
 
@@ -1076,42 +1076,42 @@ html[dir=rtl] .form-control--valid, html[dir=rtl] .form-control--invalid {
 }
 .form-control--valid {
   background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"%3e%3cpath d="M12,2c5.519,0 10,4.481 10,10c0,5.519 -4.481,10 -10,10c-5.519,0 -10,-4.481 -10,-10c0,-5.519 4.481,-10 10,-10Zm0,1.667c4.599,-0 8.333,3.734 8.333,8.333c0,4.599 -3.734,8.333 -8.333,8.333c-4.599,0 -8.333,-3.734 -8.333,-8.333c-0,-4.599 3.734,-8.333 8.333,-8.333Zm-1.476,10.182l-2.984,-2.984c-0.065,-0.065 -0.17,-0.065 -0.235,0l-0.943,0.943c-0.065,0.065 -0.065,0.171 -0,0.236l4.043,4.042c0.033,0.033 0.076,0.05 0.119,0.049c0.044,0.001 0.087,-0.016 0.12,-0.049l6.994,-6.994c0.065,-0.065 0.065,-0.17 0,-0.235l-0.943,-0.943c-0.065,-0.065 -0.17,-0.065 -0.235,-0l-5.936,5.935Z" style="fill:hsl%28150, 100%, 33%%29;"/%3e%3c/svg%3e');
-  border-color: var(--cone-alert-color-success);
+  border-color: var(--base-alert-color-success);
 }
 .form-control--valid:focus {
-  border-color: var(--cone-form-color-valid);
-  box-shadow: 0 0 0 0.25rem var(--cone-form-color-valid-focus-ring);
+  border-color: var(--base-form-color-valid);
+  box-shadow: 0 0 0 0.25rem var(--base-form-color-valid-focus-ring);
   outline: 2px solid transparent;
 }
 .form-control--invalid {
   background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"%3e%3cpath d="M12,2c5.519,0 10,4.481 10,10c0,5.519 -4.481,10 -10,10c-5.519,0 -10,-4.481 -10,-10c0,-5.519 4.481,-10 10,-10Zm0,1.667c4.599,-0 8.333,3.734 8.333,8.333c0,4.599 -3.734,8.333 -8.333,8.333c-4.599,0 -8.333,-3.734 -8.333,-8.333c-0,-4.599 3.734,-8.333 8.333,-8.333Zm0.813,11.649c-0,-0.081 -0.065,-0.146 -0.146,-0.146l-1.334,0c-0.081,0 -0.146,0.065 -0.146,0.146l0,1.169c0,0.08 0.065,0.146 0.146,0.146l1.334,-0c0.081,-0 0.146,-0.066 0.146,-0.146l-0,-1.169Zm-0,-7.784c-0,-0.09 -0.073,-0.163 -0.163,-0.163l-1.3,0c-0.09,0 -0.163,0.073 -0.163,0.163l0,6.351c0,0.09 0.073,0.163 0.163,0.163l1.3,-0c0.09,-0 0.163,-0.073 0.163,-0.163l-0,-6.351Z" style="fill:hsl%280, 71%, 51%%29;"/%3e%3c/svg%3e');
-  border-color: var(--cone-alert-color-danger);
+  border-color: var(--base-alert-color-danger);
 }
 .form-control--invalid:focus {
-  border-color: var(--cone-form-color-invalid);
-  box-shadow: 0 0 0 0.25rem var(--cone-form-color-invalid-focus-ring);
+  border-color: var(--base-form-color-invalid);
+  box-shadow: 0 0 0 0.25rem var(--base-form-color-invalid-focus-ring);
   outline: 2px solid transparent;
 }
 .form-control--sm {
   --webkit-date-line-height: 1.36;
-  --cone-border-radius: 0.35em;
-  --cone-padding: 0.25em 0.75em;
+  --base-border-radius: 0.35em;
+  --base-padding: 0.25em 0.75em;
 }
 .form-control--sm[type=color] {
-  --cone-aspect-ratio: 1;
-  --cone-block-size: 100%;
-  --cone-inline-size: 1.925rem;
-  --cone-padding: 0.25em;
+  --base-aspect-ratio: 1;
+  --base-block-size: 100%;
+  --base-inline-size: 1.925rem;
+  --base-padding: 0.25em;
 }
 .form-control--lg {
   --webkit-date-line-height: 1.387;
-  --cone-padding: 0.65em 1em;
+  --base-padding: 0.65em 1em;
 }
 .form-control--lg[type=color] {
-  --cone-aspect-ratio: 1;
-  --cone-block-size: 100%;
-  --cone-inline-size: 3.204rem;
-  --cone-padding: 0.5em;
+  --base-aspect-ratio: 1;
+  --base-block-size: 100%;
+  --base-inline-size: 3.204rem;
+  --base-padding: 0.5em;
 }
 
 select.form-control:not([multiple]):not([size]) {
@@ -1126,13 +1126,13 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 
 .form-check {
-  --cone-border-radius: 0.425rem;
-  --cone-border-width: 1px;
-  --cone-font-size: 1.125rem;
-  --cone-line-height: 1.5;
-  --cone-margin-block: 0.1em;
-  --cone-vertical-alignment: center;
-  align-items: var(--cone-vertical-alignment);
+  --base-border-radius: 0.425rem;
+  --base-border-width: 1px;
+  --base-font-size: 1.125rem;
+  --base-line-height: 1.5;
+  --base-margin-block: 0.1em;
+  --base-vertical-alignment: center;
+  align-items: var(--base-vertical-alignment);
   display: inline-flex;
   gap: 0.5rem;
 }
@@ -1146,46 +1146,46 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 
 .form-check--sm {
-  --cone-border-radius: 0.35em;
-  --cone-padding: 0.25em 0.75em;
+  --base-border-radius: 0.35em;
+  --base-padding: 0.25em 0.75em;
 }
 .form-check--sm .form-check__control {
-  font-size: var(--cone-font-size);
+  font-size: var(--base-font-size);
 }
 
 .form-check--lg {
-  --cone-padding: 0.65em 1em;
+  --base-padding: 0.65em 1em;
 }
 .form-check__control {
   appearance: none;
-  background-color: var(--cone-form-color-background);
+  background-color: var(--base-form-color-background);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   block-size: 1em;
-  border: var(--cone-border-width) solid var(--cone-form-color-border);
+  border: var(--base-border-width) solid var(--base-form-color-border);
   flex-shrink: 0;
-  font-size: var(--cone-font-size);
+  font-size: var(--base-font-size);
   inline-size: 1em;
   line-height: 1;
-  margin-block: var(--cone-margin-block);
-  transition-duration: var(--cone-duration);
+  margin-block: var(--base-margin-block);
+  transition-duration: var(--base-duration);
   transition-property: border, box-shadow;
-  transition-timing-function: var(--cone-timing-function);
+  transition-timing-function: var(--base-timing-function);
 }
 .form-check__control[type=radio] {
   border-radius: 50%;
 }
 .form-check__control[type=checkbox] {
-  border-radius: var(--cone-border-radius);
+  border-radius: var(--base-border-radius);
 }
 .form-check__control:focus-visible {
-  outline: 2px solid var(--cone-form-color-check-focus-ring);
+  outline: 2px solid var(--base-form-color-check-focus-ring);
   outline-offset: 2px;
 }
 .form-check__control:checked {
-  background-color: var(--cone-form-color-check-background);
-  border-color: var(--cone-form-color-check-background);
+  background-color: var(--base-form-color-check-background);
+  border-color: var(--base-form-color-check-background);
 }
 .form-check__control:checked[type=radio] {
   background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3e%3ccircle cx="12" cy="12" r="6" style="fill:hsl%280, 0%, 100%%29;"/%3e%3c/svg%3e');
@@ -1195,12 +1195,12 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 .form-check__control:indeterminate[type=checkbox] {
   background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"%3e%3cpath d="M19.5,11.1c-0,-0.331 -0.269,-0.6 -0.6,-0.6l-13.8,0c-0.331,0 -0.6,0.269 -0.6,0.6l0,1.8c0,0.331 0.269,0.6 0.6,0.6l13.8,0c0.331,0 0.6,-0.269 0.6,-0.6l-0,-1.8Z" style="fill:hsl%280, 0%, 100%%29;"/%3e%3c/svg%3e');
-  background-color: var(--cone-form-color-check-background);
-  border-color: var(--cone-form-color-check-background);
+  background-color: var(--base-form-color-check-background);
+  border-color: var(--base-form-color-check-background);
 }
 .form-check__control:disabled, .form-check__control.disabled {
-  background-color: var(--cone-form-color-background-disabled);
-  border-color: var(--cone-form-color-border-disabled);
+  background-color: var(--base-form-color-background-disabled);
+  border-color: var(--base-form-color-border-disabled);
   cursor: not-allowed;
 }
 .form-check__control:disabled + .form-check__label, .form-check__control.disabled + .form-check__label {
@@ -1208,48 +1208,48 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 
 .form-check__label {
-  line-height: var(--cone-line-height);
+  line-height: var(--base-line-height);
 }
 
 .form-group-label {
-  --cone-border-radius: 0.425rem;
-  --cone-border-width: 1px;
+  --base-border-radius: 0.425rem;
+  --base-border-width: 1px;
   align-items: center;
-  background-color: var(--cone-form-color-group-label-background);
-  border: var(--cone-border-width) solid var(--cone-form-color-border);
-  border-radius: var(--cone-border-radius);
-  color: var(--cone-form-color-group-label-foreground);
+  background-color: var(--base-form-color-group-label-background);
+  border: var(--base-border-width) solid var(--base-form-color-border);
+  border-radius: var(--base-border-radius);
+  color: var(--base-form-color-group-label-foreground);
   display: flex;
   padding-inline: 1rem;
 }
 
 .form-group {
-  --cone-gap: 0.5rem;
+  --base-gap: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: var(--cone-gap);
+  gap: var(--base-gap);
 }
 .form-group--horizontal-check {
-  --cone-gap: 1rem;
+  --base-gap: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--cone-gap);
+  gap: var(--base-gap);
 }
 .form-group--vertical-check {
-  --cone-gap: 1rem;
+  --base-gap: 1rem;
   align-items: start;
   flex-direction: column;
-  gap: var(--cone-gap);
+  gap: var(--base-gap);
 }
 .form-group--row {
-  --cone-container-inline-size: 38rem;
-  --cone-gap: 0.25rem 1rem;
-  --cone-label-inline-size: 10rem;
-  --cone-vertical-alignment: center;
-  align-items: var(--cone-vertical-alignment);
+  --base-container-inline-size: 38rem;
+  --base-gap: 0.25rem 1rem;
+  --base-label-inline-size: 10rem;
+  --base-vertical-alignment: center;
+  align-items: var(--base-vertical-alignment);
   display: grid;
-  gap: var(--cone-gap);
+  gap: var(--base-gap);
   grid-template-columns: minmax(0, 1fr);
 }
 .form-group--row\:vertical-center {
@@ -1260,7 +1260,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 @container form-group-container (inline-size > 38rem) {
   .form-group--row {
-    grid-template-columns: minmax(0, var(--cone-label-inline-size)) minmax(0, 1fr);
+    grid-template-columns: minmax(0, var(--base-label-inline-size)) minmax(0, 1fr);
   }
 }
 @container form-group-container (inline-size > 38rem) {
@@ -1278,18 +1278,18 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 .form-group--stacked > *:first-child {
   border-start-end-radius: 0;
-  border-start-start-radius: var(--cone-border-radius);
+  border-start-start-radius: var(--base-border-radius);
   border-end-end-radius: 0;
-  border-end-start-radius: var(--cone-border-radius);
+  border-end-start-radius: var(--base-border-radius);
 }
 .form-group--stacked > *:last-child {
-  border-start-end-radius: var(--cone-border-radius);
+  border-start-end-radius: var(--base-border-radius);
   border-start-start-radius: 0;
-  border-end-end-radius: var(--cone-border-radius);
+  border-end-end-radius: var(--base-border-radius);
   border-end-start-radius: 0;
 }
 .form-group--stacked > *:only-child {
-  border-radius: var(--cone-border-radius);
+  border-radius: var(--base-border-radius);
 }
 .form-group--stacked > *:focus {
   z-index: 2;
@@ -1309,121 +1309,121 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 
 :root[data-theme-mode=dark] {
-  --cone-base-color-background: hsl(192, 100%, 7%);
-  --cone-base-color-blockquote-border: hsl(194, 85%, 56%);
-  --cone-base-color-border: hsla(0, 0%, 100%, 0.08);
-  --cone-base-color-code-background: hsl(207, 64%, 18%);
-  --cone-base-color-code-foreground: hsl(0, 0%, 95%);
-  --cone-base-color-heading: hsl(0, 0%, 95%);
-  --cone-base-color-link: hsl(194, 85%, 56%);
-  --cone-base-color-link-hover: hsl(194, 85%, 64.8%);
-  --cone-base-color-mark-background: hsl(50, 100%, 80%);
-  --cone-base-color-mark-foreground: hsl(192, 100%, 7%);
-  --cone-base-color-marker: hsl(194, 85%, 56%);
-  --cone-base-color-primary: hsl(194, 85%, 56%);
-  --cone-base-color-secondary: hsl(326, 100%, 65%);
-  --cone-base-color-strong: hsl(0, 0%, 95%);
-  --cone-base-color-text: hsl(0, 0%, 90%);
+  --base-base-color-background: hsl(192, 100%, 7%);
+  --base-base-color-blockquote-border: hsl(194, 85%, 56%);
+  --base-base-color-border: hsla(0, 0%, 100%, 0.08);
+  --base-base-color-code-background: hsl(207, 64%, 18%);
+  --base-base-color-code-foreground: hsl(0, 0%, 95%);
+  --base-base-color-heading: hsl(0, 0%, 95%);
+  --base-base-color-link: hsl(194, 85%, 56%);
+  --base-base-color-link-hover: hsl(194, 85%, 64.8%);
+  --base-base-color-mark-background: hsl(50, 100%, 80%);
+  --base-base-color-mark-foreground: hsl(192, 100%, 7%);
+  --base-base-color-marker: hsl(194, 85%, 56%);
+  --base-base-color-primary: hsl(194, 85%, 56%);
+  --base-base-color-secondary: hsl(326, 100%, 65%);
+  --base-base-color-strong: hsl(0, 0%, 95%);
+  --base-base-color-text: hsl(0, 0%, 90%);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-btn-color-pagination-background: hsl(192, 100%, 9%);
-  --cone-btn-color-pagination-background-hover: hsl(194, 85%, 56%);
-  --cone-btn-color-pagination-focus-ring: hsl(194, 85%, 56%);
-  --cone-btn-color-pagination-foreground: hsl(0, 0%, 95%);
-  --cone-btn-color-pagination-foreground-hover: hsl(0, 0%, 95%);
-  --cone-btn-color-primary-background: hsl(194, 85%, 56%);
-  --cone-btn-color-primary-background-hover: hsl(194, 85%, 66%);
-  --cone-btn-color-primary-foreground: hsl(192, 100%, 0%);
-  --cone-btn-color-primary-outline-foreground-hover: hsl(192, 100%, 0%);
-  --cone-btn-color-primary-shadow: hsl(194, 100%, 27%);
-  --cone-btn-color-secondary-background: hsl(326, 100%, 65%);
-  --cone-btn-color-secondary-background-hover: hsl(326, 100%, 70%);
-  --cone-btn-color-secondary-foreground: hsl(0, 0%, 95%);
-  --cone-btn-color-secondary-shadow: hsl(326, 100%, 18%);
+  --base-btn-color-pagination-background: hsl(192, 100%, 9%);
+  --base-btn-color-pagination-background-hover: hsl(194, 85%, 56%);
+  --base-btn-color-pagination-focus-ring: hsl(194, 85%, 56%);
+  --base-btn-color-pagination-foreground: hsl(0, 0%, 95%);
+  --base-btn-color-pagination-foreground-hover: hsl(0, 0%, 95%);
+  --base-btn-color-primary-background: hsl(194, 85%, 56%);
+  --base-btn-color-primary-background-hover: hsl(194, 85%, 66%);
+  --base-btn-color-primary-foreground: hsl(192, 100%, 0%);
+  --base-btn-color-primary-outline-foreground-hover: hsl(192, 100%, 0%);
+  --base-btn-color-primary-shadow: hsl(194, 100%, 27%);
+  --base-btn-color-secondary-background: hsl(326, 100%, 65%);
+  --base-btn-color-secondary-background-hover: hsl(326, 100%, 70%);
+  --base-btn-color-secondary-foreground: hsl(0, 0%, 95%);
+  --base-btn-color-secondary-shadow: hsl(326, 100%, 18%);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-cta-color-background: hsl(192, 100%, 6%);
+  --base-cta-color-background: hsl(192, 100%, 6%);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-form-color-background: hsl(192, 100%, 11.65%);
-  --cone-form-color-background-disabled: hsl(192, 100%, 7%);
-  --cone-form-color-border: hsla(0, 0%, 100%, 0.08);
-  --cone-form-color-border-disabled: hsla(0, 0%, 100%, 0.08);
-  --cone-form-color-border-focus: hsl(194, 85%, 56%);
-  --cone-form-color-check-background: hsl(194, 85%, 56%);
-  --cone-form-color-check-focus-ring: hsl(194, 85%, 56%);
-  --cone-form-color-check-foreground: hsl(192, 100%, 7%);
-  --cone-form-color-invalid: hsl(0, 71%, 51%);
-  --cone-form-color-invalid-focus-ring: hsla(0, 71%, 51%, 0.25);
-  --cone-form-color-label: hsl(0, 0%, 95%);
-  --cone-form-color-legend: hsl(0, 0%, 95%);
-  --cone-form-color-placeholder: hsl(0, 0%, 60%);
-  --cone-form-color-range-thumb-background: hsl(194, 85%, 56%);
-  --cone-form-color-range-thumb-focus-ring: hsl(194, 85%, 56%);
-  --cone-form-color-range-track-background: hsla(0, 0%, 100%, 0.08);
-  --cone-form-color-ring-focus: hsla(194, 85%, 56%, 0.25);
-  --cone-form-color-select-foreground: hsl(0, 0%, 100%);
-  --cone-form-color-text: hsl(0, 0%, 90%);
-  --cone-form-color-valid: hsl(150, 100%, 33%);
-  --cone-form-color-valid-focus-ring: hsla(150, 100%, 33%, 0.25);
+  --base-form-color-background: hsl(192, 100%, 11.65%);
+  --base-form-color-background-disabled: hsl(192, 100%, 7%);
+  --base-form-color-border: hsla(0, 0%, 100%, 0.08);
+  --base-form-color-border-disabled: hsla(0, 0%, 100%, 0.08);
+  --base-form-color-border-focus: hsl(194, 85%, 56%);
+  --base-form-color-check-background: hsl(194, 85%, 56%);
+  --base-form-color-check-focus-ring: hsl(194, 85%, 56%);
+  --base-form-color-check-foreground: hsl(192, 100%, 7%);
+  --base-form-color-invalid: hsl(0, 71%, 51%);
+  --base-form-color-invalid-focus-ring: hsla(0, 71%, 51%, 0.25);
+  --base-form-color-label: hsl(0, 0%, 95%);
+  --base-form-color-legend: hsl(0, 0%, 95%);
+  --base-form-color-placeholder: hsl(0, 0%, 60%);
+  --base-form-color-range-thumb-background: hsl(194, 85%, 56%);
+  --base-form-color-range-thumb-focus-ring: hsl(194, 85%, 56%);
+  --base-form-color-range-track-background: hsla(0, 0%, 100%, 0.08);
+  --base-form-color-ring-focus: hsla(194, 85%, 56%, 0.25);
+  --base-form-color-select-foreground: hsl(0, 0%, 100%);
+  --base-form-color-text: hsl(0, 0%, 90%);
+  --base-form-color-valid: hsl(150, 100%, 33%);
+  --base-form-color-valid-focus-ring: hsla(150, 100%, 33%, 0.25);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-header-color-background: hsla(192, 100%, 7%, 0.95);
+  --base-header-color-background: hsla(192, 100%, 7%, 0.95);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-hero-color-gradient-start: hsl(205, 100%, 47%);
-  --cone-hero-color-gradient-end: hsl(194, 85%, 56%);
+  --base-hero-color-gradient-start: hsl(205, 100%, 47%);
+  --base-hero-color-gradient-end: hsl(194, 85%, 56%);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-highlighted-color-background: hsl(192, 100%, 6%);
+  --base-highlighted-color-background: hsl(192, 100%, 6%);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-navigation-color-arrow: hsla(0, 0%, 100%, 0.25);
+  --base-navigation-color-arrow: hsla(0, 0%, 100%, 0.25);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-selection-color-background: hsl(194, 85%, 56%);
-  --cone-selection-color-foreground: hsl(192, 100%, 7%);
+  --base-selection-color-background: hsl(194, 85%, 56%);
+  --base-selection-color-foreground: hsl(192, 100%, 7%);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-scrollbar-color-thumb-background: hsla(0, 0%, 100%, 0.15);
-  --cone-scrollbar-color-thumb-background-hover: hsla(0, 0%, 100%, 0.25);
-  --cone-scrollbar-color-track-background: hsla(0, 0%, 100%, 0.05);
+  --base-scrollbar-color-thumb-background: hsla(0, 0%, 100%, 0.15);
+  --base-scrollbar-color-thumb-background-hover: hsla(0, 0%, 100%, 0.25);
+  --base-scrollbar-color-track-background: hsla(0, 0%, 100%, 0.05);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-prism-color-color: hsl(217, 34%, 88%);
-  --cone-prism-color-background: hsl(207, 83%, 10%);
-  --cone-prism-color-comment: hsl(180, 9%, 55%);
-  --cone-prism-color-punctuation: hsl(276, 68%, 75%);
-  --cone-prism-color-namespace: hsl(197, 31%, 77%);
-  --cone-prism-color-deleted: hsla(1, 83%, 63%, 0.56);
-  --cone-prism-color-boolean: hsl(350, 100%, 67%);
-  --cone-prism-color-number: hsl(14, 90%, 70%);
-  --cone-prism-color-constant: hsl(221, 100%, 75%);
-  --cone-prism-color-class-name: hsl(33, 100%, 77%);
-  --cone-prism-color-regex: hsl(217, 34%, 88%);
+  --base-prism-color-color: hsl(217, 34%, 88%);
+  --base-prism-color-background: hsl(207, 83%, 10%);
+  --base-prism-color-comment: hsl(180, 9%, 55%);
+  --base-prism-color-punctuation: hsl(276, 68%, 75%);
+  --base-prism-color-namespace: hsl(197, 31%, 77%);
+  --base-prism-color-deleted: hsla(1, 83%, 63%, 0.56);
+  --base-prism-color-boolean: hsl(350, 100%, 67%);
+  --base-prism-color-number: hsl(14, 90%, 70%);
+  --base-prism-color-constant: hsl(221, 100%, 75%);
+  --base-prism-color-class-name: hsl(33, 100%, 77%);
+  --base-prism-color-regex: hsl(217, 34%, 88%);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-table-color-border: hsla(0, 0%, 100%, 0.08);
-  --cone-table-color-caption: hsl(0, 0%, 90%);
-  --cone-table-color-heading: hsl(0, 0%, 95%);
-  --cone-table-color-hover: hsla(0, 0%, 100%, 0.05);
-  --cone-table-color-text: hsl(0, 0%, 90%);
-  --cone-table-color-stripe: hsla(0, 0%, 100%, 0.025);
+  --base-table-color-border: hsla(0, 0%, 100%, 0.08);
+  --base-table-color-caption: hsl(0, 0%, 90%);
+  --base-table-color-heading: hsl(0, 0%, 95%);
+  --base-table-color-hover: hsla(0, 0%, 100%, 0.05);
+  --base-table-color-text: hsl(0, 0%, 90%);
+  --base-table-color-stripe: hsla(0, 0%, 100%, 0.025);
 }
 
 :root[data-theme-mode=dark] {
-  --cone-testimonial-color-background-hover: hsl(192, 100%, 6%);
+  --base-testimonial-color-background-hover: hsl(192, 100%, 6%);
 }
 
 [data-theme-mode=dark] {
@@ -1434,8 +1434,8 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 
 .container {
-  --inline-size: var(--cone-container-inline-size);
-  --gap: var(--cone-container-gap);
+  --inline-size: var(--base-container-inline-size);
+  --gap: var(--base-container-gap);
   inline-size: 100%;
   margin-inline: auto;
   max-inline-size: var(--inline-size);
@@ -1453,16 +1453,16 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 
 .l-post {
-  background-color: var(--cone-base-color-background);
+  background-color: var(--base-base-color-background);
 }
 .l-post > .container + .container > .l-post__inner {
-  padding-block-start: calc(var(--cone-section-gap) / 5);
+  padding-block-start: calc(var(--base-section-gap) / 5);
 }
 .l-post__inner {
   display: flex;
   flex-direction: column;
   gap: clamp(3rem, 5vw, 4.5rem);
-  padding-block: calc(var(--cone-section-gap) / 1.5) calc(var(--cone-section-gap) / 2);
+  padding-block: calc(var(--base-section-gap) / 1.5) calc(var(--base-section-gap) / 2);
 }
 @media (min-width: 80em) {
   .l-post--artist-list .l-post__list, .l-post--literature .l-post__list {
@@ -1471,14 +1471,14 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 .l-post--artist .l-post__inner {
   display: grid;
-  gap: var(--cone-container-gap);
+  gap: var(--base-container-gap);
   grid-template-columns: minmax(0, 1fr);
-  padding-block: calc(var(--cone-section-gap) / 3) calc(var(--cone-section-gap) / 2);
+  padding-block: calc(var(--base-section-gap) / 3) calc(var(--base-section-gap) / 2);
 }
 @media (min-width: 32em) {
   .l-post--artist .l-post__inner {
     grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
-    padding-block: calc(var(--cone-section-gap) / 1.5) calc(var(--cone-section-gap) / 2);
+    padding-block: calc(var(--base-section-gap) / 1.5) calc(var(--base-section-gap) / 2);
   }
 }
 @media (min-width: 48em) {
@@ -1499,7 +1499,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   display: grid;
 }
 .l-post__header ::selection {
-  background-color: var(--cone-base-color-secondary);
+  background-color: var(--base-base-color-secondary);
   color: hsl(0, 0%, 100%);
 }
 .l-post__header > * {
@@ -1511,7 +1511,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   z-index: 10;
 }
 .l-post__header .l-post__title {
-  --cone-base-color-heading: hsl(0, 0%, 100%);
+  --base-base-color-heading: hsl(0, 0%, 100%);
 }
 .l-post__background img {
   block-size: 15rem;
@@ -1527,7 +1527,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 .l-post__heading {
   display: flex;
   flex-direction: column;
-  padding-block-start: calc(var(--cone-section-gap) / 2.5);
+  padding-block-start: calc(var(--base-section-gap) / 2.5);
 }
 .l-post__heading > * {
   margin-block-end: 0;
@@ -1585,7 +1585,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 
 .l-not-found {
   align-items: center;
-  background-color: var(--cone-base-color-background);
+  background-color: var(--base-base-color-background);
   display: flex;
 }
 .l-not-found__inner {
@@ -1594,7 +1594,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   gap: 1rem;
   justify-content: center;
   min-block-size: 65dvh;
-  padding-block: var(--cone-section-gap);
+  padding-block: var(--base-section-gap);
   text-align: center;
 }
 .l-not-found__image {
@@ -1630,7 +1630,7 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 }
 .l-not-found__navigation > *:not(:last-child)::after {
   --size: 0.3em;
-  background-color: var(--cone-base-color-secondary);
+  background-color: var(--base-base-color-secondary);
   block-size: var(--size);
   border-radius: 50%;
   content: "";
@@ -1639,11 +1639,11 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   position: relative;
 }
 .l-not-found__navigation a {
-  color: var(--cone-base-color-text);
+  color: var(--base-base-color-text);
   text-decoration: none;
 }
 .l-not-found__navigation a:hover, .l-not-found__navigation a:focus {
-  color: var(--cone-base-color-link);
+  color: var(--base-base-color-link);
 }
 
 .skip-link {
@@ -1663,7 +1663,7 @@ html[style*=padding-right] .site-header {
 }
 .site-header__inner {
   align-items: center;
-  block-size: var(--cone-header-block-size);
+  block-size: var(--base-header-block-size);
   display: flex;
   gap: 1.5rem;
   justify-content: space-between;
@@ -1706,8 +1706,12 @@ html[style*=padding-right] .site-header {
   visibility: visible;
 }
 
+.hero {
+  text-align: center;
+}
 .hero__title {
-  font-size: clamp(5.95rem, 2vw + 1rem, 7rem);
+  font-size: clamp(4.25rem, 2vw + 1rem, 5rem);
+  max-inline-size: 30ch;
 }
 
 .site-navigation__btn {
@@ -1729,10 +1733,10 @@ html[style*=padding-right] .site-header {
   }
 }
 .site-navigation__btn span {
-  transition-duration: var(--cone-duration);
+  transition-duration: var(--base-duration);
   transition-property: all;
-  transition-timing-function: var(--cone-timing-function);
-  background-color: var(--cone-navigation-color-hamburger);
+  transition-timing-function: var(--base-timing-function);
+  background-color: var(--base-navigation-color-hamburger);
   block-size: 2px;
   display: flex;
   inline-size: 100%;
@@ -1741,20 +1745,20 @@ html[style*=padding-right] .site-header {
   inline-size: 75%;
 }
 .site-navigation__panel {
-  transition-duration: var(--cone-duration);
+  transition-duration: var(--base-duration);
   transition-property: opacity;
-  transition-timing-function: var(--cone-timing-function);
-  background-color: var(--cone-base-color-background);
+  transition-timing-function: var(--base-timing-function);
+  background-color: var(--base-base-color-background);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  inset: calc(var(--cone-header-block-size) - 1px) 0 auto;
+  inset: calc(var(--base-header-block-size) - 1px) 0 auto;
   justify-content: space-between;
   max-block-size: 25rem;
   opacity: 0;
   overflow-y: auto;
   padding-block: 0.5rem 1.5rem;
-  padding-inline: var(--cone-container-gap);
+  padding-inline: var(--base-container-gap);
   position: absolute;
   visibility: hidden;
   z-index: 30;
@@ -1820,16 +1824,15 @@ html[style*=padding-right] .site-header {
   position: relative;
 }
 .site-navigation .navigation-menu a {
-  transition-duration: var(--cone-duration);
+  transition-duration: var(--base-duration);
   transition-property: all;
-  transition-timing-function: var(--cone-timing-function);
-  color: var(--cone-base-color-text);
-  font-size: 0.938rem;
+  transition-timing-function: var(--base-timing-function);
+  color: var(--base-base-color-text);
   font-weight: 500;
   text-decoration: none;
 }
 .site-navigation .navigation-menu a:hover {
-  color: var(--cone-base-color-link-hover);
+  color: var(--base-base-color-link-hover);
 }
 .site-navigation .navigation-menu a:focus {
   outline-offset: 2px;
@@ -1861,7 +1864,7 @@ html[style*=padding-right] .site-header {
   outline: inherit;
   padding: 0;
   block-size: var(--size);
-  color: var(--cone-base-color-primary);
+  color: var(--base-base-color-primary);
   inline-size: var(--size);
   inset-block-start: -3px;
   outline: none;
@@ -1886,15 +1889,15 @@ html[style*=padding-right] .site-header {
 }
 @media (min-width: 80em) {
   .site-navigation .sub-menu {
-    transition-duration: var(--cone-duration);
+    transition-duration: var(--base-duration);
     transition-property: all;
-    transition-timing-function: var(--cone-timing-function);
-    background-color: var(--cone-base-color-primary);
-    border-block-start: 0.45rem solid var(--cone-base-color-primary);
+    transition-timing-function: var(--base-timing-function);
+    background-color: var(--base-base-color-primary);
+    border-block-start: 0.45rem solid var(--base-base-color-primary);
     box-shadow: 0 0 1.5rem hsla(0, 0%, 0%, 0.05);
     display: flex;
     inset: 98% auto auto 0;
-    line-height: var(--cone-line-height-md);
+    line-height: var(--base-line-height-md);
     margin-block-start: 0;
     margin-inline-start: 0;
     min-inline-size: 17rem;
@@ -1919,10 +1922,10 @@ html[style*=padding-right] .site-header {
 }
 
 .cookie-consent {
-  animation-duration: var(--cone-duration);
+  animation-duration: var(--base-duration);
   animation-fill-mode: forwards;
   animation-name: cookie-in;
-  background: var(--cone-base-color-background);
+  background: var(--base-base-color-background);
   box-shadow: 0 0 4rem hsla(0, 0%, 0%, 0.1);
   display: flex;
   flex-direction: column;
@@ -1936,7 +1939,7 @@ html[style*=padding-right] .site-header {
 }
 @media (min-width: 64em) {
   .cookie-consent {
-    border-radius: var(--cone-border-radius-lg) var(--cone-border-radius-lg) 0;
+    border-radius: var(--base-border-radius-lg) var(--base-border-radius-lg) 0;
     inset: auto clamp(1rem, 5vw, 1.5rem) clamp(1rem, 5vw, 1.5rem) auto;
     justify-content: center;
     max-inline-size: 45rem;
@@ -1944,7 +1947,7 @@ html[style*=padding-right] .site-header {
   }
 }
 .cookie-consent.animate--out {
-  animation-duration: var(--cone-duration);
+  animation-duration: var(--base-duration);
   animation-fill-mode: forwards;
   animation-name: cookie-out;
 }
@@ -1954,7 +1957,7 @@ html[style*=padding-right] .site-header {
   width: var(--size);
 }
 .cookie-consent__caption {
-  color: var(--cone-base-color-text);
+  color: var(--base-base-color-text);
 }
 .cookie-consent__caption > * {
   margin-block-end: 0;
@@ -1988,15 +1991,15 @@ html[style*=padding-right] .site-header {
   inline-size: 0.5rem;
 }
 .cookie-consent__options::-webkit-scrollbar-thumb {
-  background: var(--cone-scrollbar-color-thumb-background);
-  border-radius: var(--cone-border-radius-sm);
+  background: var(--base-scrollbar-color-thumb-background);
+  border-radius: var(--base-border-radius-sm);
 }
 .cookie-consent__options::-webkit-scrollbar-thumb:hover {
-  background: var(--cone-scrollbar-color-thumb-background-hover);
+  background: var(--base-scrollbar-color-thumb-background-hover);
 }
 .cookie-consent__options::-webkit-scrollbar-track {
-  background: var(--cone-scrollbar-color-track-background);
-  border-radius: var(--cone-border-radius-sm);
+  background: var(--base-scrollbar-color-track-background);
+  border-radius: var(--base-border-radius-sm);
 }
 .cookie-consent__options--visible {
   display: block;
@@ -2013,22 +2016,22 @@ html[style*=padding-right] .site-header {
 }
 .cookie-consent__option p,
 .cookie-consent__option ul {
-  color: var(--cone-base-color-text);
+  color: var(--base-base-color-text);
 }
 .cookie-consent__option .table-responsive::-webkit-scrollbar {
   block-size: 0.5rem;
   inline-size: 0.5rem;
 }
 .cookie-consent__option .table-responsive::-webkit-scrollbar-thumb {
-  background: var(--cone-scrollbar-color-thumb-background);
-  border-radius: var(--cone-border-radius-sm);
+  background: var(--base-scrollbar-color-thumb-background);
+  border-radius: var(--base-border-radius-sm);
 }
 .cookie-consent__option .table-responsive::-webkit-scrollbar-thumb:hover {
-  background: var(--cone-scrollbar-color-thumb-background-hover);
+  background: var(--base-scrollbar-color-thumb-background-hover);
 }
 .cookie-consent__option .table-responsive::-webkit-scrollbar-track {
-  background: var(--cone-scrollbar-color-track-background);
-  border-radius: var(--cone-border-radius-sm);
+  background: var(--base-scrollbar-color-track-background);
+  border-radius: var(--base-border-radius-sm);
 }
 .cookie-consent__option table {
   font-size: 1rem;
@@ -2088,7 +2091,7 @@ html[style*=padding-right] .site-header {
   font-weight: 700;
 }
 .post-card__title a {
-  color: var(--cone-base-color-heading);
+  color: var(--base-base-color-heading);
   text-decoration: none;
 }
 
@@ -2117,7 +2120,7 @@ html[style*=padding-right] .site-header {
   margin-inline: auto;
 }
 .heading--light {
-  --cone-base-color-heading: hsl(0, 0%, 100%);
+  --base-base-color-heading: hsl(0, 0%, 100%);
 }
 .heading__caption {
   max-inline-size: 50rem;
@@ -2130,7 +2133,7 @@ html[style*=padding-right] .site-header {
   margin-block-start: 0.5rem;
 }
 .heading__subtitle {
-  color: var(--cone-base-color-secondary);
+  color: var(--base-base-color-secondary);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -2155,7 +2158,7 @@ html[style*=padding-right] .site-header {
 }
 .restriction__caption {
   align-items: center;
-  border: 1px solid var(--cone-base-color-border);
+  border: 1px solid var(--base-base-color-border);
   display: flex;
   flex-direction: column;
   gap: 0.5rem 1.5rem;
@@ -2166,9 +2169,9 @@ html[style*=padding-right] .site-header {
   text-align: center;
 }
 .restriction__body {
-  --cone-base-color-heading: hsl(0, 0%, 100%);
-  --cone-base-color-text: hsla(0, 0%, 100%, 0.9);
-  color: var(--cone-base-color-text);
+  --base-base-color-heading: hsl(0, 0%, 100%);
+  --base-base-color-text: hsla(0, 0%, 100%, 0.9);
+  color: var(--base-base-color-text);
 }
 .restriction__body > * {
   margin-block-end: 0;
@@ -2203,7 +2206,7 @@ html[style*=padding-right] .site-header {
 }
 .post-content img,
 .post-content iframe {
-  border-radius: var(--cone-border-radius-sm);
+  border-radius: var(--base-border-radius-sm);
 }
 .post-content .gallery,
 .post-content .wp-caption,
@@ -2234,7 +2237,7 @@ html[style*=padding-right] .site-header {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem var(--cone-container-gap);
+  gap: 1.5rem var(--base-container-gap);
   justify-content: space-between;
   padding-block: calc(3rem / 2) 3rem;
 }
@@ -2254,7 +2257,7 @@ html[style*=padding-right] .site-header {
   text-decoration: none;
 }
 .site-footer__navigation a:hover {
-  color: var(--cone-base-color-link);
+  color: var(--base-base-color-link);
 }
 .site-footer__navigation a[aria-current=page] {
   font-weight: 700;
@@ -2632,10 +2635,10 @@ html[style*=padding-right] .site-header {
 
 .pswp__custom-caption {
   background: hsl(0, 0%, 100%);
-  color: var(--cone-base-color-text);
+  color: var(--base-base-color-text);
   font-size: 0.9378rem;
   inset: auto 2rem 2rem auto;
-  line-height: var(--cone-line-height-md);
+  line-height: var(--base-line-height-md);
   padding: 0.5rem 1rem;
   position: absolute;
 }
@@ -2822,9 +2825,9 @@ html[style*=padding-right] .site-header {
 }
 .splide__pagination__page {
   --size: 1rem;
-  transition-duration: var(--cone-duration);
+  transition-duration: var(--base-duration);
   transition-property: all;
-  transition-timing-function: var(--cone-timing-function);
+  transition-timing-function: var(--base-timing-function);
   background: none;
   border: 0;
   color: inherit;
@@ -2837,7 +2840,7 @@ html[style*=padding-right] .site-header {
   border: 3px solid hsl(0, 0%, 100%);
   border-radius: 50%;
   display: flex;
-  font-size: var(--cone-font-size-lead);
+  font-size: var(--base-font-size-lead);
   inline-size: var(--size);
 }
 @media (min-width: 64em) {
@@ -2939,9 +2942,9 @@ html[style*=padding-right] .site-header {
 }
 
 .gallery-item {
-  transition-duration: var(--cone-duration);
+  transition-duration: var(--base-duration);
   transition-property: all;
-  transition-timing-function: var(--cone-timing-function);
+  transition-timing-function: var(--base-timing-function);
   display: inline-flex;
   margin-block: 0;
   text-align: center;
@@ -2967,12 +2970,12 @@ html[style*=padding-right] .site-header {
   margin-inline: auto;
 }
 .wp-caption .wp-caption-text {
-  font-size: var(--cone-font-size-sm);
+  font-size: var(--base-font-size-sm);
   margin-block: 0.5rem 0;
 }
 
 .wp-caption-text {
-  line-height: var(--cone-line-height-md);
+  line-height: var(--base-line-height-md);
   text-align: start;
   text-transform: uppercase;
 }
@@ -3017,13 +3020,13 @@ html[style*=padding-right] .site-header {
 }
 
 :root {
-  --cone-container-gap: clamp(1.5rem, 5vw, 4.5rem);
-  --cone-section-gap: clamp(4rem, 6rem, 10vw);
-  --cone-header-block-size: 4rem;
+  --base-container-gap: clamp(1.5rem, 5vw, 4.5rem);
+  --base-section-gap: clamp(4rem, 6rem, 10vw);
+  --base-header-block-size: 4rem;
 }
 @media (min-width: 64em) {
   :root {
-    --cone-header-block-size: 5rem;
+    --base-header-block-size: 6rem;
   }
 }
 
