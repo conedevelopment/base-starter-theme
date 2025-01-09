@@ -2,13 +2,13 @@
 
 namespace Base\Modules;
 
-class Translations extends Module
+class Search extends Module
 {
     /**
      * Boot the module.
      */
     public function boot(): void
     {
-        __('Translation', 'base');
+        
     }
 }

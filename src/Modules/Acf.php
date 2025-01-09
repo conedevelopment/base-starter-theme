@@ -15,10 +15,7 @@ class Acf extends Module
 
         add_filter('acf/format_value/type=textarea', function ($value, $post_id, $field) {
             if (
-                in_array($field['key'], [
-                    'field_670630e640f81',
-                    'field_671aad5b663e2',
-                ])
+                in_array($field['key'], [])
             ) {
                 return $value;
             }
@@ -32,10 +29,7 @@ class Acf extends Module
 
         add_filter('acf/format_value/type=text', function ($value, $post_id, $field) {
             if (
-                in_array($field['key'], [
-                    'field_660ac7435e2c2',
-                    'field_671d5a05dac28',
-                ])
+                in_array($field['key'], [])
             ) {
                 return $value;
             }
@@ -54,7 +48,7 @@ class Acf extends Module
         add_filter('acf/admin/prevent_escaped_html_notice', '__return_true');
 
         /**
-         * Modify CPT save
+         * Modify ACF CPT save folder
          */
         add_filter('acf/settings/save_json/type=acf-post-type', function($path) {
             return get_template_directory() . '/acf-json-cpt';

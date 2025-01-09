@@ -3,7 +3,7 @@
         <div class="site-footer__inner">
             <div class="site-footer__navigations">
                 <?php
-                for ($i = 1; $i <= 4; $i++) :
+                for ($i = 1; $i <= 3; $i++) :
                     $base_footer_menu = 'footer-' . $i;
                     if (has_nav_menu($base_footer_menu)) : ?>
                         <div class="site-footer__navigation">

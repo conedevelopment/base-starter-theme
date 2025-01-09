@@ -74,6 +74,5 @@ class Mailchimp extends Module
     {
         add_action('wp_ajax_nopriv_mailchimp-subscribe', [static::class, 'mailchimpSubscribe']);
         add_action('wp_ajax_mailchimp_subscribe', [static::class, 'mailchimpSubscribe']);
-
     }
 }
