@@ -1,0 +1,5 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.l-front-page {
+  margin-block: spacer-clamp('l', 'xl');
+}

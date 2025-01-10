@@ -35,7 +35,7 @@ if ($base_title) :
                         <?php
                         foreach ($base_buttons as $item) {
                             $base_class = $item['type'] === 'default' ? 'btn btn--primary btn--lg btn--primary-shadow' : 'btn btn--outline-primary btn--lg';
-                            wpsimply_link($item['button'], $base_class);
+                            base_link($item['button'], $base_class);
                         }
                         ?>
                     </div>

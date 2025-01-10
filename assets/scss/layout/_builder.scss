@@ -1,0 +1,9 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.l-builder {
+  margin-block: get-css-variable(--header-block-size);
+
+  > * + * {
+    margin-block-start: get-css-variable(--section-gap);
+  }
+}

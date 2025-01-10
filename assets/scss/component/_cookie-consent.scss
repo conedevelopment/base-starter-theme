@@ -32,8 +32,8 @@
 
   &__icon {
     --size: 2.5rem;
-    height: var(--size);
-    width: var(--size);
+    block-size: var(--size);
+    inline-size: var(--size);
   }
 
   &__caption {

@@ -1,10 +1,50 @@
+@use 'sass:color';
 @use 'sprucecss/scss/spruce' as *;
 
 .hero {
   text-align: center;
 
+  &__inner {
+    @include layout-stack;
+  }
+
+  &__subtitle {
+    background-color: color.adjust(color('primary', $only-color: true), $lightness: 47.5%);
+    border-radius: 3rem;
+    color: color.adjust(color('primary', $only-color: true), $lightness: -25%, $saturation: 100%, $hue: -10deg);
+    display: inline-flex;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.15em 1.25em;
+    text-transform: uppercase;
+  }
+
   &__title {
-    font-size: responsive-font-size(5rem);
+    font-size: responsive-font-size(5rem, 45);
+    margin-block-start: spacer('s');
+    margin-inline: auto;
     max-inline-size: 30ch;
+    text-wrap: balance;
+  }
+
+  &__description {
+    margin-inline: auto;
+    max-inline-size: 70ch;
+    text-wrap: balance;
+
+    @include breakpoint('sm') {
+      font-size: config('font-size-lead', $typography);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('m');
+    justify-content: center;
+  }
+
+  .breadcrumb-list {
+    margin-block-start: 1.75rem;
   }
 }

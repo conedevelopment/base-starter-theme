@@ -1,0 +1,17 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.builder-alert {
+  padding-block: get-css-variable(--section-gap) calc(#{get-css-variable(--section-gap)} / 1.5);
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: spacer('m');
+    justify-content: center;
+
+    > * {
+      margin-block: 0;
+    }
+  }
+}

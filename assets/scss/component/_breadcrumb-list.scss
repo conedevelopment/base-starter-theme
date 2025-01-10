@@ -1,0 +1,66 @@
+@use 'sass:color';
+@use 'sprucecss/scss/spruce' as *;
+
+.breadcrumb-list {
+  @include clear-list;
+  align-items: center;
+  background-color: color.adjust(color('primary', $only-color: true), $lightness: 35%);
+  border-radius: 3rem;
+  display: flex;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  max-inline-size: 100%;
+  -ms-overflow-style: none;
+  overflow-x: auto;
+  padding: 0.25em 1.25em;
+  scrollbar-width: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > li {
+    align-items: center;
+    display: inline-flex;
+    margin-block: 0;
+  }
+
+  .separator {
+    block-size: 0.4em;
+    border-block-end: 2px solid hsl(0deg 0% 0% / 10%);
+    border-inline-end: 2px solid hsl(0deg 0% 0% / 10%);
+    display: inline-flex;
+    flex-shrink: 0;
+    inline-size: 0.4em;
+    inset-block-start: -1px;
+    margin-inline: 0.75em;
+    position: relative;
+    transform: rotate(-45deg);
+  }
+
+  a {
+    color: color.adjust(color('primary', $only-color: true), $lightness: -25%, $saturation: 100%, $hue: -10deg);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: color.adjust(color('primary', $only-color: true), $lightness: -15%, $saturation: 100%, $hue: -10deg);
+      text-decoration: underline;
+    }
+  }
+
+  .current-item {
+    @include text-ellipsis(1);
+    color: color.adjust(color('primary', $only-color: true), $lightness: -25%, $saturation: 100%, $hue: -10deg);
+    display: inline-block;
+    max-inline-size: 30ch;
+    text-align: start;
+  }
+
+  [typeof='ListItem'] {
+    display: flex;
+  }
+}

@@ -8,7 +8,7 @@
 
 WordPress theme for Base.
 
-## Required WordPress plugins
+## Preferred WordPress plugins
 
 - Advanced Custom Field PRO
 - Breadcrumb NavXT
