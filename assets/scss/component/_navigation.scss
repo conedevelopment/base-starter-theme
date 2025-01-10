@@ -92,7 +92,7 @@
 
   .current-menu-parent > a {
     color: color('heading');
-    font-weight: 700;
+    font-weight: 500;
     position: relative;
   }
 
@@ -109,7 +109,7 @@
     }
 
     .current-menu-item > a {
-      font-weight: 700;
+      font-weight: 500;
       position: relative;
     }
 
@@ -129,7 +129,7 @@
 
       &[aria-current='page'] {
         color: color('heading');
-        font-weight: 700;
+        font-weight: 500;
         position: relative;
       }
     }

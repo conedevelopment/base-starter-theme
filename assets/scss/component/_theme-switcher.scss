@@ -1,0 +1,37 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.no-transition {
+  * {
+    transition: none !important;
+  }
+}
+
+.theme-switcher {
+  @include set-css-variable((
+    --btn-color-primary-outline-border: hsl(0deg 0% 100% / 10%)
+  ));
+  color: color('text');
+  display: inline-flex;
+  position: relative;
+
+  &[data-theme-mode='system'] &__system-mode,
+  &[data-theme-mode='light'] &__light-mode,
+  &[data-theme-mode='dark'] &__dark-mode {
+    display: inline-flex;
+  }
+
+  button {
+    display: none;
+
+    > * {
+      pointer-events: none;
+    }
+  }
+
+  .btn--sm {
+    @include set-css-variable((
+      --icon-size: 0.7rem,
+      --icon-padding: 0.5rem,
+    ));
+  }
+}

@@ -1,75 +1,82 @@
-@use 'sass:color';
 @use 'sprucecss/scss/spruce' as *;
 
 .site-footer {
-  $this: &;
-  color: hsl(0deg 0% 45%);
-  font-size: 0.9rem;
-  position: relative;
-  text-transform: uppercase;
-  z-index: 10;
+  padding-block: spacer-clamp('xl', 'xxl');
 
-  &--home {
-    #{$this}__inner {
-      padding-block: spacer('l');
-    }
-  }
-
-  &__inner {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: spacer('m') get-css-variable(--container-gap);
-    justify-content: space-between;
-    padding-block: calc(#{spacer('l')} / 2) spacer('l');
-  }
-
-  &__navigation {
-    @include clear-list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: spacer('xxs') spacer('m');
-
-    > * {
-      margin-block: 0;
-    }
-
-    a {
-      color: hsl(0deg 0% 45%);
-      text-decoration: none;
-
-      &:hover {
-        color: color('link');
-      }
-
-      &[aria-current='page'] {
-        font-weight: 700;
-      }
-    }
+  &__top {
+    @include layout-grid('l', 14rem);
   }
 
   &__logo {
     display: flex;
-    flex-shrink: 0;
-    position: relative;
-
-    @include breakpoint('sm') {
-      order: 2;
-    }
 
     svg,
     img {
-      --size: 2.5rem;
-      block-size: var(--size);
+      block-size: 1rem;
       inline-size: auto;
 
       @include breakpoint('md') {
-        --size: 3.5rem;
+        block-size: 1.25rem;
       }
+    }
+  }
+
+  &__title {
+    font-size: font-size('h4');
+    font-weight: 500;
+    margin-block: 0 spacer('m');
+  }
+
+  &__navigation {
+    @include clear-list;
+    @include layout-stack(spacer('xs'));
+
+    a {
+      color: color(text);
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &[aria-current='page'] {
+        color: color('heading');
+      }
+
+      &[aria-current='page'] {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__bottom {
+    align-items: center;
+    border-block-start: 1px solid color('border');
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('s');
+    justify-content: space-between;
+    margin-block-start: spacer('l');
+    padding-block-start: spacer('l');
+  }
+
+  &__social {
+    align-items: center;
+    display: flex;
+    gap: spacer('s');
+
+    a {
+      color: color('heading');
+    }
+
+    svg {
+      --size: 1.25rem;
+      block-size: var(--size);
+      inline-size: var(--size);
     }
   }
 
   &__copyright {
     margin-block: 0;
+    margin-inline-end: auto;
   }
 }

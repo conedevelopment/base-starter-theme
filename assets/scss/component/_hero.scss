@@ -20,7 +20,7 @@
   }
 
   &__title {
-    font-size: responsive-font-size(5rem, 45);
+    font-size: responsive-font-size(5rem, 45, '2rem + 3vw');
     margin-block-start: spacer('s');
     margin-inline: auto;
     max-inline-size: 30ch;
@@ -42,6 +42,7 @@
     flex-wrap: wrap;
     gap: spacer('m');
     justify-content: center;
+    margin-block-start: 2rem;
   }
 
   .breadcrumb-list {

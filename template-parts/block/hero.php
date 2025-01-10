@@ -25,7 +25,7 @@ if ($base_title) :
                 <?php if ($base_description) : ?>
                     <p class="hero__description"><?php echo $base_description; ?></p>
                 <?php endif; ?>
-                <?php if ($base_breadcrumb === false && function_exists('bcn_display')) : ?>
+                <?php if ($base_breadcrumb === true && function_exists('bcn_display')) : ?>
                     <div class="breadcrumb-list" typeof="BreadcrumbList" vocab="https://schema.org/">
                         <?php bcn_display(); ?>
                     </div>
