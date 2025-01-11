@@ -21,11 +21,11 @@ function base_posted_on($show_modified = false, $show_label = false, $show_only_
     );
 
     if (! $show_only_update || get_the_date(DATE_W3C) === get_the_modified_date(DATE_W3C)) {
-        echo '<span class="posted-on"><span class="' . $class . '">' . __('Published at', 'base') . '</span> ' . $time_string . '</span>';
+        return '<span class="posted-on"><span class="' . $class . '">' . __('Published at', 'base') . '</span> ' . $time_string . '</span>';
     }
 
     if ($show_modified && get_the_date(DATE_W3C) !== get_the_modified_date(DATE_W3C)) {
-        echo '<span class="updated-on"><span class="' . $class . '">' . __('Last updated at', 'base') . '</span> ' . $modified_string . '</span>';
+        return '<span class="updated-on"><span class="' . $class . '">' . __('Last updated at', 'base') . '</span> ' . $modified_string . '</span>';
     }
 }
 

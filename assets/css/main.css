@@ -1846,7 +1846,7 @@ html[style*=padding-right] .site-header {
 }
 @media (min-width: 90em) {
   .site-navigation__panel > .navigation-menu {
-    gap: 1rem 1.75rem;
+    gap: 1rem 2.5rem;
   }
 }
 .site-navigation li {
@@ -2256,6 +2256,14 @@ html[style*=padding-right] .site-header {
     font-size: 1.063rem;
   }
 }
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-weight: 400;
+}
 .post-content * + h2,
 .post-content * + h3 {
   margin-block-start: 3rem;
@@ -2284,6 +2292,9 @@ html[style*=padding-right] .site-header {
 }
 .post-content hr {
   margin-block: 3rem;
+}
+.post-content strong {
+  font-weight: 500;
 }
 
 .site-footer {
