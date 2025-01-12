@@ -37,6 +37,10 @@ $color-tertiary: hsl(169deg 100% 50%);
     'cta': (
       'background': hsl(230deg 100% 11%),
     ),
+    'feature-grid': (
+      'background': hsl(216deg 100% 97.5%),
+      'dot': hsl(207deg 50% 91%),
+    ),
     'form': (
       'border': $color-black,
     ),
@@ -81,7 +85,7 @@ $color-tertiary: hsl(169deg 100% 50%);
   $dark-colors: dark.$colors,
   $display: (
     'border-radius-lg': 1.5rem,
-    'border-radius-xl': 2.5rem,
+    'border-radius-xl': clamp(2.5rem, 4vw, 3.5rem),
   ),
   $generators: (
     'content': (
@@ -124,6 +128,6 @@ $color-tertiary: hsl(169deg 100% 50%);
   $typography: (
     'font-family-base': #{'Work Sans', sans-serif},
     'font-family-heading': #{'Work Sans', sans-serif},
-    'font-weight-heading': 300,
+    'font-weight-heading': 400,
   ),
 );

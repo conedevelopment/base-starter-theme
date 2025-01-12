@@ -1,18 +1,13 @@
+@use 'sass:color';
 @use 'sprucecss/scss/spruce' as *;
 
 .heading {
   $this: &;
-  @include layout-stack('xs');
+  @include layout-stack('s');
   margin-block-end: spacer-clamp(1rem, 'l');
-
-  &--space-between {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: spacer('xs:m');
-    inline-size: 100%;
-    justify-content: space-between;
-  }
+  margin-inline: auto;
+  max-inline-size: 50rem;
+  text-wrap: balance;
 
   &--center {
     text-align: center;
@@ -22,26 +17,24 @@
     }
   }
 
-  &--light {
-    @include set-css-variable((
-      --base-color-heading: hsl(0deg 0% 100%),
-    ));
-  }
-
-  &__caption {
-    @include layout-stack('xs');
-    max-inline-size: 50rem;
+  &__title {
+    font-size: responsive-font-size(3rem, 35);
   }
 
   &__subtitle {
-    color: color('secondary');
-    font-weight: 700;
+    background-color: black;
+    border-radius: 3rem;
+    color: white;
+    display: inline-flex;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.15em 1.25em;
     text-transform: uppercase;
   }
 
-  &__btns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: spacer('s');
+  &__description {
+    @include breakpoint('md') {
+      font-size: 1.1rem;
+    }
   }
 }

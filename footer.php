@@ -35,6 +35,7 @@
                 the_field('base_footer_copyright', 'option');
                 ?>
             </p>
+            <?php get_template_part('template-parts/socials'); ?>
         </div>
     </div>
 </footer>

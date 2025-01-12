@@ -433,6 +433,11 @@ template {
 }
 
 :root {
+  --base-feature-grid-color-background: hsl(216, 100%, 97.5%);
+  --base-feature-grid-color-dot: hsl(207, 50%, 91%);
+}
+
+:root {
   --base-header-color-background: hsla(0, 0%, 100%, 0.95);
 }
 
@@ -486,7 +491,7 @@ template {
   --base-font-size-lg: 1.125rem;
   --base-font-size-ratio: 1.25;
   --base-font-size-sm: 0.875rem;
-  --base-font-weight-heading: 300;
+  --base-font-weight-heading: 400;
   --base-inline-padding: 0.1em 0.3em;
   --base-line-height-base: 1.8;
   --base-line-height-heading: calc(2px + 2ex + 2px);
@@ -495,7 +500,7 @@ template {
   --base-line-height-sm: 1.2;
   --base-border-radius-lg: 1.5rem;
   --base-border-radius-sm: 0.425rem;
-  --base-border-radius-xl: 2.5rem;
+  --base-border-radius-xl: clamp(2.5rem, 4vw, 3.5rem);
   --base-container-inline-size: 92rem;
   --base-page-margin: 2cm;
   --base-hidden-elements: header, footer, aside, nav, form, iframe, [class^="aspect-ratio"];

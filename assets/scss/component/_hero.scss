@@ -2,6 +2,7 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .hero {
+  padding-block: get-css-variable(--section-gap);
   text-align: center;
 
   &__inner {
@@ -21,6 +22,7 @@
 
   &__title {
     font-size: responsive-font-size(5rem, 45, '2rem + 3vw');
+    font-weight: 300;
     margin-block-start: spacer('s');
     margin-inline: auto;
     max-inline-size: 30ch;

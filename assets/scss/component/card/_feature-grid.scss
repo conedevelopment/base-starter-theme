@@ -1,0 +1,17 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.feature-grid-card {
+  $this: &;
+  @include layout-stack('s');
+  text-align: center;
+
+  &__icon {
+    block-size: 7rem;
+    display: inline-flex;
+    inline-size: auto;
+  }
+
+  &__title {
+    font-size: font-size('h2');
+  }
+}

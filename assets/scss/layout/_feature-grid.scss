@@ -1,0 +1,56 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.l-feature-grid {
+  $this: &;
+
+  background-color: color('background', 'feature-grid');
+  border-radius: config('border-radius-xl', $display);
+  margin-inline: calc(#{get-css-variable(--container-gap)} / 2);
+  overflow: hidden;
+  padding-block: get-css-variable(--section-gap);
+  position: relative;
+
+  @include breakpoint('md') {
+    margin-inline: get-css-variable(--container-gap);
+  }
+
+  &::before {
+    background-image: linear-gradient(0, color('background', 'feature-grid') 10%, transparent);
+    block-size: 50rem;
+    content: '';
+    inset: auto 0 -1rem;
+    position: absolute;
+    z-index: 10;
+  }
+
+  &::after {
+    --size: 1.25rem;
+    background-image: radial-gradient(color('dot', 'feature-grid') 2px, transparent 2px);
+    background-size: var(--size) var(--size);
+    content: '';
+    inset: 0;
+    opacity: 60%;
+    position: absolute;
+    z-index: 4;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__list {
+    --column: 1;
+    display: grid;
+    gap: spacer-clamp('m', 'l');
+    grid-template-columns: repeat(var(--column), minmax(0, 1fr));
+
+    @include breakpoint('md') {
+      --column: 2;
+    }
+
+    @include breakpoint('xl') {
+      --column: 3;
+    }
+  }
+}

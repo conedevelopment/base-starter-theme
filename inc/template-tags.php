@@ -120,19 +120,12 @@ function base_get_inline_svg($path, array $attrs = [], int $ttl = 3600): string
     if ($svg_elems->length === 0) {
         return $empty_svg;
     }
-
-    // May cause duplicate ID error
     $svg_elems->item(0)->removeAttribute('id');
 
     foreach ($attrs as $attr_name => $attr_value) {
         $svg_elems->item(0)->setAttribute($attr_name, $attr_value);
     }
 
-    // SVG version 1.1
-    //$document->xmlVersion = '1.1';
-    //$svg_elems->item(0)->setAttribute('version', '1.1');
-
-    // Handle the SVG as an image
     $svg_elems->item(0)->setAttribute('role', 'img');
 
     $xml = $document->saveXML($svg_elems->item(0));
