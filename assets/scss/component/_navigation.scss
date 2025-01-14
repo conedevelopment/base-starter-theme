@@ -41,8 +41,7 @@
     max-block-size: 25rem;
     opacity: 0;
     overflow-y: auto;
-    padding-block: spacer('xs') spacer('m');
-    padding-inline: get-css-variable(--container-gap);
+    padding-block: 0 spacer('m');
     position: absolute;
     visibility: hidden;
     z-index: 30;
@@ -53,7 +52,7 @@
       border-block-end: none;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: spacer('s') spacer-clamp('m', 2rem);
+      gap: spacer('s') spacer-clamp('m', 'l');
       inset: auto !important;
       margin-block-end: 2px;
       opacity: 100%;

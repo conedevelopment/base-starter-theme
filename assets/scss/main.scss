@@ -23,6 +23,7 @@
 
 body {
   font-size: 0.9378rem;
+  padding-block-start: get-css-variable(--header-block-size);
 
   @include breakpoint('md') {
     font-size: 1rem;

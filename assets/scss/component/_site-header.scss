@@ -1,5 +1,15 @@
 @use 'sprucecss/scss/spruce' as *;
 
+.logged-in.admin-bar {
+  .site-header {
+    inset-block-start: 32px;
+
+    @media (max-width: 782px) {
+      inset-block-start: 46px;
+    }
+  }
+}
+
 html[style*='padding-right'] {
   .site-header {
     inset-inline-end: 17px;
@@ -8,9 +18,37 @@ html[style*='padding-right'] {
 
 .site-header {
   $this: &;
-  position: relative;
+  @include transition;
+  background-color: color('background', 'header');
+  inset: 0 0 auto;
+  position: fixed;
+  z-index: 50;
+
+  &--hidden {
+    transform: translateY(-100%);
+
+    #{$this}__logo {
+      transform: translateY(-100%);
+    }
+  }
+
+  &--small {
+    @include breakpoint('md') {
+      #{$this}__inner {
+        block-size: calc(#{get-css-variable(--header-block-size)} / 1.25);
+      }
+
+      #{$this}__logo {
+        svg,
+        img {
+          block-size: 1.15rem;
+        }
+      }
+    }
+  }
 
   &__inner {
+    @include transition;
     align-items: center;
     block-size: get-css-variable(--header-block-size);
     display: flex;
@@ -25,6 +63,7 @@ html[style*='padding-right'] {
 
     svg,
     img {
+      @include transition;
       block-size: 1rem;
       inline-size: auto;
 
@@ -32,6 +71,12 @@ html[style*='padding-right'] {
         block-size: 1.25rem;
       }
     }
+  }
+
+  &__btns {
+    align-items: center;
+    display: flex;
+    gap: spacer('s');
   }
 
   &--open {

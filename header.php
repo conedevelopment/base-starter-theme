@@ -33,28 +33,18 @@
                             ]);
                         }
 
-                        if (have_rows('base_header_btns', 'option')) : ?>
+                        if (have_rows('base_header_buttons', 'option')) : ?>
                             <div class="site-header__btns">
-                                <?php while (have_rows('base_header_btns', 'option')) : the_row(); ?>
+                                <?php while (have_rows('base_header_buttons', 'option')) : the_row(); ?>
                                     <?php
-                                    $base_class = get_sub_field('type') === 'regular' ? 'btn btn--primary' : 'btn btn--outline-primary';
-                                    base_link(get_sub_field('link'), $base_class);
+                                    $base_class = get_sub_field('type') === 'primary' ? 'btn btn--primary' : 'btn btn--outline-primary';
+                                    base_link(get_sub_field('button'), $base_class);
                                     ?>
                                 <?php endwhile; ?>
                             </div>
                         <?php endif; ?>
                     </div>
                 </nav>
-                <?php if (have_rows('base_header_btns', 'option')) : ?>
-                    <div class="site-header__btns">
-                        <?php while (have_rows('base_header_btns', 'option')) : the_row(); ?>
-                            <?php
-                            $base_class = get_sub_field('type') === 'regular' ? 'btn btn--primary' : 'btn btn--outline-primary';
-                            base_link(get_sub_field('link'), $base_class);
-                            ?>
-                        <?php endwhile; ?>
-                    </div>
-                <?php endif; ?>
                 <button
                     aria-controls="primary-menu"
                     aria-expanded="false"

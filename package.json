@@ -17,7 +17,6 @@
     "copy-files-from-to": "^3.12.0",
     "del-cli": "^6.0.0",
     "dotenv": "^16.4.7",
-    "gsap": "^3.12.5",
     "npm-run-all": "^4.1.5",
     "photoswipe": "^5.4.4",
     "sass": "^1.83.1",
@@ -40,14 +39,6 @@
     {
       "from": "node_modules/@alpinejs/focus/dist/cdn.min.js",
       "to": "assets/js/plugin/alpine-focus.min.js"
-    },
-    {
-      "from": "node_modules/gsap/dist/gsap.min.js",
-      "to": "assets/js/plugin/gsap.min.js"
-    },
-    {
-      "from": "node_modules/gsap/dist/TextPlugin.min.js",
-      "to": "assets/js/plugin/gsap-text.min.js"
     },
     {
       "from": "node_modules/photoswipe/dist/photoswipe.esm.min.js",

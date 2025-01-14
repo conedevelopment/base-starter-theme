@@ -20,7 +20,7 @@
     border-radius: config('border-radius-lg', $display) config('border-radius-lg', $display) 0;
     inset: auto spacer-clamp('s', 'm') spacer-clamp('s', 'm') auto;
     justify-content: center;
-    max-inline-size: 45rem;
+    max-inline-size: 40rem;
     padding: spacer-clamp(m, l);
   }
 

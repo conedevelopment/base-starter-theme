@@ -42,9 +42,6 @@ class Assets extends Module
         wp_enqueue_script('base-navigation', static::asset('/js/navigation.js'), [], Config::VERSION, ['strategy' => 'defer']);
         wp_enqueue_script('base-header', static::asset('/js/header.js'), [], Config::VERSION, ['strategy' => 'defer']);
 
-        // Prism
-        wp_enqueue_script('base-prism', static::asset('/js/plugin/prism-custom.min.js'), [], Config::VERSION, true);
-
         // TOC
         if (is_single()) {
             wp_enqueue_script('base-toc', static::asset('/js/toc.js'), [], Config::VERSION, true);
@@ -53,11 +50,11 @@ class Assets extends Module
         wp_enqueue_script('base-accordion', static::asset('/js/accordion.js'), [], Config::VERSION, true);
         wp_enqueue_script('base-theme-switcher', static::asset('/js/theme-switcher.js'), [], Config::VERSION, ['strategy' => 'defer']);
 
-        if (wp_get_environment_type() === 'production') {
-            wp_enqueue_script('base-cookie-check', static::asset('/js/cookie-check.js'), ['base-cookie-handler'], Config::VERSION, true);
-            wp_enqueue_script('base-cookie-consent', static::asset('/js/cookie-consent.js'), ['base-cookie-handler'], Config::VERSION, true);
-            wp_enqueue_script('base-cookie-consent-scripts', static::asset('/js/scripts.js'), ['base-cookie-consent'], Config::VERSION, true);
-        }
+        // if (wp_get_environment_type() === 'production') {
+            wp_enqueue_script('base-cookie-check', static::asset('/js/cookie-consent/check.js'), ['base-cookie-handler'], Config::VERSION, true);
+            wp_enqueue_script('base-cookie-consent', static::asset('/js/cookie-consent/consent.js'), ['base-cookie-handler'], Config::VERSION, true);
+            wp_enqueue_script('base-cookie-consent-scripts', static::asset('/js/cookie-consent/scripts.js'), ['base-cookie-consent'], Config::VERSION, true);
+        // }
 
         wp_localize_script('base-navigation', 'base', [
             'themeUrl' => get_template_directory_uri(),

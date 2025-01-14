@@ -59,19 +59,26 @@
     padding-block-start: spacer('l');
   }
 
-  &__social {
+  &__socials {
     align-items: center;
     display: flex;
     gap: spacer('s');
+    justify-content: space-between;
+  }
 
-    a {
-      color: color('heading');
-    }
+  &__social {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
 
     svg {
       --size: 1.25rem;
       block-size: var(--size);
       inline-size: var(--size);
+    }
+
+    &--youtube svg {
+      --size: 1.5rem;
     }
   }
 

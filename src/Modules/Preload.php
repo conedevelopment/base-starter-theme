@@ -21,9 +21,6 @@ class Preload extends Module
             [
                 'href' => get_template_directory_uri() . '/assets/font/work-sans-v19-latin-500.woff2',
             ],
-            [
-                'href' => get_template_directory_uri() . '/assets/font/work-sans-v19-latin-700.woff2',
-            ],
         ];
 
         foreach ($preloadLinks as $link) {

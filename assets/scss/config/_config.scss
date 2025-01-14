@@ -9,22 +9,18 @@ $color-tertiary: hsl(169deg 100% 50%);
   $btn: (
     'border-radius': 2rem,
     'border-width': 1px,
-    'font-family': #{'Manrope', sans-serif},
-    'font-weight': 600,
+    'font-weight': 500,
     'icon-padding': 0.85em,
-    'padding': 0.85em 1.75em,
+    'padding': 0.75em 1.65em,
   ),
   $btn-lg: (
-    'padding': clamp(0.9em, 3vw, 1em) clamp(1.5em, 3vw, 1.75em),
+    'font-size': 1rem,
+    'padding': clamp(0.75em, 3vw, 1em) clamp(1.35em, 3vw, 1.75em),
   ),
   $color-black: $color-black,
   $color-primary: $color-primary,
   $color-secondary: $color-secondary,
   $colors: (
-    'base': (
-      'primary-dark': hsl(230deg 100% 11%),
-      'tertiary': $color-tertiary,
-    ),
     'btn': (
       'primary-outline-foreground-hover': hsl(0deg 0% 100%),
       'secondary-background-hover': hsl(326deg 100% 47%),
@@ -34,52 +30,16 @@ $color-tertiary: hsl(169deg 100% 50%);
       'pagination-foreground': $color-primary,
       'pagination-foreground-hover': hsl(0deg 0% 100%),
     ),
-    'cta': (
-      'background': hsl(230deg 100% 11%),
-    ),
     'feature-grid': (
       'background': hsl(216deg 100% 97.5%),
       'dot': hsl(207deg 50% 91%),
     ),
-    'form': (
-      'border': $color-black,
-    ),
     'header': (
-      'background': hsl(0deg 0% 100% / 95%),
-    ),
-    'hero': (
-      'gradient-start': hsl(238deg 100% 47%),
-      'gradient-end': hsl(194deg 85% 56%),
-    ),
-    'highlighted': (
-      'background': hsl(230deg 100% 11%),
+      'background': hsl(0deg 0% 100%),
     ),
     'navigation': (
       'hamburger': $color-primary,
       'arrow': hsl(0deg 0% 0% / 15%),
-    ),
-    'prism': (
-      'color': hsl(243deg 14% 29%),
-      'background': hsl(0deg 0% 98%),
-      'comment': hsl(225deg 14% 46%),
-      'punctuation': hsl(279deg 50% 53%),
-      'namespace': hsl(173deg 100% 24%),
-      'deleted': hsl(1deg 83% 63% / 56%),
-      'boolean': hsl(0deg 44% 53%),
-      'number': hsl(315deg 90% 35%),
-      'constant': hsl(221deg 57% 52%),
-      'class-name': hsl(0deg 0% 7%),
-      'regex': hsl(1deg 48% 59%),
-    ),
-    'reference': (
-      'background': $color-black,
-      'box-shadow': hsl(0deg 0% 0% / 15%),
-      'icon': hsl(0deg 0% 100% / 25%),
-      'link': hsl(0deg 0% 100% / 80%),
-      'title': hsl(0deg 0% 100%),
-    ),
-    'testimonial': (
-      'background-hover': hsl(195 100% 97%),
     ),
   ),
   $dark-colors: dark.$colors,
@@ -114,7 +74,7 @@ $color-tertiary: hsl(169deg 100% 50%);
       'form-label': true,
       'form-range': false,
       'form-row': true,
-      'form-switch': false,
+      'form-switch': true,
     ),
   ),
   $layout: (
