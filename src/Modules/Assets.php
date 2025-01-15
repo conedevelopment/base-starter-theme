@@ -50,11 +50,11 @@ class Assets extends Module
         wp_enqueue_script('base-accordion', static::asset('/js/accordion.js'), [], Config::VERSION, true);
         wp_enqueue_script('base-theme-switcher', static::asset('/js/theme-switcher.js'), [], Config::VERSION, ['strategy' => 'defer']);
 
-        // if (wp_get_environment_type() === 'production') {
+        if (wp_get_environment_type() === 'production') {
             wp_enqueue_script('base-cookie-check', static::asset('/js/cookie-consent/check.js'), ['base-cookie-handler'], Config::VERSION, true);
             wp_enqueue_script('base-cookie-consent', static::asset('/js/cookie-consent/consent.js'), ['base-cookie-handler'], Config::VERSION, true);
             wp_enqueue_script('base-cookie-consent-scripts', static::asset('/js/cookie-consent/scripts.js'), ['base-cookie-consent'], Config::VERSION, true);
-        // }
+        }
 
         wp_localize_script('base-navigation', 'base', [
             'themeUrl' => get_template_directory_uri(),

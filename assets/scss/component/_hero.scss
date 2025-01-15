@@ -2,8 +2,27 @@
 @use 'sprucecss/scss/spruce' as *;
 
 .hero {
+  $this: &;
   padding-block: get-css-variable(--section-gap);
   text-align: center;
+
+  &--small {
+    padding-block: calc(#{get-css-variable(--section-gap)} / 2) 0;
+
+    #{$this}__inner {
+      @include layout-stack('xs');
+    }
+
+    #{$this}__title {
+      font-size: responsive-font-size(4rem, 52.5, '1rem + 3vw');
+    }
+
+    #{$this}__description {
+      @include breakpoint('sm') {
+        font-size: 1.063rem;
+      }
+    }
+  }
 
   &__inner {
     @include layout-stack;
@@ -23,7 +42,6 @@
   &__title {
     font-size: responsive-font-size(5rem, 52.5, '1rem + 3vw');
     font-weight: 300;
-    margin-block-start: spacer('s');
     margin-inline: auto;
     max-inline-size: 30ch;
     text-wrap: balance;

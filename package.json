@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@alpinejs/focus": "^3.14.8",
+    "@conedevelopment/qkie": "^1.1.1",
     "@splidejs/splide": "^4.1.4",
     "alpinejs": "^3.14.8",
     "copy-files-from-to": "^3.12.0",
@@ -51,6 +52,10 @@
     {
       "from": "node_modules/@splidejs/splide/dist/js/splide.min.js",
       "to": "assets/js/plugin/splide.min.js"
+    },
+    {
+      "from": "node_modules/@conedevelopment/qkie/index.js",
+      "to": "assets/js/plugin/qkie.js"
     }
   ],
   "copyFilesSettings": {

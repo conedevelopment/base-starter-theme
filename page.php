@@ -3,6 +3,7 @@
         <article class="l-post">
             <?php
             get_template_part('template-parts/block/hero', '', [
+                'class' => 'hero--small',
                 'title' => get_the_title(),
                 'description' => base_posted_on(true, true, true),
             ]);

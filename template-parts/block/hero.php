@@ -1,4 +1,5 @@
 <?php
+$base_class = $args['class'] ?? get_sub_field('hero_class');
 $base_title = $args['title'] ?? get_sub_field('hero_title');
 $base_subtitle = $args['subtitle'] ?? get_sub_field('hero_subtitle');
 $base_description = $args['description'] ?? get_sub_field('hero_description');
@@ -11,7 +12,7 @@ if (! $base_title) {
 
 if ($base_title) :
 ?>
-    <div class="hero">
+    <div class="hero <?php echo $base_class; ?>">
         <div class="container">
             <div class="hero__inner">
                 <?php if ($base_subtitle) : ?>
@@ -20,7 +21,7 @@ if ($base_title) :
                     </p>
                 <?php endif; ?>
                 <h1 class="hero__title">
-                    <strong><?php echo $base_title; ?></strong>
+                    <?php echo $base_title; ?>
                 </h1>
                 <?php if ($base_description) : ?>
                     <p class="hero__description"><?php echo $base_description; ?></p>
