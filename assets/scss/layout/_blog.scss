@@ -1,0 +1,8 @@
+@use 'sass:color';
+@use 'sprucecss/scss/spruce' as *;
+
+.l-blog {
+  display: flex;
+  flex-direction: column;
+  gap: spacer('l');
+}

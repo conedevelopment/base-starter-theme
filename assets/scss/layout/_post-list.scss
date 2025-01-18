@@ -1,0 +1,42 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.l-post-list {
+  &__inner {
+    --columns: 1;
+
+    display: grid;
+    gap: spacer('l');
+    grid-template-columns: repeat(var(--columns), minmax(0, 2fr));
+
+    @include breakpoint(sm) {
+      --columns: 2;
+    }
+
+    @include breakpoint(md) {
+      --columns: 3;
+    }
+
+    &--small {
+      margin-block-start: spacer('l');
+      @include breakpoint(lg) {
+        --columns: 4;
+      }
+    }
+  }
+
+  &__helper {
+    display: flex;
+    flex-direction: column;
+    gap: spacer-clamp('l', 'xl');
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-block-start: spacer-clamp('m', 'l');
+
+    &:empty {
+      display: none;
+    }
+  }
+}

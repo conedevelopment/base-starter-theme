@@ -32,12 +32,6 @@ class Tinymce extends Module
                 'classes' => 'check-list',
                 'wrapper' => false,
             ],
-            [
-                'title' => __('Inline Code', 'base'),
-                'inline' => 'code',
-                'classes' => 'code-inline',
-                'wrapper' => false,
-            ],
         ];
 
         $init_array['style_formats'] = json_encode($style_formats);

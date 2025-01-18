@@ -5,12 +5,6 @@
   @include a11y-card-link('.post-card__link', true);
   @include layout-stack('m');
 
-  &--artist {
-    #{$this}__thumbnail {
-      aspect-ratio: 4 / 5;
-    }
-  }
-
   &__thumbnail {
     aspect-ratio: 16 / 11;
     inline-size: 100%;

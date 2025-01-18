@@ -1,0 +1,33 @@
+@use 'sass:color';
+@use 'sprucecss/scss/spruce' as *;
+
+.post-categories {
+  &__inner {
+    align-items: center;
+    display: flex;
+    gap: spacer('s');
+    -ms-overflow-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .category-label {
+    @include transition;
+    border-radius: 3rem;
+    color: color('heading');
+    display: inline-flex;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    text-decoration: none;
+
+    &--active {
+      background-color: color('primary-background', 'btn');
+      color: color('primary-foreground', 'btn');
+    }
+  }
+}

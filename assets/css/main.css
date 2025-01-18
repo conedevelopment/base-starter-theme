@@ -1456,6 +1456,12 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
   --inline-size: 55rem;
 }
 
+.l-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 .l-post {
   background-color: var(--base-base-color-background);
 }
@@ -1585,6 +1591,44 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 .l-post__vimeo iframe {
   aspect-ratio: 16/9;
   inline-size: 100%;
+}
+
+.l-post-list__inner {
+  --columns: 1;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(var(--columns), minmax(0, 2fr));
+}
+@media (min-width: 48em) {
+  .l-post-list__inner {
+    --columns: 2;
+  }
+}
+@media (min-width: 64em) {
+  .l-post-list__inner {
+    --columns: 3;
+  }
+}
+.l-post-list__inner--small {
+  margin-block-start: 3rem;
+}
+@media (min-width: 80em) {
+  .l-post-list__inner--small {
+    --columns: 4;
+  }
+}
+.l-post-list__helper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 5vw, 4.5rem);
+}
+.l-post-list__more {
+  display: flex;
+  justify-content: center;
+  margin-block-start: clamp(1.5rem, 5vw, 3rem);
+}
+.l-post-list__more:empty {
+  display: none;
 }
 
 .l-builder {
@@ -2224,9 +2268,6 @@ html[style*=padding-right] .site-header {
 .post-card > * + * {
   margin-block-start: 1.5rem;
 }
-.post-card--artist .post-card__thumbnail {
-  aspect-ratio: 4/5;
-}
 .post-card__thumbnail {
   aspect-ratio: 16/11;
   inline-size: 100%;
@@ -2303,6 +2344,34 @@ html[style*=padding-right] .site-header {
   .heading__description {
     font-size: 1.1rem;
   }
+}
+
+.post-categories__inner {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  -ms-overflow-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+.post-categories__inner::-webkit-scrollbar {
+  display: none;
+}
+.post-categories .category-label {
+  transition-duration: var(--base-duration);
+  transition-property: all;
+  transition-timing-function: var(--base-timing-function);
+  border-radius: 3rem;
+  color: var(--base-base-color-heading);
+  display: inline-flex;
+  font-size: 1rem;
+  padding: 0.25em 1em;
+  text-decoration: none;
+}
+.post-categories .category-label--active {
+  background-color: var(--base-btn-color-primary-background);
+  color: var(--base-btn-color-primary-foreground);
 }
 
 .builder-alert {
@@ -3242,6 +3311,81 @@ html[style*=padding-right] .site-header {
 .mejs-background,
 .mejs-mediaelement {
   position: relative !important;
+}
+
+.page-numbers {
+  --base-border-radius: 2rem;
+  --base-border-width: 1px;
+  --base-font-size: 1rem;
+  --base-font-weight: 500;
+  --base-gap: 0.5rem;
+  --base-icon-padding: 0.85em;
+  --base-icon-size: 1em;
+  --base-padding: 0.75em 1.65em;
+  --base-shadow-size: 0.25rem;
+  align-items: center;
+  border-radius: var(--base-border-radius);
+  border-style: solid;
+  border-width: var(--base-border-width);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+  gap: var(--base-gap);
+  justify-content: center;
+  line-height: 1;
+  padding: var(--base-padding);
+  text-align: start;
+  text-decoration: none;
+  transition-duration: var(--base-duration);
+  transition-property: background-color, border-color, box-shadow, color;
+  transition-timing-function: var(--base-timing-function);
+}
+
+.page-numbers:focus {
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.page-numbers:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.pagination .page-numbers {
+  background-color: var(--base-btn-color-pagination-background);
+  border-color: var(--base-btn-color-pagination-background);
+  color: var(--base-btn-color-pagination-foreground);
+  padding-inline: 1rem;
+}
+.pagination .page-numbers:focus-visible {
+  outline: 2px solid var(--base-btn-color-pagination-focus-ring);
+  outline-offset: 2px;
+}
+.pagination .page-numbers:hover {
+  background-color: var(--base-btn-color-pagination-background-hover);
+  border-color: var(--base-btn-color-pagination-background-hover);
+  color: var(--base-btn-color-pagination-foreground-hover);
+}
+.pagination .page-numbers.current {
+  background-color: var(--base-btn-color-pagination-background-hover);
+  border-color: var(--base-btn-color-pagination-background-hover);
+  color: var(--base-btn-color-pagination-foreground-hover);
+}
+.pagination .page-numbers.dots {
+  pointer-events: none;
 }
 
 :root {

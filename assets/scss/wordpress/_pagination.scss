@@ -1,0 +1,36 @@
+@use 'sass:color';
+@use 'sprucecss/scss/spruce' as *;
+
+@include generate-btn(
+  '.page-numbers',
+  null,
+  false,
+  false
+);
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  .nav-links {
+    @include clear-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('s');
+  }
+
+  .page-numbers {
+    @include btn-variant('pagination');
+    padding-inline: 1rem;
+
+    &.current {
+      background-color: color('pagination-background-hover', 'btn');
+      border-color: color('pagination-background-hover', 'btn');
+      color: color('pagination-foreground-hover', 'btn');
+    }
+
+    &.dots {
+      pointer-events: none;
+    }
+  }
+}
