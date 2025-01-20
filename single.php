@@ -4,34 +4,14 @@ $base_toc = base_toc(get_the_content());
 get_header(); ?>
     <main id="content" class="site-main">
         <article class="l-post l-post--single">
-            <div class="container">
-                <div class="l-post__heading">
-                    <h1 class="l-post__title l-post__title--wide">
-                        <?php the_title(); ?>
-                    </h1>
-                    <div class="l-post__breadcrumb">
-                        <?php if(function_exists('bcn_display')) : ?>
-                            <div class="breadcrumb-list" typeof="BreadcrumbList" vocab="https://schema.org/">
-                                <?php bcn_display(); ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="l-post__footer">
-                        <?php if (get_the_category()) : ?>
-                            <div class="post-card__categories">
-                                <?php base_post_categories(); ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php
-                        if (get_post_type() === 'knowledge-base') {
-                            base_posted_on(true, true, true);
-                        } else {
-                            base_posted_on();
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
+            <?php
+            get_template_part('template-parts/block/hero', '', [
+                'class' => 'hero--small',
+                'title' => get_the_title(),
+                'description' => base_posted_on(true, true, true) . base_post_categories(),
+                'show_breadcrumb' => true,
+            ]);
+            ?>
             <div class="container">
                 <div class="l-post__inner <?php if ($base_toc) : ?>l-post__inner--toc<?php endif; ?>">
                     <?php if ($base_toc) : ?>
@@ -70,14 +50,7 @@ get_header(); ?>
                                 }
                                 ?>
                             </div>
-                        <?php
-                        endif;
-
-                        if (get_post_type() === 'knowledge-base') {
-                            get_template_part('template-parts/knowledge-base/rating');
-                            get_template_part('template-parts/knowledge-base/comment');
-                        }
-                        ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

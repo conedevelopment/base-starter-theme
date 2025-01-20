@@ -1465,102 +1465,49 @@ html[dir=rtl] select.form-control:not([multiple]):not([size]) {
 .l-post {
   background-color: var(--base-base-color-background);
 }
-.l-post > .container + .container > .l-post__inner {
-  padding-block-start: calc(var(--base-section-gap) / 5);
+.l-post--related .l-post__inner {
+  gap: clamp(2.5rem, 5vw, 3rem);
+}
+.l-post--related .heading {
+  margin-block-end: 0;
+}
+.l-post--single .l-post__inner {
+  display: flex;
+  margin-inline: auto;
+  max-inline-size: 57.5rem;
+}
+.l-post--single .l-post__inner--toc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-inline-size: initial;
+}
+@media (min-width: 80em) {
+  .l-post--single .l-post__inner--toc {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 25rem);
+  }
+}
+.l-post--single .l-post__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 5vw, 3rem);
+  margin-block-start: 0;
+}
+.l-post--single .l-post__content .post-content,
+.l-post--single .l-post__content .author-card {
+  inline-size: 100%;
+  max-inline-size: 50rem;
+}
+@media (min-width: 80em) {
+  .l-post--single .l-post__sidebar {
+    order: 2;
+  }
 }
 .l-post__inner {
   display: flex;
   flex-direction: column;
   gap: clamp(3rem, 5vw, 4.5rem);
   padding-block: calc(var(--base-section-gap) / 1.5) calc(var(--base-section-gap) / 2);
-}
-@media (min-width: 80em) {
-  .l-post--artist-list .l-post__list, .l-post--literature .l-post__list {
-    --column: 4;
-  }
-}
-.l-post--artist .l-post__inner {
-  display: grid;
-  gap: var(--base-container-gap);
-  grid-template-columns: minmax(0, 1fr);
-  padding-block: calc(var(--base-section-gap) / 3) calc(var(--base-section-gap) / 2);
-}
-@media (min-width: 32em) {
-  .l-post--artist .l-post__inner {
-    grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
-    padding-block: calc(var(--base-section-gap) / 1.5) calc(var(--base-section-gap) / 2);
-  }
-}
-@media (min-width: 48em) {
-  .l-post--artist .l-post__inner {
-    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
-  }
-}
-@media (min-width: 80em) {
-  .l-post--artist .l-post__inner {
-    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
-  }
-}
-.l-post--artist .l-post__heading {
-  padding-block-start: 0;
-}
-.l-post__header {
-  align-items: end;
-  display: grid;
-}
-.l-post__header ::selection {
-  background-color: var(--base-base-color-secondary);
-  color: hsl(0, 0%, 100%);
-}
-.l-post__header > * {
-  grid-area: 1/1;
-}
-.l-post__header .l-post__heading {
-  padding-block: 0 3rem;
-  position: relative;
-  z-index: 10;
-}
-.l-post__header .l-post__title {
-  --base-base-color-heading: hsl(0, 0%, 100%);
-}
-.l-post__background img {
-  block-size: 15rem;
-  inline-size: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-@media (min-width: 64em) {
-  .l-post__background img {
-    block-size: 20rem;
-  }
-}
-.l-post__heading {
-  display: flex;
-  flex-direction: column;
-  padding-block-start: calc(var(--base-section-gap) / 2.5);
-}
-.l-post__heading > * {
-  margin-block-end: 0;
-  margin-block-start: 0;
-}
-.l-post__heading > * + * {
-  margin-block-start: 0;
-}
-.l-post__heading--center {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.l-post__title {
-  font-size: clamp(1.95rem, 1rem + 2vw, 3rem);
-  max-inline-size: 70rem;
-  text-transform: uppercase;
-}
-.l-post__title span {
-  font-weight: 400;
-}
-.l-post__subtitle {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 .l-post__list {
   --column: 1;
@@ -2270,15 +2217,21 @@ html[style*=padding-right] .site-header {
 }
 .post-card__thumbnail {
   aspect-ratio: 16/11;
+  border-radius: var(--base-border-radius-sm);
   inline-size: 100%;
   object-fit: cover;
 }
-.post-card__caption > * {
+.post-card__body > * {
   margin-block-end: 0;
   margin-block-start: 0;
 }
-.post-card__caption > * + * {
-  margin-block-start: 0;
+.post-card__body > * + * {
+  margin-block-start: 0.5rem;
+}
+.post-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 .post-card__title {
   font-size: clamp(1.0625rem, 2vw + 1rem, 1.25rem);

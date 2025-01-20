@@ -5,9 +5,51 @@
   $this: &;
   background-color: color('background');
 
-  > .container + .container {
-    > #{$this}__inner {
-      padding-block-start: calc(#{get-css-variable(--section-gap)} / 5);
+  &--related {
+    #{$this}__inner {
+      gap: spacer-clamp(2.5rem, 'l');
+    }
+
+    .heading {
+      margin-block-end: 0;
+    }
+  }
+
+  &--single {
+    #{$this}__inner {
+      display: flex;
+      margin-inline: auto;
+      max-inline-size: 57.5rem;
+
+      &--toc {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        max-inline-size: initial;
+
+        @include breakpoint('lg') {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 25rem);
+        }
+      }
+    }
+
+    #{$this}__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: spacer-clamp('m', 'l');
+      margin-block-start: 0;
+
+      .post-content,
+      .author-card {
+        inline-size: 100%;
+        max-inline-size: 50rem;
+      }
+    }
+
+    #{$this}__sidebar {
+      @include breakpoint('lg') {
+        order: 2;
+      }
     }
   }
 
@@ -16,103 +58,6 @@
     flex-direction: column;
     gap: spacer-clamp('l', 'xl');
     padding-block: calc(#{get-css-variable(--section-gap)} / 1.5) calc(#{get-css-variable(--section-gap)} / 2);
-  }
-
-  &--artist-list,
-  &--literature {
-    #{$this}__list {
-      @include breakpoint('lg') {
-        --column: 4;
-      }
-    }
-  }
-
-  &--artist {
-    #{$this}__inner {
-      display: grid;
-      gap: get-css-variable(--container-gap);
-      grid-template-columns: minmax(0, 1fr);
-      padding-block: calc(#{get-css-variable(--section-gap)} / 3) calc(#{get-css-variable(--section-gap)} / 2);
-
-      @include breakpoint('xs') {
-        grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
-        padding-block: calc(#{get-css-variable(--section-gap)} / 1.5) calc(#{get-css-variable(--section-gap)} / 2);
-      }
-
-      @include breakpoint('sm') {
-        grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
-      }
-
-      @include breakpoint('lg') {
-        grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
-      }
-    }
-
-    #{$this}__heading {
-      padding-block-start: 0;
-    }
-  }
-
-  &__header {
-    @include selection('secondary', hsl(0deg 0% 100%));
-    align-items: end;
-    display: grid;
-
-    > * {
-      grid-area: 1 / 1;
-    }
-
-    #{$this}__heading {
-      padding-block: 0 spacer('l');
-      position: relative;
-      z-index: 10;
-    }
-
-    #{$this}__title {
-      @include set-css-variable((
-        --base-color-heading: hsl(0deg 0% 100%)
-      ));
-    }
-  }
-
-  &__background {
-    img {
-      block-size: 15rem;
-      inline-size: 100%;
-      object-fit: cover;
-      object-position: center;
-
-      @include breakpoint('md') {
-        block-size: 20rem;
-      }
-    }
-  }
-
-  &__heading {
-    @include layout-stack(0);
-    display: flex;
-    flex-direction: column;
-    padding-block-start: calc(#{get-css-variable(--section-gap)} / 2.5);
-
-    &--center {
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-  }
-
-  &__title {
-    font-size: responsive-font-size(3rem, 35, '1rem + 2vw');
-    max-inline-size: 70rem;
-    text-transform: uppercase;
-
-    span {
-      font-weight: 400;
-    }
-  }
-
-  &__subtitle {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
   }
 
   &__list {

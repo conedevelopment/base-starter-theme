@@ -7,12 +7,19 @@
 
   &__thumbnail {
     aspect-ratio: 16 / 11;
+    border-radius: config('border-radius-sm', $display);
     inline-size: 100%;
     object-fit: cover;
   }
 
-  &__caption {
-    @include layout-stack(0);
+  &__body {
+    @include layout-stack('xs');
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacer('xs:s');
   }
 
   &__title {

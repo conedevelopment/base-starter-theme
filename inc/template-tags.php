@@ -35,18 +35,24 @@ function base_posted_on($show_modified = false, $show_label = false, $show_only_
 function base_post_categories($type = 'link')
 {
     $categories = get_the_category();
+    $output = '';
 
     if (! empty($categories)) {
-        echo '<span class="sr-only">' . __('Categories:', 'base') . '</span>';
+        $output .= '<span class="post-categories">';
+        $output .= '<span class="sr-only">' . __('Categories:', 'base') . '</span>';
 
         foreach ($categories as $category) {
             if ($type === 'link') {
-                echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+                $output .= '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
             } else {
-                echo '<span>' . esc_html($category->name) . '</span>';
+                $output .= '<span>' . esc_html($category->name) . '</span>';
             }
         }
     }
+
+    $output .= '</span>';
+
+    return $output;
 }
 
 /**
