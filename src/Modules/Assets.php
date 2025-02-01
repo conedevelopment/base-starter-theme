@@ -19,9 +19,6 @@ class Assets extends Module
      */
     public static function assets(): void
     {
-        // Deregister default styles and scripts
-        wp_dequeue_style('classic-theme-styles');
-
         wp_enqueue_style('base-main', static::asset('/css/main.css'), [], Config::VERSION);
 
         wp_enqueue_script('base-cookie-handler', static::asset('/js/plugin/cookie-handler.js'), [], Config::VERSION);

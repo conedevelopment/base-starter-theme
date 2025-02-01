@@ -8,15 +8,24 @@
 
 WordPress theme for Base.
 
-## Preferred WordPress plugins
+## Required WordPress plugins
 
 - Advanced Custom Field PRO
+
+## Preferred WordPress plugins
+
 - Breadcrumb NavXT
 - Classic Editor
 - Contact Form 7
 - Modern Image Formats
 - Safe SVG
-- SEO Framework
+- The SEO Framework
+
+## Preferred Settings
+
+### The SEO Framework
+
+- Settings -> Title Settings -> Prefixes -> Check the "Remove term type prefixes from generated archive titles?"
 
 ## Image Sizes
 
@@ -28,7 +37,7 @@ WordPress theme for Base.
 
 The project uses npm script to compile Sass. For more details, see: `package.json`.
 
-To compile the  `.scss` files, do the following:
+To compile the `.scss` files, do the following:
 
 - run `npm install` to install the node dependencies,
 - run `npm start` to start the development compilation and watch.
