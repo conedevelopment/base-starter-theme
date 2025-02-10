@@ -11,7 +11,7 @@ class Shortcodes extends Module
      *
      * @return string
      */
-    public function iframe($atts, $content = null): string
+    public static function iframe($atts, $content = null): string
     {
         $atts = shortcode_atts([
             'type' => 'youtube',
@@ -39,7 +39,7 @@ class Shortcodes extends Module
     /**
      * Responsive table shortcode.
      */
-    public function table($atts, $content = null): string
+    public static function table($atts, $content = null): string
     {
         return '<div class="table-responsive">' . Str::removeEmptyP($content) . '</div>';
     }
@@ -47,7 +47,7 @@ class Shortcodes extends Module
     /**
      * Button shortcode.
      */
-    public function button($atts, $content = null): string
+    public static function button($atts, $content = null): string
     {
         $atts = shortcode_atts([
             'url' => '',
@@ -59,74 +59,9 @@ class Shortcodes extends Module
     }
 
     /**
-     * Code highlighting shortcode.
-     */
-    public function code($atts, $content = null): string
-    {
-        $atts = shortcode_atts([
-            'id' => null,
-        ], $atts);
-
-        if ($atts['id']) {
-            $language = get_field('base_language', $atts['id']);
-
-            $shell = get_field('base_display_shell', $atts['id']);
-            $code = get_field('base_code', $atts['id']);
-
-            $code = $code ? $code : $content;
-            $codeBlockShell = $shell === 'show' ? '<div class="code-block__header"><span class="code-block__dots"><span class="code-block__dot"></span><span class="code-block__dot"></span><span class="code-block__dot"></span></span></div>' : '';
-            $class = $shell === 'show' ? 'code-block code-block--header' : 'code-block';
-
-            $output = '
-                <div
-                    x-data="{ copied: false }"
-                    class="' . $class . '"
-                    data-lang="' . esc_attr(strtolower($language['label'])) . '"
-                >
-                    ' . $codeBlockShell . '
-                    <pre>
-                        <code class="language-' . esc_attr($language['value']) . '">' . esc_html($code) . '</code>
-                    </pre>
-                    <button
-                        @click="
-                            copyCode(`' . esc_js($code) . '`);
-                            copied = true;
-                            setTimeout(() => copied = false, 2000);
-                        "
-                        class="code-block__copy" 
-                        :class="copied ? \'code-block__copy--active\' : \'\'">
-                        <span x-text="copied ? \'' . esc_html__('Copied', 'base') . '\' : \'' . esc_html__('Copy', 'base') . '\'"></span>
-                    </button>
-                </div>
-                <script>
-                    function copyCode(code) {
-                        let tempInput = document.createElement(\'textarea\');
-                        tempInput.value = code;
-                        document.body.appendChild(tempInput);
-                        tempInput.select();
-
-                        try {
-                            document.execCommand(\'copy\');
-                        } catch (err) {
-                            console.error(\'Could not copy text: \', err);
-                        }
-
-                        document.body.removeChild(tempInput);
-                    }
-                </script>
-            ';
-        } else {
-            $output = '';
-        }
-
-        return $output;
-    }
-
-
-    /**
      * Cookie opt in-out btn shortcode.
      */
-    public function cookie($atts, $content = null): string
+    public static function cookie($atts, $content = null): string
     {
         $args = wp_parse_args(shortcode_atts([
             'type' => 'none',
@@ -136,28 +71,13 @@ class Shortcodes extends Module
     }
 
     /**
-     * Accordion card.
-     */
-    public function accordionCard($atts, $content = null): string
-    {
-        $args = wp_parse_args(shortcode_atts([
-            'title' => null,
-        ], $atts));
-
-        return '<div class="accordion-card"><h3 class="accordion-card__title">' . $args['title'] . '</h3>
-        <div class="accordion-card__content" aria-hidden="true"><div class="post-content">' . $content . '</div></div></div>';
-    }
-
-    /**
      * Boot the module.
      */
     public function boot(): void
     {
-        add_shortcode('table', [$this, 'table']);
-        add_shortcode('code', [$this, 'code']);
-        add_shortcode('button', [$this, 'button']);
-        add_shortcode('accordion-card', [$this, 'accordionCard']);
-        add_shortcode('cookie-button', [$this, 'cookie']);
-        add_shortcode('iframe', [$this, 'iframe']);
+        add_shortcode('table', [static::class, 'table']);
+        add_shortcode('button', [static::class, 'button']);
+        add_shortcode('cookie-button', [static::class, 'cookie']);
+        add_shortcode('iframe', [static::class, 'iframe']);
     }
 }

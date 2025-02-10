@@ -1,31 +1,37 @@
 <p>
   <a href="https://github.com/conedevelopment/base-starter-theme">
     <br>
-    <img src="./.github/base-logo-dark.svg" alt="Base" width="226" height="40">
+    <img src="./.github/base-logo-dark.svg" alt="Base" width="136" height="25">
     <br>
   </a>
 </p>
 
-WordPress theme for Base.
+**Base** is a WordPress starter theme built with our proven methodology for developing custom WordPress themes. It leverages **Advanced Custom Fields PRO (ACF PRO)** for flexible content management and rapid development.
+
 
 ## Required WordPress plugins
 
 - Advanced Custom Field PRO
 
-## Preferred WordPress plugins
+## 🔧 Required Plugins
+Ensure the following plugin is installed and activated:
+- **Advanced Custom Fields PRO**
 
-- Breadcrumb NavXT
-- Classic Editor
-- Contact Form 7
-- Modern Image Formats
-- Safe SVG
-- The SEO Framework
+## 🌟 Recommended Plugins
+For an enhanced development experience, we recommend the following plugins:
+- [**Breadcrumb NavXT**](https://wordpress.org/plugins/breadcrumb-navxt/) – Manage breadcrumbs easily
+- [**Classic Editor**](https://wordpress.org/plugins/classic-editor/) – Revert to the classic WordPress editor
+- [**Contact Form 7**](https://wordpress.org/plugins/contact-form-7/) – Simple, customizable contact forms
+- [**Modern Image Formats**](https://wordpress.org/plugins/modern-image-formats/) – Enable next-gen image formats (e.g., WebP)
+- [**Safe SVG**](https://wordpress.org/plugins/safe-svg/) – Secure SVG uploads
+- [**The SEO Framework**](https://wordpress.org/plugins/autodescription/) – Lightweight and reliable SEO solution
 
-## Preferred Settings
 
-### The SEO Framework
+## ⚙️ Preferred Settings
 
-- Settings -> Title Settings -> Prefixes -> Check the "Remove term type prefixes from generated archive titles?"
+### The SEO Framework Configuration
+- Navigate to **Settings → Title Settings → Prefixes**
+- Enable: **"Remove term type prefixes from generated archive titles"**
 
 ## Image Sizes
 

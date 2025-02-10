@@ -9,7 +9,7 @@ final class Wpcf7 extends Module
      *
      * @return void
      */
-    function loadScripts(): void
+    public static function loadScripts(): void
     {
         // Dequeue wpcf7-recaptcha and google-recaptcha
         wp_dequeue_script('wpcf7-recaptcha');
@@ -46,12 +46,10 @@ final class Wpcf7 extends Module
      */
     public function boot(): void
     {
-        $module = new static();
-
         add_filter('wpcf7_autop_or_not', '__return_false');
         add_filter('wpcf7_load_css', '__return_false');
         add_filter('wpcf7_load_js', '__return_false');
-        add_filter('wpcf7_form_class_attr', [$module, 'formClass']);
-        add_action('wp_enqueue_scripts', [$module, 'loadScripts'], 20, 0);
+        add_filter('wpcf7_form_class_attr', [static::class, 'formClass']);
+        add_action('wp_enqueue_scripts', [static::class, 'loadScripts'], 20, 0);
     }
 }

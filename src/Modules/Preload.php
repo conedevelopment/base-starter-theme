@@ -28,7 +28,7 @@ class Preload extends Module
             $as = $link['as'] ?? 'font';
             $type = $link['type'] ?? 'font/woff2';
             $href = $link['href'] ?? '';
-            $crossorigin = $link['crossorigin'] ?? '';
+            $crossorigin = $link['crossorigin'] ?? true;
 
             if (!empty($href)) {
                 printf(
@@ -37,7 +37,7 @@ class Preload extends Module
                     esc_attr($as),
                     esc_attr($type),
                     esc_url($href),
-                    !empty($crossorigin) ? 'crossorigin="' . esc_attr($crossorigin) . '"' : ''
+                    $crossorigin ? 'crossorigin' : ''
                 );
             }
         }

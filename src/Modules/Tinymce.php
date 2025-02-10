@@ -7,7 +7,7 @@ class Tinymce extends Module
     /**
      * Plus styles in TinyMCE
      */
-    public function styleButton(array $buttons): array
+    public static function styleButton(array $buttons): array
     {
         array_unshift($buttons, 'styleselect');
 
@@ -17,7 +17,7 @@ class Tinymce extends Module
     /**
      * Insert formats.
      */
-    public function insertFormats($init_array): array
+    public static function insertFormats($init_array): array
     {
         $style_formats = [
             [
@@ -42,22 +42,22 @@ class Tinymce extends Module
     /**
      * Add shortcode select to TinyMCE
      */
-    public function addShortcodes(): void
+    public static function addShortcodes(): void
     {
         if (! current_user_can('edit_posts') && ! current_user_can('edit_pages')) {
             return;
         }
 
         if (get_user_option('rich_editing') === 'true') {
-            add_filter('mce_external_plugins', [$this, 'addShortcodeTinymcePlugin']);
-            add_filter('mce_buttons', [$this, 'registerShortcodeButton']);
+            add_filter('mce_external_plugins', [static::class, 'addShortcodeTinymcePlugin']);
+            add_filter('mce_buttons', [static::class, 'registerShortcodeButton']);
         }
     }
 
     /**
      * Register the buttons shortcode.
      */
-    public function registerShortcodeButton($buttons): array
+    public static function registerShortcodeButton($buttons): array
     {
         array_push($buttons, 'base_shortcodes_button');
 
@@ -67,7 +67,7 @@ class Tinymce extends Module
     /**
      * Add shortcode to tinymce.
      */
-    public function addShortcodeTinymcePlugin($plugin_array): array
+    public static function addShortcodeTinymcePlugin($plugin_array): array
     {
         $plugin_array['BaseShortcodes'] = get_template_directory_uri() . '/assets/js/tinymce-shortcode.js';
 
@@ -77,7 +77,7 @@ class Tinymce extends Module
     /**
      * Customize the toolbar.
      */
-    public function customizeToolbar(array $toolbar): array
+    public static function customizeToolbar(array $toolbar): array
     {
         $toolbar['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
 
@@ -89,9 +89,9 @@ class Tinymce extends Module
      */
     public function boot(): void
     {
-        add_filter('mce_buttons_2', [$this, 'styleButton']);
-        add_filter('tiny_mce_before_init', [$this, 'insertFormats']);
-        add_action('init', [$this, 'addShortcodes']);
-        add_filter('tiny_mce_before_init', [$this, 'customizeToolbar']);
+        add_filter('mce_buttons_2', [static::class, 'styleButton']);
+        add_filter('tiny_mce_before_init', [static::class, 'insertFormats']);
+        add_action('init', [static::class, 'addShortcodes']);
+        add_filter('tiny_mce_before_init', [static::class, 'customizeToolbar']);
     }
 }

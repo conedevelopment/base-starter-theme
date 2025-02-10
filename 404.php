@@ -5,7 +5,6 @@
             <div class="container">
                 <div class="l-not-found__inner">
                     <div class="l-not-found__content">
-                        <?php echo base_get_inline_svg_asset('404.svg'); ?>
                         <h1 class="l-not-found__title"><?php esc_html_e('Error 404, we couldn\'t find the page', 'base'); ?></h1>
                         <?php
                         wp_nav_menu([

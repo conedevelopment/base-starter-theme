@@ -9,7 +9,7 @@ final class Auth extends Module
      *
      * @return void
      */
-    public function assets(): void
+    public static function assets(): void
     {
         wp_enqueue_style('base-login', get_template_directory_uri() . '/assets/css/login.css');
     }
@@ -19,7 +19,7 @@ final class Auth extends Module
      *
      * @return void
      */
-    public function removeShakeJs(): void
+    public static function removeShakeJs(): void
     {
         remove_action('login_footer', 'wp_shake_js', 12);
     }
@@ -29,7 +29,7 @@ final class Auth extends Module
      *
      * @return string
      */
-    public function getLogoText(): string
+    public static function getLogoText(): string
     {
         return get_option('blogname');
     }
@@ -39,7 +39,7 @@ final class Auth extends Module
      *
      * @return string
      */
-    public function getLogoUrl(): string
+    public static function getLogoUrl(): string
     {
         return home_url();
     }
@@ -51,11 +51,9 @@ final class Auth extends Module
      */
     public function boot(): void
     {
-        $module = new static();
-
-        add_filter('login_headerurl', [$module, 'getLogoUrl']);
-        add_filter('login_headertext', [$module, 'getLogoText']);
-        add_action('login_enqueue_scripts', [$module, 'assets']);
-        add_action('login_footer', [$module, 'removeShakeJs']);
+        add_filter('login_headerurl', [static::class, 'getLogoUrl']);
+        add_filter('login_headertext', [static::class, 'getLogoText']);
+        add_action('login_enqueue_scripts', [static::class, 'assets']);
+        add_action('login_footer', [static::class, 'removeShakeJs']);
     }
 }
