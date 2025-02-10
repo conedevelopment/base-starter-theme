@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Base Starter Theme 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2025-02-01 21:46+0100\n"
+"POT-Creation-Date: 2025-02-10 18:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Cone <hello@conedevelopment.com>\n"
@@ -21,183 +21,155 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: assets\n"
 "X-Poedit-SearchPathExcluded-2: acf-json\n"
 
-#: 404.php:8
-msgid "404-es hiba, nem találjuk az URL-t"
+#: 404.php:9
+msgid "Error 404, we couldn't find the page"
 msgstr ""
 
 #: 404.php:19
-msgid "Vissza a kezdőlapra"
+msgid "Back to home"
 msgstr ""
 
-#: archive-tool.php:35 archive.php:32 author.php:42 home.php:40 taxonomy.php:34
-msgid "Előző"
+#: header.php:14
+msgid "Jump to content"
 msgstr ""
 
-#: archive-tool.php:36 archive.php:33 author.php:43 home.php:41 taxonomy.php:35
-msgid "Következő"
-msgstr ""
-
-#: author.php:25
-msgid "Bejegyzések"
-msgstr ""
-
-#: author.php:54
-msgid "Nem találtunk bejegyzés ehhez a szerzőhöz."
-msgstr ""
-
-#: header.php:13
-msgid "Ugrás a tartalomra"
-msgstr ""
-
-#: header.php:23
+#: header.php:24
 msgid "Main"
 msgstr ""
 
-#: header.php:50
-msgid "Navigáció nyitása/zárása"
+#: header.php:51
+msgid "Toggle navigation"
+msgstr ""
+
+#: home.php:10
+msgid "Blog"
+msgstr ""
+
+#: home.php:33
+msgid "Previous"
+msgstr ""
+
+#: home.php:34
+msgid "Next"
 msgstr ""
 
 #: inc/template-tags.php:24
-msgid "Közzétéve:"
+msgid "Published at"
 msgstr ""
 
 #: inc/template-tags.php:28
-msgid "Utoljára frissítve:"
+msgid "Last updated at"
 msgstr ""
 
-#: inc/template-tags.php:85
-msgid "Összes"
+#: inc/template-tags.php:42
+msgid "Categories:"
 msgstr ""
 
-#: single-tool.php:29
-msgid "megtekintése"
+#: inc/template-tags.php:75
+msgid "All"
 msgstr ""
 
-#: single-tool.php:35
-msgid "Blog bejegyzés megtekintése"
+#: searchform.php:11
+msgid "Search for:"
 msgstr ""
 
-#: single-tool.php:51
-msgid "Típus"
+#: searchform.php:21
+msgid "What are you looking for?"
 msgstr ""
 
-#: single-tool.php:64
-msgid "Kategóriák"
+#: searchform.php:26
+msgid "result(s) found."
 msgstr ""
 
-#: single-tool.php:79
-msgid "Szerző"
+#: searchform.php:36
+msgid "No results found."
 msgstr ""
 
-#: single-tool.php:91
-msgid "Közzétéve"
+#: single.php:21
+msgid "Table of Content"
 msgstr ""
 
-#: single-tool.php:101
-msgid "Hasonló bejegyzések"
+#: single.php:61
+msgid "More posts"
 msgstr ""
 
-#: single.php:43
-msgid "További bejegyzések"
+#: single.php:63
+msgid "All posts"
 msgstr ""
 
-#: single.php:45
-msgid "Összes bejegyzés"
+#: src/Modules/Assets.php:58
+msgid "Allow all"
 msgstr ""
 
 #: src/Modules/Assets.php:59
-msgid "Összes elfogadása"
+msgid "Customize"
 msgstr ""
 
-#: src/Modules/Assets.php:60
-msgid "Testreszabás"
+#: src/Modules/Assets.php:60 src/Modules/Shortcodes.php:70
+msgid "Decline"
 msgstr ""
 
 #: src/Modules/Assets.php:61
-msgid "Elutasítás"
-msgstr ""
-
-#: src/Modules/Assets.php:62
-msgid "Kijelöltek elfogadása"
+msgid "Allow selected"
 msgstr ""
 
 #: src/Modules/Shortcodes.php:18
-msgid "A YouTube videó beágyazás megtekintéséhez el kell fogadnod a kapcsolódó sütiket."
+msgid "In order to play embedded YouTube videos, you must agree to the processing of data and the use of associated cookies."
 msgstr ""
 
 #: src/Modules/Shortcodes.php:19
-msgid "YouTube sütik elutasítása"
+msgid "Decline YouTube cookies"
 msgstr ""
 
 #: src/Modules/Shortcodes.php:20
-msgid "YouTube sütik elfogadása"
+msgid "Allow YouTube cookies"
+msgstr ""
+
+#: src/Modules/Shortcodes.php:70
+msgid "Allow"
 msgstr ""
 
 #: src/Modules/Tinymce.php:24
-msgid "Bevezető méret"
+msgid "Lead size"
 msgstr ""
 
 #: src/Modules/Tinymce.php:30
-msgid "Felsorolás lista"
+msgid "Check list"
 msgstr ""
 
-#: src/Theme.php:105
-msgid "Link másolása"
+#: src/Theme.php:107
+msgid "Copy link"
 msgstr ""
 
-#: src/Theme.php:109
-msgid "Link másolva"
+#: src/Theme.php:111
+msgid "Link copied"
 msgstr ""
 
-#: template-parts/block/co-author-post.php:26
-msgid "Bejegyzések társszerzőként"
+#: template-contact.php:8
+msgid "Contact"
 msgstr ""
 
-#: template-parts/block/latest-post.php:17
-msgid "Friss bejegyzések"
+#: template-contact.php:19
+msgid "Keep in touch"
 msgstr ""
 
-#: template-parts/block/latest-post.php:33
-msgid "Tovább a blogra"
+#: template-contact.php:24
+msgid "Address"
+msgstr ""
+
+#: template-contact.php:39
+msgid "Email"
+msgstr ""
+
+#: template-contact.php:50
+msgid "Phone"
+msgstr ""
+
+#: template-parts/builder.php:23
+#, php-format
+msgid "<h1 class=\"empty-builder-alert__title\">You haven't built this page yet.</h1><a href=\"%s\" class=\"btn btn--primary\">Edit</a>"
 msgstr ""
 
 #: template-parts/modal.php:24
-msgid "Ablak bezárása"
-msgstr ""
-
-#: template-parts/newsletter.php:15
-msgid "Az e-mail címed"
-msgstr ""
-
-#: template-parts/newsletter.php:16
-msgid "E-mail"
-msgstr ""
-
-#: template-parts/newsletter.php:24
-msgid "Feliratkozás"
-msgstr ""
-
-#: template-parts/newsletter.php:30
-#, php-format
-msgid "Elfogadom az <a href=\"%s\">adatkezelést</a>."
-msgstr ""
-
-#: template-parts/newsletter.php:56
-msgid "Kérünk töltsd ki az e-mail mezőt."
-msgstr ""
-
-#: template-parts/newsletter.php:62
-msgid "Kérünk fogadd el az adatkezelést"
-msgstr ""
-
-#: template-parts/newsletter.php:84
-msgid "Sikeres feliratkozás, köszönjük!"
-msgstr ""
-
-#: template-parts/newsletter.php:90
-msgid "Megszakadt feliratkozás, próbálkozz újra."
-msgstr ""
-
-#: template-parts/newsletter.php:95
-msgid "Nem várt hiba, póbálkozz újra."
+msgid "Close modal"
 msgstr ""
