@@ -9,7 +9,7 @@ class Config extends Module
     /**
      * The theme version.
      */
-    public const VERSION = '1.0.0';
+    public const VERSION = '0.1.0';
 
     /**
      * Enable iframe tags in WYSIWYG editor.
