@@ -2,6 +2,8 @@
 
 namespace Base\Modules;
 
+use WP_Query;
+
 class Search extends Module
 {
     /**
