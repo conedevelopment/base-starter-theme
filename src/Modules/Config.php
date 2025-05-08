@@ -9,7 +9,7 @@ class Config extends Module
     /**
      * The theme version.
      */
-    public const VERSION = '0.1.0';
+    public const VERSION = '0.2.0';
 
     /**
      * Enable iframe tags in WYSIWYG editor.
@@ -68,7 +68,15 @@ class Config extends Module
      */
     public static function hideAdmminMenu(): void
     {
-        remove_submenu_page('themes.php', 'site-editor.php?path=/patterns');
+        remove_submenu_page('themes.php', 'site-editor.php'); // Pattern page
+    }
+
+    /**
+     * Run the_content filter on acf_the_content.
+     */
+    public static function acfContent($content)
+    {
+        return apply_filters('the_content', $content);
     }
 
     /**
@@ -85,5 +93,6 @@ class Config extends Module
         add_filter('acf_the_content', [static::class, 'shortcodeParagraphFix'], 11);
         remove_filter('term_description', 'wpautop');
         add_action('admin_menu', [static::class, 'hideAdmminMenu']);
+        add_filter('acf_the_content', [static::class, 'acfContent'], 5);
     }
 }

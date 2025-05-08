@@ -3,6 +3,7 @@
 namespace Base;
 
 use Base\Modules\Acf;
+use Base\Modules\Admin;
 use Base\Modules\Assets;
 use Base\Modules\Auth;
 use Base\Modules\Comments;
@@ -129,6 +130,7 @@ final class Theme
     {
         (new Config)->boot();
         (new Acf)->boot();
+        (new Admin)->boot();
         (new Assets)->boot();
         (new Auth)->boot();
         (new Comments)->boot();

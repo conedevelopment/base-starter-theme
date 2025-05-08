@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> ⚠️ **This project is a Work in Progress (WIP).** Expect ongoing updates and improvements.  
+> ⚠️ **This project is a Work in Progress (WIP).** Expect ongoing updates and improvements.
 
 **Base** is a WordPress starter theme built with our proven methodology for developing custom WordPress themes. It leverages **Advanced Custom Fields PRO (ACF PRO)** for flexible content management and rapid development.
 

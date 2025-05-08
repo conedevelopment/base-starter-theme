@@ -1,0 +1,17 @@
+@use 'sprucecss/scss/spruce' as *;
+
+.acf-image-preview {
+  --inline-size: 25rem;
+
+  [data-name='image'] {
+    max-inline-size: var(--inline-size) !important;
+  }
+
+  &--small {
+    --inline-size: 12.5rem;
+  }
+}
+
+.acf-fields > .acf-tab-wrap {
+  overflow-y: hidden;
+}

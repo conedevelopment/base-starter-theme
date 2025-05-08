@@ -11,7 +11,10 @@ class Preload extends Module
      */
     public static function injectPreloadLinks(): void
     {
-        $preloadLinks = [
+        $image_ids = [];
+
+        // Preload links for fonts
+        $preload_links = [
             [
                 'href' => get_template_directory_uri() . '/assets/font/work-sans-v19-latin-regular.woff2',
             ],
@@ -23,7 +26,19 @@ class Preload extends Module
             ],
         ];
 
-        foreach ($preloadLinks as $link) {
+        // Add preloaded images to the preload links array
+        foreach ($image_ids as $image_id) {
+            $image_url = wp_get_attachment_url($image_id);
+            if ($image_url) {
+                $preload_links[] = [
+                    'href' => $image_url,
+                    'as' => 'image',
+                ];
+            }
+        }
+
+        // Output preload links
+        foreach ($preload_links as $link) {
             $rel = $link['rel'] ?? 'preload';
             $as = $link['as'] ?? 'font';
             $type = $link['type'] ?? 'font/woff2';
