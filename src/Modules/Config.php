@@ -66,7 +66,7 @@ class Config extends Module
     /**
      * Hide any admin menu.
      */
-    public static function hideAdmminMenu(): void
+    public static function hideAdminMenu(): void
     {
         remove_submenu_page('themes.php', 'site-editor.php'); // Pattern page
     }
@@ -92,7 +92,7 @@ class Config extends Module
         add_filter('the_content', [static::class, 'shortcodeParagraphFix']);
         add_filter('acf_the_content', [static::class, 'shortcodeParagraphFix'], 11);
         remove_filter('term_description', 'wpautop');
-        add_action('admin_menu', [static::class, 'hideAdmminMenu']);
+        add_action('admin_menu', [static::class, 'hideAdminMenu']);
         add_filter('acf_the_content', [static::class, 'acfContent'], 5);
     }
 }
