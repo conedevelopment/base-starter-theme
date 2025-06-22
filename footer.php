@@ -7,8 +7,8 @@
                 </a>
             </div>
             <?php
-            for ($i = 1; $i <= 3; $i++) :
-                $base_footer_menu = 'footer-' . $i;
+            for ($base_footer_menu_index = 1; $base_footer_menu_index <= 3; $base_footer_menu_index++) :
+                $base_footer_menu = 'footer-' . $base_footer_menu_index;
                 if (has_nav_menu($base_footer_menu)) : ?>
                     <div class="site-footer__column">
                         <h3 class="site-footer__title">
@@ -29,11 +29,7 @@
         <div class="site-footer__bottom">
             <?php get_template_part('template-parts/theme-switcher'); ?>
             <p class="site-footer__copyright">
-                <?php
-                echo date('Y');
-                echo ' ';
-                the_field('base_footer_copyright', 'option');
-                ?>
+                <?php printf('%s %s', esc_html(date('Y')), get_field('base_footer_copyright', 'option')); ?>
             </p>
             <?php get_template_part('template-parts/footer/socials'); ?>
         </div>
