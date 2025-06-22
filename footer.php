@@ -7,7 +7,7 @@
                 </a>
             </div>
             <?php
-            for ($base_footer_menu_index = 1; $base_footer_menu_index <= 3; $base_footer_menu_index++) :
+            foreach (range(1, 3) as $base_footer_menu_index) :
                 $base_footer_menu = 'footer-' . $base_footer_menu_index;
                 if (has_nav_menu($base_footer_menu)) : ?>
                     <div class="site-footer__column">
