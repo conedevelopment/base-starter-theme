@@ -23,7 +23,7 @@
                         ?>
                     </div>
                 <?php endif;
-            endfor;
+            endforeach;
             ?>
         </div>
         <div class="site-footer__bottom">
